@@ -1,0 +1,83 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Jun 29 11:28:54 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.16-s070_1 (64bit) 10/31/2025 16:29 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.16-s070_1 NR250925-2329/23_16-UB (database version 18.20.679) {superthreading v2.20}
+#@(#)CDS: AAE 23.16-s017 (64bit) 10/31/2025 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.16-s018_1 () Oct 25 2025 07:16:43 ( )
+#@(#)CDS: SYNTECH 23.16-s005_1 () Sep 24 2025 21:37:10 ( )
+#@(#)CDS: CPE v23.16-s054
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s519 (64bit) Wed Aug 27 00:58:07 PDT 2025 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+setLibraryUnit -cap 1ff
+setLibraryUnit -time 1ps
+set init_gnd_net VSS
+set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm.syn.v
+set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+set init_top_cell des
+set init_pwr_net VDD
+setDesignMode -process 7
+init_design
+saveDesign des_Summer2026_init.inn
+floorPlan -site asap7sc7p5t -s 54.0 48.6 0 0 0 0
+saveDesign des_Summer2026_fplan.inn
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 43.2 -inRowOffset 5.4
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { M1 M6 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1 M6 } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1 }
+setAddStripeMode -stacked_via_bottom_layer M1 -stacked_via_top_layer M2 -allow_nonpreferred_dir stripe
+setViaGenMode -ignore_viarule_enclosure true
+addStripe -direction horizontal -set_to_set_distance 0.54 -spacing 0.252 -ybottom_offset -0.009 -ytop_offset -0.009 -width 0.018 -nets {VDD VSS} -layer M2
+addStripe -direction horizontal -set_to_set_distance 0.54 -spacing 0.252 -ybottom_offset -0.009 -ytop_offset -0.009 -width 0.018 -nets {VDD VSS} -layer M1
+setViaGenMode -ignore_viarule_enclosure true
+editPowerVia -skip_via_on_pin {Pad Block Cover Standardcell} -skip_via_on_wire_shape {Ring Blockring Corewire Blockwire Iowire Padring Fillwire Noshape} -bottom_layer M1 -add_vias 1 -orthogonal_only 0 -top_layer M2
+setViaGenMode -viarule_preference { M6_M5widePWR1p152 M5_M4widePWR0p864 M4_M3widePWR0p864 M3_M2widePWR0p936 M3_M2widePWR }
+addStripe -extend_to design_boundary -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 7.92 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.378 -xleft_offset 4.509 -merge_stripes_value 0.16 -layer M3 -width 0.09 -nets {VDD VSS} -stacked_via_bottom_layer M2
+setAddStripeMode -max_via_size { Stripe 100 100 100 } -via_using_exact_crossover_size true -stacked_via_bottom_layer M3 -stacked_via_top_layer M4
+addStripe -extend_to design_boundary -direction horizontal -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 15.36 -skip_via_on_pin Standardcell -spacing 0.504 -start_offset 7.671 -merge_stripes_value 0.16 -layer M4 -width 0.12 -nets {VDD VSS}
+setAddStripeMode -stacked_via_bottom_layer M4 -stacked_via_top_layer M5
+setViaGenMode -bar_cut_orientation horizontal
+addStripe -extend_to design_boundary -direction vertical -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 15.36 -skip_via_on_pin Standardcell -spacing 0.504 -start_offset 5.286 -merge_stripes_value 0.16 -layer M5 -width 0.216 -nets {VDD VSS}
+setAddStripeMode -stacked_via_bottom_layer M5 -stacked_via_top_layer M6
+setViaGenMode -bar_cut_orientation vertical
+addStripe -extend_to design_boundary -direction horizontal -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 14.08 -skip_via_on_pin Standardcell -spacing 0.672 -start_offset 9.602 -merge_stripes_value 0.16 -layer M6 -width 0.288 -nets {VDD VSS}
+setDesignMode -topRoutingLayer 6
+setPlaceMode -place_global_place_io_pins true
+set_interactive_constraint_modes {setup_con}
+set_false_path -from [get_ports]
+set_false_path -to [get_ports]
+set_interactive_constraint_modes {}
+defOut des_Summer2026.unopt.def
+place_opt_design
+defOut des_Summer2026.opt.def
+saveDesign des_Summer2026_place.inn
+set_ccopt_property buffer_cells { BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3 }
+set_ccopt_property inverter_cells { INV_X8 INV_X16 INV_X32 }
+set_ccopt_property clock_gating_cells {CLKGATE_X1 CLKGATE_X2 CLKGATE_X4 CLKGATE_X8}
+set_ccopt_property use_inverters true
+set_ccopt_property target_max_trans inf
+set_ccopt_property target_skew inf
+create_ccopt_clock_tree_spec
+set_ccopt_property buffer_cells { BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx8_ASAP7_75t_L  }
+set_ccopt_property inverter_cells { CKINVDCx10_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L }
+set_ccopt_property clock_gating_cells { ICGx1_ASAP7_75t_L ICGx2_ASAP7_75t_L ICGx3_ASAP7_75t_L ICGx4_ASAP7_75t_L ICGx5_ASAP7_75t_L ICGx8_ASAP7_75t_L ICGx2p67DC_ASAP7_75t_L ICGx4DC_ASAP7_75t_L ICGx5p33DC_ASAP7_75t_L ICGx6p67DC_ASAP7_75t_L }
+set_ccopt_property use_inverters true
+set_ccopt_property target_max_trans 200ps
+set_ccopt_property target_skew 200ps
+create_ccopt_clock_tree_spec
+set_ccopt_property buffer_cells { BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx8_ASAP7_75t_L  }
+set_ccopt_property inverter_cells { CKINVDCx10_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L }
+set_ccopt_property clock_gating_cells { ICGx1_ASAP7_75t_L ICGx2_ASAP7_75t_L ICGx3_ASAP7_75t_L ICGx4_ASAP7_75t_L ICGx5_ASAP7_75t_L ICGx8_ASAP7_75t_L ICGx2p67DC_ASAP7_75t_L ICGx4DC_ASAP7_75t_L ICGx5p33DC_ASAP7_75t_L ICGx6p67DC_ASAP7_75t_L }
+set_ccopt_property use_inverters true
+set_ccopt_property target_max_trans 200ps
+set_ccopt_property target_skew 200ps
+create_ccopt_clock_tree_spec

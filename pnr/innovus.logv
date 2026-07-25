@@ -1,0 +1,451 @@
+[06/29 10:38:41      0s] 
+[06/29 10:38:41      0s] Cadence Innovus(TM) Implementation System.
+[06/29 10:38:41      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[06/29 10:38:41      0s] 
+[06/29 10:38:41      0s] Version:	v23.16-s070_1, built Fri Oct 31 16:29:58 PDT 2025
+[06/29 10:38:41      0s] Options:	
+[06/29 10:38:41      0s] Date:		Mon Jun 29 10:38:41 2026
+[06/29 10:38:41      0s] Host:		vlsilab.iitbbs.ac.in (x86_64 w/Linux 5.14.0-503.11.1.el9_5.x86_64) (20cores*28cpus*Intel(R) Core(TM) i7-14700 33792KB)
+[06/29 10:38:41      0s] OS:		Red Hat Enterprise Linux 9.5 (Plow)
+[06/29 10:38:41      0s] 
+[06/29 10:38:41      0s] License:
+[06/29 10:38:43      0s] 		[10:38:43.426394] Configured Lic search path (23.02-s006): 5280@14.139.1.126:1717@14.139.1.126
+
+[06/29 10:38:45      1s] 		invs	Innovus Implementation System	23.1	checkout succeeded
+[06/29 10:38:45      1s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[06/29 10:39:00     11s] Memory management switch to non-aggressive memory release mode.
+[06/29 10:39:00     11s] 
+[06/29 10:39:00     11s] OS Mmap count monitoring thread starts. Limit of OS Mmap count is 65530
+[06/29 10:39:00     11s] 
+[06/29 10:39:03     13s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v23.16-s070_1 (64bit) 10/31/2025 16:29 (Linux 3.10.0-693.el7.x86_64)
+[06/29 10:39:06     15s] @(#)CDS: NanoRoute 23.16-s070_1 NR250925-2329/23_16-UB (database version 18.20.679) {superthreading v2.20}
+[06/29 10:39:06     15s] @(#)CDS: AAE 23.16-s017 (64bit) 10/31/2025 (Linux 3.10.0-693.el7.x86_64)
+[06/29 10:39:06     15s] @(#)CDS: CTE 23.16-s018_1 () Oct 25 2025 07:16:43 ( )
+[06/29 10:39:06     15s] @(#)CDS: SYNTECH 23.16-s005_1 () Sep 24 2025 21:37:10 ( )
+[06/29 10:39:06     15s] @(#)CDS: CPE v23.16-s054
+[06/29 10:39:06     15s] @(#)CDS: IQuantus/TQuantus 23.1.1-s519 (64bit) Wed Aug 27 00:58:07 PDT 2025 (Linux 3.10.0-693.el7.x86_64)
+[06/29 10:39:06     15s] @(#)CDS: OA 22.61-p027 Wed May 14 22:25:16 2025
+[06/29 10:39:06     15s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[06/29 10:39:06     15s] @(#)CDS: RCDB 11.15.0
+[06/29 10:39:06     15s] @(#)CDS: STYLUS 23.16-s001_1 (07/11/2025 08:51 PDT)
+[06/29 10:39:06     15s] @(#)CDS: IntegrityPlanner-23.16-17108 (23.16) (2025-08-12 13:53:14+0800)
+[06/29 10:39:06     15s] @(#)CDS: SYNTHESIS_ENGINE 23.16-s067
+[06/29 10:39:06     15s] Create and set the environment variable TMPDIR to /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/pnr/innovus_temp_9864_213f693a-e6ea-4187-8624-21fb70ecc840_vlsilab.iitbbs.ac.in_cdsl14_1hWJai.
+
+[06/29 10:39:06     15s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[06/29 10:39:08     16s] Info: Process UID = 9864 / 213f693a-e6ea-4187-8624-21fb70ecc840 / 9DgDlFVM3s
+[06/29 10:39:08     16s] 
+[06/29 10:39:08     16s] **INFO:  MMMC transition support version v31-84 
+[06/29 10:39:08     16s] 
+[06/29 10:39:08     16s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[06/29 10:39:08     16s] <CMD> suppressMessage ENCEXT-2799
+[06/29 10:39:08     16s] <CMD> win
+[06/29 10:41:10     20s] can't read "::env(USER_DIR)": no such element in array
+[06/29 10:43:29     24s] can't read "::env(USER_DIR)": no such element in array
+[06/29 10:45:47     28s] can't read "::env(DESIGN)": no such element in array
+[06/29 10:49:26     35s] can't read "::env(DESIGN)": no such element in array
+[06/29 10:55:36     46s] can't read "::env(DESIGN)": no such element in array
+[06/29 10:59:45     54s] <CMD> setLibraryUnit -cap 1ff
+[06/29 10:59:45     54s] <CMD> setLibraryUnit -time 1ps
+[06/29 10:59:45     54s] <CMD> set init_gnd_net VSS
+[06/29 10:59:45     54s] <CMD> set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm_pdk.syn.v
+[06/29 10:59:45     54s] <CMD> set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+[06/29 10:59:45     54s] <CMD> set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+[06/29 10:59:45     54s] <CMD> set init_top_cell des
+[06/29 10:59:45     54s] <CMD> set init_pwr_net VDD
+[06/29 10:59:45     54s] <CMD> setDesignMode -process 7
+[06/29 10:59:45     54s] ##  Process: 7             (User Set)               
+[06/29 10:59:45     54s] ##     Node: (not set)                           
+[06/29 10:59:45     54s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[06/29 10:59:45     54s] Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[06/29 10:59:45     54s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[06/29 10:59:45     54s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[06/29 10:59:45     54s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[06/29 10:59:45     54s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[06/29 10:59:45     54s] <CMD> init_design
+[06/29 10:59:45     54s] #% Begin Load MMMC data ... (date=06/29 10:59:45, mem=1922.4M)
+[06/29 10:59:45     54s] **ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib' for library set
+
+[06/29 11:02:51     60s] <CMD> setLibraryUnit -cap 1ff
+[06/29 11:02:51     60s] <CMD> setLibraryUnit -time 1ps
+[06/29 11:02:51     60s] <CMD> set init_gnd_net VSS
+[06/29 11:02:51     60s] <CMD> set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm_pdk.syn.v
+[06/29 11:02:51     60s] <CMD> set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+[06/29 11:02:51     60s] <CMD> set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+[06/29 11:02:51     60s] <CMD> set init_top_cell des
+[06/29 11:02:51     60s] <CMD> set init_pwr_net VDD
+[06/29 11:02:51     60s] <CMD> setDesignMode -process 7
+[06/29 11:02:51     60s] ##  Process: 7             (User Set)               
+[06/29 11:02:51     60s] ##     Node: (not set)                           
+[06/29 11:02:51     60s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[06/29 11:02:51     60s] Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[06/29 11:02:51     60s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[06/29 11:02:51     60s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[06/29 11:02:51     60s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[06/29 11:02:51     60s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[06/29 11:02:51     60s] <CMD> init_design
+[06/29 11:02:51     60s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[06/29 11:02:51     60s] % Begin Load MMMC data ... (date=06/29 11:02:51, mem=1937.3M)
+[06/29 11:02:51     60s] **ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.lib' for library set
+**ERROR: (TCLCMD-995):	Can not open file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib' for library set
+
+[06/29 11:03:20     61s] <CMD> setLibraryUnit -cap 1ff
+[06/29 11:03:20     61s] <CMD> setLibraryUnit -time 1ps
+[06/29 11:03:20     61s] <CMD> set init_gnd_net VSS
+[06/29 11:03:20     61s] <CMD> set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm_pdk.syn.v
+[06/29 11:03:20     61s] <CMD> set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+[06/29 11:03:20     61s] <CMD> set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+[06/29 11:03:20     61s] <CMD> set init_top_cell des
+[06/29 11:03:20     61s] <CMD> set init_pwr_net VDD
+[06/29 11:03:20     61s] <CMD> setDesignMode -process 7
+[06/29 11:03:20     61s] ##  Process: 7             (User Set)               
+[06/29 11:03:20     61s] ##     Node: (not set)                           
+[06/29 11:03:20     61s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[06/29 11:03:20     61s] Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[06/29 11:03:20     61s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[06/29 11:03:20     61s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[06/29 11:03:20     61s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[06/29 11:03:20     61s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[06/29 11:03:20     61s] <CMD> init_design
+[06/29 11:03:20     61s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[06/29 11:03:20     61s] % Begin Load MMMC data ... (date=06/29 11:03:20, mem=1937.3M)
+[06/29 11:03:20     61s] % End Load MMMC data ... (date=06/29 11:03:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=1937.5M, current mem=1937.5M)
+[06/29 11:03:20     61s] 
+[06/29 11:03:20     61s] Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef ...
+[06/29 11:03:20     61s] 
+[06/29 11:03:20     61s] Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef ...
+[06/29 11:03:20     61s] **WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+[06/29 11:03:20     61s] so you are unable to create rectilinear partition in a hierarchical flow.
+[06/29 11:03:20     61s] Set DBUPerIGU to M1 pitch 36.
+[06/29 11:03:25     61s] [11:03:25.197554] Periodic Lic check successful
+[11:03:25.197568] Feature usage summary:
+[11:03:25.197569] Innovus_Impl_System
+[11:03:25.197569] Innovus_7nm_Opt
+
+[06/29 11:03:25     61s] (#124) This command "init_design" required an extra checkout of license invs_7nm.
+[06/29 11:03:25     61s] Additional license(s) checked out: 1 'invs_7nm' (Innovus_7nm_Opt; INVS07; 23.1) license(s)
+[06/29 11:03:25     61s] 
+[06/29 11:03:25     61s] Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef ...
+[06/29 11:03:25     61s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[06/29 11:03:25     61s] Loading view definition file from /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+[06/29 11:03:25     61s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:03:28     65s] Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120' 
+[06/29 11:03:28     65s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:03:29     65s] Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120' 
+[06/29 11:03:29     65s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:03:32     68s] Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_ccsa_211120' 
+[06/29 11:03:32     68s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.lib' ...
+[06/29 11:03:32     68s] Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_ccsa_220123' 
+[06/29 11:03:32     68s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:03:32     69s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 100310)
+[06/29 11:03:32     69s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 142077)
+[06/29 11:03:32     69s] Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120' 
+[06/29 11:03:32     69s] Ending "PreSetAnalysisView" (total cpu=0:00:07.5, real=0:00:07.0, peak res=2442.7M, current mem=1964.9M)
+[06/29 11:03:32     69s] *** End library_loading (cpu=0.12min, real=0.12min, mem=486.0M, fe_cpu=1.16min, fe_real=24.85min, fe_mem=2308.9M) ***
+[06/29 11:03:32     69s] **ERROR: (IMPSYT-16038):	The specified file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm_pdk.syn.v' could not be found. Check your file system, correct the file name.
+[06/29 11:03:32     69s] **ERROR: (IMPIMEX-7008):	No netlist files are found.
+[06/29 11:03:32     69s] 
+[06/29 11:07:02     75s] <CMD> setLibraryUnit -cap 1ff
+[06/29 11:07:02     75s] **ERROR: (IMPTS-432):	Units must be set the before the design is read and constraints are loaded. This command is ignored.
+<CMD> setLibraryUnit -time 1ps
+[06/29 11:07:02     75s] **ERROR: (IMPTS-432):	Units must be set the before the design is read and constraints are loaded. This command is ignored.
+<CMD> set init_gnd_net VSS
+[06/29 11:07:02     75s] <CMD> set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm_pdk.syn.v
+[06/29 11:07:02     75s] <CMD> set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+[06/29 11:07:02     75s] <CMD> set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+[06/29 11:07:02     75s] <CMD> set init_top_cell des
+[06/29 11:07:02     75s] <CMD> set init_pwr_net VDD
+[06/29 11:07:02     75s] <CMD> setDesignMode -process 7
+[06/29 11:07:02     75s] ##  Process: 7             (User Set)               
+[06/29 11:07:02     75s] ##     Node: (not set)                           
+[06/29 11:07:02     75s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[06/29 11:07:02     75s] Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[06/29 11:07:02     75s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[06/29 11:07:02     75s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[06/29 11:07:02     75s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[06/29 11:07:02     75s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[06/29 11:07:02     75s] <CMD> init_design
+[06/29 11:07:02     75s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[06/29 11:07:02     75s] % Begin Load MMMC data ... (date=06/29 11:07:02, mem=1969.5M)
+[06/29 11:07:03     76s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1978.0M, current mem=1978.0M)
+[06/29 11:07:03     76s] 
+[06/29 11:07:03     76s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[06/29 11:07:03     76s] Summary for sequential cells identification: 
+[06/29 11:07:03     76s]   Identified SBFF number: 0
+[06/29 11:07:03     76s]   Identified MBFF number: 0
+[06/29 11:07:03     76s]   Identified SB Latch number: 0
+[06/29 11:07:03     76s]   Identified MB Latch number: 0
+[06/29 11:07:03     76s]   Not identified SBFF number: 0
+[06/29 11:07:03     76s]   Not identified MBFF number: 0
+[06/29 11:07:03     76s]   Not identified SB Latch number: 0
+[06/29 11:07:03     76s]   Not identified MB Latch number: 0
+[06/29 11:07:03     76s]   Number of sequential cells which are not FFs: 0
+[06/29 11:07:03     76s] **WARN: (IMPOPT-3000):	Buffer footprint is not defined or is an invalid buffer footprint.
+[06/29 11:07:03     76s] Type 'man IMPOPT-3000' for more detail.
+[06/29 11:07:03     76s] **WARN: (IMPOPT-3001):	Inverter footprint is not defined or is an invalid inverter footprint.
+[06/29 11:07:03     76s] Type 'man IMPOPT-3001' for more detail.
+[06/29 11:07:03     76s]  Visiting view : default_view_setup
+[06/29 11:07:03     76s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[06/29 11:07:03     76s]    : PowerDomain = none : no stdDelay from this view
+[06/29 11:07:03     76s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[06/29 11:07:03     76s]  Visiting view : default_view_hold
+[06/29 11:07:03     76s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[06/29 11:07:03     76s]    : PowerDomain = none : no stdDelay from this view
+[06/29 11:07:03     76s]    : PowerDomain = none : Weighted F : unweighted  = -922337203685477632.00 (1.000) with rcCorner = -1
+[06/29 11:07:03     76s] *INFO : stdDelay is calculated as zero; using legacy method.
+[06/29 11:07:03     76s] *INFO : stdSlew is calculated as zero; using legacy method.
+[06/29 11:07:03     76s] TLC MultiMap info (StdDelay):
+[06/29 11:07:03     76s]   : dc_typical + typical_lib + 1 + no RcCorner := -9.22337e+17ps
+[06/29 11:07:03     76s]   : dc_typical + typical_lib + 1 + default_rc_corner := -9.22337e+17ps
+[06/29 11:07:03     76s]  Setting StdDelay to: 10ps
+[06/29 11:07:03     76s] 
+[06/29 11:07:03     76s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[06/29 11:07:03     76s] 
+[06/29 11:07:03     76s] TimeStamp Deleting Cell Server Begin ...
+[06/29 11:07:03     76s] 
+[06/29 11:07:03     76s] TimeStamp Deleting Cell Server End ...
+[06/29 11:07:03     76s] Extraction setup Started 
+[06/29 11:07:03     76s] Innovus terminated by internal (SEGV) error/signal.
+[06/29 11:07:03     76s] *** Stack trace:
+*** Stack trace:
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x2462942b]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(syStackTrace+0xd4)[0x2462998d]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0xea91deb]
+/lib64/libc.so.6(+0x3e72f)[0x7f007463e72f]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN14peEngineClient16getStdCellHeightEv+0x18)[0x1b0e5cf8]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_Z17peGridDefaultSizev+0x175)[0x1ace62a5]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN14peEngineClient10getViaListERSt6vectorI11eeEngineViaSaIS1_EEi+0x429)[0x1b0dfa09]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN21eeExtEngineDesignData10getViaListERSt6vectorI11eeEngineViaSaIS1_EE+0x28)[0xf36c068]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN21eeExtEngineDesignData12setLayerInfoEv+0x631)[0xf3760c1]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x1af604a3]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_Z10dbMCRCInitv+0x1f)[0x1af6c4af]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_Z28peiInitializeExtractionSetUpb+0x7e)[0x1af6d3ce]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x1fad7bf5]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN6TAMmmc14updateRcCornerEP14TAMmmcRcCornerPKcf9tabooleanR18TAMmmcTripleFactorS4_fS4_S6_S4_S6_S4_fS4_fS4_S6_S4_S6_S4_S6_S4_S3_S3_S3_fS4_S3_S3_S3_S3_+0x43e)[0x24b4c67e]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_Z30TaCmd_createOrUpdate_rc_cornerPvP10Tcl_InterpiPPc9tabooleanP6tcmCmd+0x1329)[0x26cf8c89]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0x22f)[0x280f35af]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0x548)[0x280dec58]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclInvokeStringCommand+0x7a)[0x376272da]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x71)[0x3762bdd1]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x3762dffe]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_CDNSEvalEx+0x12)[0x3762eb52]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclNREvalObjEx+0x72)[0x3762ec12]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x376e4924]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x37642334]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x71)[0x3762bdd1]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x3762dffe]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_CDNSEvalEx+0x12)[0x3762eb52]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclNREvalObjEx+0x72)[0x3762ec12]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x376e4924]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x37642334]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x71)[0x3762bdd1]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x3762dffe]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_CDNSEvalEx+0x12)[0x3762eb52]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclNREvalObjEx+0x72)[0x3762ec12]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x376e4924]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x37642334]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x71)[0x3762bdd1]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_RecordAndEvalObj+0xd3)[0x376c9973]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_RecordAndEval+0x38)[0x376c9ae8]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_Z17rdaEditCmdLineEndPc+0x24c)[0xeb9825c]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN9seConsole7sesMode9DoExecuteERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPv+0xf0)[0x1fbc7080]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN7Redline9EmacsMode10AcceptLineEv+0x3f)[0x218ab9af]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN7Redline11ModeCommandINS_9EmacsModeEE15CommandFnNoKeysERKN5boost8functionIFvRS1_EEERNS_6EditorE+0x60)[0x218b3d70]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN5boost6detail8function26void_function_obj_invoker2INS_3_bi6bind_tINS3_11unspecifiedENS_8functionIFvRN7Redline6EditorEEEENS3_5list1INS_3argILi1EEEEEEEvS9_RKNS7_14KeyCombinationEE6invokeERNS1_15function_bufferES9_SJ_+0x1a)[0x218c2c7a]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZNK7Redline7Command3RunERNS_6EditorERKNS_14KeyCombinationE+0x1b)[0x218c249b]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_ZN7Redline6Editor9Internals3RunEb+0xc6)[0x218a8a46]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0x377307dd]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_ServiceEvent+0x88)[0x376f0bc8]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_DoOneEvent+0x148)[0x376f0ed8]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x8e)[0x7f0088d5950e]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0x11a)[0x7f00844d4f5a]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication4execEv+0x7b)[0x7f00844dc9ab]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so(_ZN13TqApplication4execEv+0x169)[0x7f0088d58e49]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(_Z12edi_app_initP10Tcl_Interp+0x2eb)[0xeb7745b]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(Tcl_MainEx+0x1bb)[0x376eb60b]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus(main+0x823)[0x7c0fcb3]
+/lib64/libc.so.6(+0x295cf)[0x7f00746295cf]
+/lib64/libc.so.6(__libc_start_main+0x7f)[0x7f007462967f]
+/Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/innovus[0xea8e7d2]
+========================================
+               pstack
+========================================
+Thread 11 (Thread 0x7f000cc33640 (LWP 9939) "QFileInfoGather"):
+#0  0x00007f00746868ba in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007f00746890c0 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libc.so.6
+#2  0x00007f00842f0b43 in QWaitCondition::wait(QMutex*, QDeadlineTimer) () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#3  0x00007f0083daae22 in ?? () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#4  0x00007f00842eaf6f in ?? () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x000000002466d5b4 in create_head(void*) ()
+#6  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#7  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 10 (Thread 0x7f001c167640 (LWP 9926) "innovus"):
+#0  0x00007f00746d4175 in clock_nanosleep@GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f00746d8d87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f00746d8cbe in sleep () from /lib64/libc.so.6
+#3  0x000000000ea9ebc2 in (anonymous namespace)::mmapCountThreadLoop(void*) ()
+#4  0x000000002466d5b4 in create_head(void*) ()
+#5  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#6  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 9 (Thread 0x7f004b163640 (LWP 9911) "innovus"):
+#0  0x00007f007463f41a in sigtimedwait () from /lib64/libc.so.6
+#1  0x00007f007463eabc in sigwait () from /lib64/libc.so.6
+#2  0x000000000ea8f610 in ctrlCHandle(void*) ()
+#3  0x000000002466d5b4 in create_head(void*) ()
+#4  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#5  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 8 (Thread 0x7f004be8b640 (LWP 9910) "innovus"):
+#0  0x00007f007470432d in select () from /lib64/libc.so.6
+#1  0x00000000377304d8 in NotifierThreadProc ()
+#2  0x000000002466d5b4 in create_head(void*) ()
+#3  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#4  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 7 (Thread 0x7f004c78f640 (LWP 9908) "QDBusConnection"):
+#0  0x00007f0074701bfe in ppoll () from /lib64/libc.so.6
+#1  0x00007f00845288a9 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007f0084529d33 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#3  0x00007f00844d4f5b in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x00007f00842e9f1e in QThread::exec() () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x00007f007257f2c7 in ?? () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5DBus.so.5
+#6  0x00007f00842eaf6f in ?? () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#7  0x000000002466d5b4 in create_head(void*) ()
+#8  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#9  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 6 (Thread 0x7f004d0b4640 (LWP 9907) "QXcbEventQueue"):
+#0  0x00007f0074701aff in poll () from /lib64/libc.so.6
+#1  0x00007f0086305f42 in _xcb_conn_wait.part.0 () from /lib64/libxcb.so.1
+#2  0x00007f008630790c in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007f00755033e0 in ?? () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/../../Qt/v5/64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007f00842eaf6f in ?? () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x000000002466d5b4 in create_head(void*) ()
+#6  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#7  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 5 (Thread 0x7f004d8b5640 (LWP 9906) "innovus"):
+#0  0x00007f00746d4175 in clock_nanosleep@GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f00746d8d87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f00746d8cbe in sleep () from /lib64/libc.so.6
+#3  0x0000000024649a20 in syiPeakMem(void*) ()
+#4  0x000000002466d5b4 in create_head(void*) ()
+#5  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#6  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 4 (Thread 0x7f004e8b7640 (LWP 9904) "innovus"):
+#0  0x00007f00746d4175 in clock_nanosleep@GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f00746d8d87 in nanosleep () from /lib64/libc.so.6
+#2  0x0000000010f8b95d in rdaiLicRecheck(void*) ()
+#3  0x000000002466d5b4 in create_head(void*) ()
+#4  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#5  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 3 (Thread 0x7f004f9fa640 (LWP 9893) "innovus"):
+#0  0x00007f007470432d in select () from /lib64/libc.so.6
+#1  0x0000000035b3bf8b in ProcessInfo::sampleUsage(void*) ()
+#2  0x000000002466d5b4 in create_head(void*) ()
+#3  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#4  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 2 (Thread 0x7f00501fb640 (LWP 9892) "innovus"):
+#0  0x00007f007470f50f in accept () from /lib64/libc.so.6
+#1  0x0000000035b44327 in ProcessInfo::handleConnection(void*) ()
+#2  0x000000002466d5b4 in create_head(void*) ()
+#3  0x00007f0074689d22 in start_thread () from /lib64/libc.so.6
+#4  0x00007f007470ed40 in clone3 () from /lib64/libc.so.6
+Thread 1 (Thread 0x7f0071c24c40 (LWP 9864) "innovus"):
+#0  0x00007f00746d8b3f in wait4 () from /lib64/libc.so.6
+#1  0x00007f007464b283 in do_system () from /lib64/libc.so.6
+#2  0x0000000024629557 in syStackTraceDump(_IO_FILE*, bool) ()
+#3  0x000000002462998e in syStackTrace ()
+#4  0x000000000ea91dec in rdaiErrorHandler1(int) ()
+#5  <signal handler called>
+#6  0x000000001b0e5cf8 in peEngineClient::getStdCellHeight() ()
+#7  0x000000001ace62a6 in peGridDefaultSize() ()
+#8  0x000000001b0dfa0a in peEngineClient::getViaList(std::vector<eeEngineVia, std::allocator<eeEngineVia> >&, int) ()
+#9  0x000000000f36c069 in eeExtEngineDesignData::getViaList(std::vector<eeEngineVia, std::allocator<eeEngineVia> >&) ()
+#10 0x000000000f3760c2 in eeExtEngineDesignData::setLayerInfo() ()
+#11 0x000000001af604a4 in eeExtEngineDesignData::resetDesignData() [clone .constprop.0] ()
+#12 0x000000001af6c4b0 in dbMCRCInit() ()
+#13 0x000000001af6d3cf in peiInitializeExtractionSetUp(bool) ()
+#14 0x000000001fad7bf6 in toiCteUpdateRcCornerPostCallback(TAMmmcRcCorner*, TAMmmcUpdateRcCornerCbkInfo*) ()
+#15 0x0000000024b4c67f in TAMmmc::updateRcCorner(TAMmmcRcCorner*, char const*, float, taboolean, TAMmmcTripleFactor&, taboolean, float, taboolean, TAMmmcTripleFactor&, taboolean, TAMmmcTripleFactor&, taboolean, float, taboolean, float, taboolean, TAMmmcTripleFactor&, taboolean, TAMmmcTripleFactor&, taboolean, TAMmmcTripleFactor&, taboolean, char const*, char const*, char const*, float, taboolean, char const*, char const*, char const*, char const*) ()
+#16 0x0000000026cf8c8a in TaCmd_createOrUpdate_rc_corner(void*, Tcl_Interp*, int, char**, taboolean, tcmCmd*) ()
+#17 0x00000000280f35b0 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#18 0x00000000280dec59 in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#19 0x00000000376272db in TclInvokeStringCommand ()
+#20 0x000000003762bdd2 in TclNRRunCallbacks ()
+#21 0x000000003762dfff in TclEvalEx ()
+#22 0x000000003762eb53 in Tcl_CDNSEvalEx ()
+#23 0x000000003762ec13 in TclNREvalObjEx ()
+#24 0x00000000376e4925 in TclNREvalFile ()
+#25 0x0000000037642335 in TclNRSourceObjCmd ()
+#26 0x000000003762bdd2 in TclNRRunCallbacks ()
+#27 0x000000003762dfff in TclEvalEx ()
+#28 0x000000003762eb53 in Tcl_CDNSEvalEx ()
+#29 0x000000003762ec13 in TclNREvalObjEx ()
+#30 0x00000000376e4925 in TclNREvalFile ()
+#31 0x0000000037642335 in TclNRSourceObjCmd ()
+#32 0x000000003762bdd2 in TclNRRunCallbacks ()
+#33 0x000000003762dfff in TclEvalEx ()
+#34 0x000000003762eb53 in Tcl_CDNSEvalEx ()
+#35 0x000000003762ec13 in TclNREvalObjEx ()
+#36 0x00000000376e4925 in TclNREvalFile ()
+#37 0x0000000037642335 in TclNRSourceObjCmd ()
+#38 0x000000003762bdd2 in TclNRRunCallbacks ()
+#39 0x00000000376c9974 in Tcl_RecordAndEvalObj ()
+#40 0x00000000376c9ae9 in Tcl_RecordAndEval ()
+#41 0x000000000eb9825d in rdaEditCmdLineEnd(char*) ()
+#42 0x000000001fbc7081 in seConsole::sesMode::DoExecute(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, void*) ()
+#43 0x00000000218ab9b0 in Redline::EmacsMode::AcceptLine() ()
+#44 0x00000000218b3d71 in Redline::ModeCommand<Redline::EmacsMode>::CommandFnNoKeys(boost::function<void (Redline::EmacsMode&)> const&, Redline::Editor&) ()
+#45 0x00000000218c2c7b in boost::detail::function::void_function_obj_invoker2<boost::_bi::bind_t<boost::_bi::unspecified, boost::function<void (Redline::Editor&)>, boost::_bi::list1<boost::arg<1> > >, void, Redline::Editor&, Redline::KeyCombination const&>::invoke(boost::detail::function::function_buffer&, Redline::Editor&, Redline::KeyCombination const&) ()
+#46 0x00000000218c249c in Redline::Command::Run(Redline::Editor&, Redline::KeyCombination const&) const ()
+#47 0x00000000218a8a47 in Redline::Editor::Internals::Run(bool) ()
+#48 0x00000000377307de in FileHandlerEventProc ()
+#49 0x00000000376f0bc9 in Tcl_ServiceEvent ()
+#50 0x00000000376f0ed9 in Tcl_DoOneEvent ()
+#51 0x00007f0088d5950f in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
+#52 0x00007f00844d4f5b in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#53 0x00007f00844dc9ac in QCoreApplication::exec() () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#54 0x00007f0088d58e4a in TqApplication::exec() () from /Data/cad/cadence/installs/DDI231/INNOVUS231/tools.lnx86/innovus/bin/64bit/../../../lib/64bit/libtq.so
+#55 0x000000000eb7745c in edi_app_init(Tcl_Interp*) ()
+#56 0x00000000376eb60c in Tcl_MainEx ()
+#57 0x0000000007c0fcb4 in main ()
+========================================
+                gdb
+========================================
+Using: gdb
+/home/sh.15mjeE: Permission denied.
+[06/29 11:07:15     76s] 
+[06/29 11:07:15     76s] *** Memory Usage v#1 (Current mem = 2309.191M, initial mem = 848.578M) ***
+[06/29 11:07:15     76s] 
+[06/29 11:07:15     76s] *** Summary of all messages that are not suppressed in this session:
+[06/29 11:07:15     76s] Severity  ID               Count  Summary                                  
+[06/29 11:07:15     76s] WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+[06/29 11:07:15     76s] ERROR     IMPTS-432            2  Units must be set the before the design ...
+[06/29 11:07:15     76s] ERROR     IMPSYT-16038         1  The specified file '%s' could not be fou...
+[06/29 11:07:15     76s] WARNING   IMPOPT-3000          1  Buffer footprint is not defined or is an...
+[06/29 11:07:15     76s] WARNING   IMPOPT-3001          1  Inverter footprint is not defined or is ...
+[06/29 11:07:15     76s] ERROR     IMPIMEX-7008         1  No netlist files are found.              
+[06/29 11:07:15     76s] ERROR     TCLCMD-995          10  Can not open file '%s' for %s            
+[06/29 11:07:15     76s] WARNING   TECHLIB-1277         2  The %s '%s' has been defined for %s %s '...
+[06/29 11:07:15     76s] *** Message Summary: 5 warning(s), 14 error(s)
+[06/29 11:07:15     76s] 
+[06/29 11:07:15     76s] --- Ending "Innovus" (totcpu=0:01:17, real=0:28:34, mem=2309.2M) ---

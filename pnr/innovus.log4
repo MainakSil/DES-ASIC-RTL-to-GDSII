@@ -1,0 +1,1853 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.16-s070_1, built Fri Oct 31 16:29:58 PDT 2025
+Options:	
+Date:		Mon Jun 29 11:28:32 2026
+Host:		vlsilab.iitbbs.ac.in (x86_64 w/Linux 5.14.0-503.11.1.el9_5.x86_64) (20cores*28cpus*Intel(R) Core(TM) i7-14700 33792KB)
+OS:		Red Hat Enterprise Linux 9.5 (Plow)
+
+License:
+		[11:28:33.426386] Configured Lic search path (23.02-s006): 5280@14.139.1.126:1717@14.139.1.126
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 18251 / a8b026ea-3e26-49b5-809c-b042c50f03ea / evtpLarMHp
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> setLibraryUnit -cap 1ff
+<CMD> setLibraryUnit -time 1ps
+<CMD> set init_gnd_net VSS
+<CMD> set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm.syn.v
+<CMD> set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+<CMD> set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+<CMD> set init_top_cell des
+<CMD> set init_pwr_net VDD
+<CMD> setDesignMode -process 7
+##  Process: 7             (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+<CMD> init_design
+#% Begin Load MMMC data ... (date=06/29 11:34:17, mem=1899.8M)
+#% End Load MMMC data ... (date=06/29 11:34:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=1900.5M, current mem=1900.5M)
+typ_cap
+
+Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef ...
+
+Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef ...
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M1 pitch 36.
+[11:34:21.219835] Periodic Lic check successful
+[11:34:21.219850] Feature usage summary:
+[11:34:21.219851] Innovus_Impl_System
+[11:34:21.219851] Innovus_7nm_Opt
+
+(#124) This command "init_design" required an extra checkout of license invs_7nm.
+Additional license(s) checked out: 1 'invs_7nm' (Innovus_7nm_Opt; INVS07; 23.1) license(s)
+
+Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef ...
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Loading view definition file from /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_ccsa_211120' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_ccsa_220123' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 100310)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 142077)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120' 
+*** End library_loading (cpu=0.12min, real=0.12min, mem=489.0M, fe_cpu=0.55min, fe_real=5.93min, fe_mem=2308.8M) ***
+#% Begin Load netlist data ... (date=06/29 11:34:28, mem=1931.1M)
+*** Begin netlist parsing (mem=2308.8M) ***
+Created 202 new cells from 5 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm.syn.v'
+
+*** Memory Usage v#1 (Current mem = 2308.766M, initial mem = 848.578M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=2308.8M) ***
+#% End Load netlist data ... (date=06/29 11:34:28, total cpu=0:00:00.1, real=0:00:00.0, peak res=1955.6M, current mem=1955.6M)
+Set top cell to des.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI33xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI333xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI332xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI331xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI32xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI322xp5_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI321xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI31xp67_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI31xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI311xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI22xp5_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI22xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI22x1_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI222xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI221xp5_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI221x1_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI21xp5_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI21xp33_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI21x1_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+**WARN: (TECHLIB-606):	An inconsistency was found during interpolated library checking of library set 'typical_lib'. Cell 'AOI211xp5_ASAP7_75t_L' found in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120', but missing in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120'. This can potentially cause issues during delay calculation.
+Message <TECHLIB-606> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Hooked 202 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell des ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 54.
+** info: there are 425 modules.
+** info: there are 17509 stdCell insts.
+** info: there are 17509 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 2332.766M, initial mem = 848.578M) ***
+
+Honor LEF defined pitches for advanced node
+Start create_tracks
+Extraction setup Started for TopCell des 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/qrcTech/qrcTechFile_typ03_unscaledV02
+Generating auto layer map file.
+
+Completed (cpu: 0:00:03.4 real: 0:00:10.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: setup
+    RC-Corner Name        : typ_cap
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/qrcTech/qrcTechFile_typ03_unscaledV02'
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.sdc' ...
+Current (total cpu=0:00:37.0, real=0:06:08, peak res=27879.0M, current mem=1906.7M)
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+set_max_transition                                | 1              | 0              
+set_max_fanout                                    | 1              | 0              
+current_design                                    | 2              | 0              
+set_max_delay                                     | 1              | 0              
+create_clock                                      | 1              | 0              
+get_ports                                         | 2              | 0              
+------------------------------------------------------------------------------------
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:01.0, peak res=1939.3M, current mem=1939.3M)
+Current (total cpu=0:00:37.1, real=0:06:09, peak res=27879.0M, current mem=1939.3M)
+Total number of combinational cells: 169
+Total number of sequential cells: 33
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: HB1xp67_ASAP7_75t_L HB2xp67_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L
+Total number of usable buffers: 14
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L
+Total number of usable inverters: 21
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 2
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=06/29 11:34:41, mem=1957.6M)
+#% End Load MMMC data post ... (date=06/29 11:34:41, total cpu=0:00:00.0, real=0:00:00.0, peak res=1958.0M, current mem=1958.0M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+WARNING   TECHLIB-606        404  An inconsistency was found during interp...
+WARNING   TECHLIB-1277         2  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 407 warning(s), 0 error(s)
+
+<CMD> saveDesign des_Summer2026_init.inn
+#% Begin save design ... (date=06/29 11:34:42, mem=1971.1M)
+INFO: Current data have to be saved into a temporary db: 'des_Summer2026_init.inn.dat.tmp' first. It will be renamed to the correct name 'des_Summer2026_init.inn.dat' after the old db was deleted.
+% Begin Save ccopt configuration ... (date=06/29 11:34:42, mem=1972.2M)
+% End Save ccopt configuration ... (date=06/29 11:34:42, total cpu=0:00:00.0, real=0:00:00.0, peak res=1984.3M, current mem=1984.3M)
+% Begin Save netlist data ... (date=06/29 11:34:42, mem=1984.5M)
+Writing Binary DB to des_Summer2026_init.inn.dat.tmp/des.v.bin in single-threaded mode...
+% End Save netlist data ... (date=06/29 11:34:42, total cpu=0:00:00.0, real=0:00:00.0, peak res=1985.9M, current mem=1985.9M)
+Saving symbol-table file ...
+Saving congestion map file des_Summer2026_init.inn.dat.tmp/des.route.congmap.gz ...
+% Begin Save AAE data ... (date=06/29 11:34:43, mem=1987.8M)
+Saving AAE Data ...
+% End Save AAE data ... (date=06/29 11:34:43, total cpu=0:00:00.2, real=0:00:00.0, peak res=1992.2M, current mem=1992.2M)
+Saving preference file des_Summer2026_init.inn.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=06/29 11:34:44, mem=2007.6M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=06/29 11:34:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=2012.0M, current mem=2012.0M)
+*info - save blackBox cells to lef file des_Summer2026_init.inn.dat.tmp/des.bbox.lef
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=06/29 11:34:44, mem=2012.7M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=06/29 11:34:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=2013.3M, current mem=2013.3M)
+% Begin Save routing data ... (date=06/29 11:34:44, mem=2013.3M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2540.9M) ***
+% End Save routing data ... (date=06/29 11:34:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=2014.0M, current mem=2014.0M)
+Saving property file des_Summer2026_init.inn.dat.tmp/des.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2540.9M) ***
+Saving preRoute extracted patterns in file 'des_Summer2026_init.inn.dat.tmp/des.techData.gz' ...
+Saving preRoute extraction data in directory 'des_Summer2026_init.inn.dat.tmp/extraction/' ...
+% Begin Save power constraints data ... (date=06/29 11:34:45, mem=2026.5M)
+% End Save power constraints data ... (date=06/29 11:34:45, total cpu=0:00:00.0, real=0:00:00.0, peak res=2027.1M, current mem=2027.1M)
+typ_cap
+typ_cap
+typ_cap
+Generated self-contained design des_Summer2026_init.inn.dat.tmp
+typical_lib
+typ_cap
+#% End save design ... (date=06/29 11:34:46, total cpu=0:00:01.3, real=0:00:04.0, peak res=2060.4M, current mem=2060.4M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> floorPlan -site asap7sc7p5t -s 54.0 48.6 0 0 0 0
+
+Honor LEF defined pitches for advanced node
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> saveDesign des_Summer2026_fplan.inn
+#% Begin save design ... (date=06/29 11:47:13, mem=2172.9M)
+INFO: Current data have to be saved into a temporary db: 'des_Summer2026_fplan.inn.dat.tmp' first. It will be renamed to the correct name 'des_Summer2026_fplan.inn.dat' after the old db was deleted.
+% Begin Save ccopt configuration ... (date=06/29 11:47:13, mem=2172.9M)
+% End Save ccopt configuration ... (date=06/29 11:47:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=2173.4M, current mem=2173.4M)
+% Begin Save netlist data ... (date=06/29 11:47:13, mem=2173.4M)
+Writing Binary DB to des_Summer2026_fplan.inn.dat.tmp/des.v.bin in single-threaded mode...
+% End Save netlist data ... (date=06/29 11:47:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=2173.4M, current mem=2173.2M)
+Saving symbol-table file ...
+Saving congestion map file des_Summer2026_fplan.inn.dat.tmp/des.route.congmap.gz ...
+% Begin Save AAE data ... (date=06/29 11:47:14, mem=2173.2M)
+Saving AAE Data ...
+% End Save AAE data ... (date=06/29 11:47:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=2173.5M, current mem=2173.5M)
+Saving preference file des_Summer2026_fplan.inn.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=06/29 11:47:14, mem=2174.4M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=06/29 11:47:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=2174.4M, current mem=2174.4M)
+*info - save blackBox cells to lef file des_Summer2026_fplan.inn.dat.tmp/des.bbox.lef
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=06/29 11:47:14, mem=2174.4M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=06/29 11:47:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=2174.7M, current mem=2174.7M)
+% Begin Save routing data ... (date=06/29 11:47:14, mem=2174.7M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2890.6M) ***
+% End Save routing data ... (date=06/29 11:47:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=2174.7M, current mem=2174.7M)
+Saving property file des_Summer2026_fplan.inn.dat.tmp/des.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2890.6M) ***
+Saving preRoute extracted patterns in file 'des_Summer2026_fplan.inn.dat.tmp/des.techData.gz' ...
+Saving preRoute extraction data in directory 'des_Summer2026_fplan.inn.dat.tmp/extraction/' ...
+% Begin Save power constraints data ... (date=06/29 11:47:14, mem=2176.2M)
+% End Save power constraints data ... (date=06/29 11:47:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=2176.2M, current mem=2176.2M)
+typ_cap
+typ_cap
+typ_cap
+Generated self-contained design des_Summer2026_fplan.inn.dat.tmp
+typical_lib
+typ_cap
+#% End save design ... (date=06/29 11:47:15, total cpu=0:00:00.8, real=0:00:02.0, peak res=2180.6M, current mem=2180.6M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> clearGlobalNets
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+<CMD> addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 43.2 -inRowOffset 5.4
+Estimated cell power/ground rail width = 0.033 um
+For 360 new insts, Inserted 360 well-taps <TAPCELL_ASAP7_75t_L> cells (prefix WELLTAP).
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { M1 M6 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1 M6 } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1 }
+#% Begin sroute (date=06/29 11:48:15, mem=2226.7M)
+#% End sroute (date=06/29 11:48:15, total cpu=0:00:00.0, real=0:00:00.0, peak res=2226.7M, current mem=2226.0M)
+<CMD> setAddStripeMode -stacked_via_bottom_layer M1 -stacked_via_top_layer M2 -allow_nonpreferred_dir stripe
+Stripes will not use preferred direction when jogging to make target( stripe ) connections
+<CMD> setViaGenMode -ignore_viarule_enclosure true
+
+viaInitial starts at Mon Jun 29 11:48:15 2026
+viaInitial ends at Mon Jun 29 11:48:15 2026
+Setting -ignore_viarule_enclosure to 1. ViaGen will ignore enclosures defined in VIARULE GENERATE, but only use those defined in cut layer.
+<CMD> addStripe -direction horizontal -set_to_set_distance 0.54 -spacing 0.252 -ybottom_offset -0.009 -ytop_offset -0.009 -width 0.018 -nets {VDD VSS} -layer M2
+#% Begin addStripe (date=06/29 11:48:15, mem=2227.1M)
+**WARN: (IMPPP-4022):	Option "-ybottom_offset" is obsolete and has been replaced by "-start_offset". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-start_offset"..
+**WARN: (IMPPP-4022):	Option "-ytop_offset" is obsolete and has been replaced by "-stop_offset". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-stop_offset"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M2 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 3034.6M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_1' instance was increased to (5.400000 0.000000) (5.508000 0.279000) because the VSS pin (5.400000 0.261000) (5.508000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_1' instance was increased to (5.400000 -0.009000) (5.508000 0.279000) because the VDD pin (5.400000 -0.009000) (5.508000 0.009000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_2' instance was increased to (48.599998 0.000000) (48.708000 0.279000) because the VSS pin (48.599998 0.261000) (48.708000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_2' instance was increased to (48.599998 -0.009000) (48.708000 0.279000) because the VDD pin (48.599998 -0.009000) (48.708000 0.009000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_3' instance was increased to (5.400000 0.261000) (5.508000 0.540000) because the VSS pin (5.400000 0.261000) (5.508000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_3' instance was increased to (5.400000 0.261000) (5.508000 0.549000) because the VDD pin (5.400000 0.531000) (5.508000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_4' instance was increased to (48.599998 0.261000) (48.708000 0.540000) because the VSS pin (48.599998 0.261000) (48.708000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_4' instance was increased to (48.599998 0.261000) (48.708000 0.549000) because the VDD pin (48.599998 0.531000) (48.708000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_5' instance was increased to (5.400000 0.540000) (5.508000 0.819000) because the VSS pin (5.400000 0.801000) (5.508000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_5' instance was increased to (5.400000 0.531000) (5.508000 0.819000) because the VDD pin (5.400000 0.531000) (5.508000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_6' instance was increased to (48.599998 0.540000) (48.708000 0.819000) because the VSS pin (48.599998 0.801000) (48.708000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_6' instance was increased to (48.599998 0.531000) (48.708000 0.819000) because the VDD pin (48.599998 0.531000) (48.708000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_7' instance was increased to (5.400000 0.801000) (5.508000 1.080000) because the VSS pin (5.400000 0.801000) (5.508000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_7' instance was increased to (5.400000 0.801000) (5.508000 1.089000) because the VDD pin (5.400000 1.071000) (5.508000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_8' instance was increased to (48.599998 0.801000) (48.708000 1.080000) because the VSS pin (48.599998 0.801000) (48.708000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_8' instance was increased to (48.599998 0.801000) (48.708000 1.089000) because the VDD pin (48.599998 1.071000) (48.708000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_9' instance was increased to (5.400000 1.080000) (5.508000 1.359000) because the VSS pin (5.400000 1.341000) (5.508000 1.359000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_9' instance was increased to (5.400000 1.071000) (5.508000 1.359000) because the VDD pin (5.400000 1.071000) (5.508000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_10' instance was increased to (48.599998 1.080000) (48.708000 1.359000) because the VSS pin (48.599998 1.341000) (48.708000 1.359000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_10' instance was increased to (48.599998 1.071000) (48.708000 1.359000) because the VDD pin (48.599998 1.071000) (48.708000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (EMS-27):	Message (IMPPP-133) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+  -allow_nonpreferred_dir { stripe }
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+*** Stripes and vias are being generated (current mem: 3034.570)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 3034.570M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 20% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 40% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 50% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 60% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 70% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 80% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 90% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+  stripes and vias are completed(total cpu time: 0:00:00.0, peak mem: 3034.570M)
+Stripe generation is complete.
+addStripe created 181 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M2   |       181      |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=06/29 11:48:16, total cpu=0:00:00.1, real=0:00:01.0, peak res=2230.5M, current mem=2230.5M)
+<CMD> addStripe -direction horizontal -set_to_set_distance 0.54 -spacing 0.252 -ybottom_offset -0.009 -ytop_offset -0.009 -width 0.018 -nets {VDD VSS} -layer M1
+#% Begin addStripe (date=06/29 11:48:16, mem=2230.5M)
+**WARN: (IMPPP-4022):	Option "-ybottom_offset" is obsolete and has been replaced by "-start_offset". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-start_offset"..
+**WARN: (IMPPP-4022):	Option "-ytop_offset" is obsolete and has been replaced by "-stop_offset". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-stop_offset"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+Initialize fgc environment(mem: 3034.6M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_1' instance was increased to (5.400000 0.000000) (5.508000 0.279000) because the VSS pin (5.400000 0.261000) (5.508000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_1' instance was increased to (5.400000 -0.009000) (5.508000 0.279000) because the VDD pin (5.400000 -0.009000) (5.508000 0.009000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_2' instance was increased to (48.599998 0.000000) (48.708000 0.279000) because the VSS pin (48.599998 0.261000) (48.708000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_2' instance was increased to (48.599998 -0.009000) (48.708000 0.279000) because the VDD pin (48.599998 -0.009000) (48.708000 0.009000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_3' instance was increased to (5.400000 0.261000) (5.508000 0.540000) because the VSS pin (5.400000 0.261000) (5.508000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_3' instance was increased to (5.400000 0.261000) (5.508000 0.549000) because the VDD pin (5.400000 0.531000) (5.508000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_4' instance was increased to (48.599998 0.261000) (48.708000 0.540000) because the VSS pin (48.599998 0.261000) (48.708000 0.279000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_4' instance was increased to (48.599998 0.261000) (48.708000 0.549000) because the VDD pin (48.599998 0.531000) (48.708000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_5' instance was increased to (5.400000 0.540000) (5.508000 0.819000) because the VSS pin (5.400000 0.801000) (5.508000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_5' instance was increased to (5.400000 0.531000) (5.508000 0.819000) because the VDD pin (5.400000 0.531000) (5.508000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_6' instance was increased to (48.599998 0.540000) (48.708000 0.819000) because the VSS pin (48.599998 0.801000) (48.708000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_6' instance was increased to (48.599998 0.531000) (48.708000 0.819000) because the VDD pin (48.599998 0.531000) (48.708000 0.549000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_7' instance was increased to (5.400000 0.801000) (5.508000 1.080000) because the VSS pin (5.400000 0.801000) (5.508000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_7' instance was increased to (5.400000 0.801000) (5.508000 1.089000) because the VDD pin (5.400000 1.071000) (5.508000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_8' instance was increased to (48.599998 0.801000) (48.708000 1.080000) because the VSS pin (48.599998 0.801000) (48.708000 0.819000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_8' instance was increased to (48.599998 0.801000) (48.708000 1.089000) because the VDD pin (48.599998 1.071000) (48.708000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_9' instance was increased to (5.400000 1.080000) (5.508000 1.359000) because the VSS pin (5.400000 1.341000) (5.508000 1.359000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_9' instance was increased to (5.400000 1.071000) (5.508000 1.359000) because the VDD pin (5.400000 1.071000) (5.508000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_10' instance was increased to (48.599998 1.080000) (48.708000 1.359000) because the VSS pin (48.599998 1.341000) (48.708000 1.359000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (IMPPP-133):	The block boundary of the 'WELLTAP_10' instance was increased to (48.599998 1.071000) (48.708000 1.359000) because the VDD pin (48.599998 1.071000) (48.708000 1.089000) on layer M1 was outside the original block boundary.
+Type 'man IMPPP-133' for more detail.
+**WARN: (EMS-27):	Message (IMPPP-133) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+  -allow_nonpreferred_dir { stripe }
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+*** Stripes and vias are being generated (current mem: 3034.570)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 3034.570M)
+Start to generate vias.
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M1 & M2 at (0.00, -0.01) (54.00, 0.01).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M1 & M2 at (0.00, 0.26) (54.00, 0.28).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer M1 & M2 at (0.00, 0.53) (54.00, 0.55).
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 20% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 40% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 50% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 60% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 70% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 80% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 90% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+  stripes and vias are completed(total cpu time: 0:00:00.0, peak mem: 3034.570M)
+Stripe generation is complete.
+addStripe created 181 wires.
+ViaGen created 362 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M1   |       181      |       NA       |
+|   V1   |       362      |        0       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=06/29 11:48:16, total cpu=0:00:00.0, real=0:00:00.0, peak res=2232.3M, current mem=2232.3M)
+<CMD> setViaGenMode -ignore_viarule_enclosure true
+Setting -ignore_viarule_enclosure to 1. ViaGen will ignore enclosures defined in VIARULE GENERATE, but only use those defined in cut layer.
+<CMD> editPowerVia -skip_via_on_pin {Pad Block Cover Standardcell} -skip_via_on_wire_shape {Ring Blockring Corewire Blockwire Iowire Padring Fillwire Noshape} -bottom_layer M1 -add_vias 1 -orthogonal_only 0 -top_layer M2
+#% Begin editPowerVia (date=06/29 11:48:16, mem=2232.3M)
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+ViaGen engine uses clone via flow to insert special vias. Open fgc and cce engine automatically.
+
+Multi Thread begin for M1 horizontal
+Clone Via Engine is enabled.
+Viagen work status, 5% finished
+Viagen work status, 10% finished
+Viagen work status, 15% finished
+Viagen work status, 20% finished
+Viagen work status, 25% finished
+Viagen work status, 30% finished
+Viagen work status, 35% finished
+Viagen work status, 40% finished
+Viagen work status, 45% finished
+Viagen work status, 50% finished
+Viagen work status, 55% finished
+Viagen work status, 60% finished
+Viagen work status, 65% finished
+Viagen work status, 70% finished
+Viagen work status, 75% finished
+Viagen work status, 80% finished
+Viagen work status, 85% finished
+Viagen work status, 90% finished
+Viagen work status, 95% finished
+Viagen work status, 100% finished
+Multi Thread begin for M2 horizontal
+Viagen work status, 5% finished
+Viagen work status, 10% finished
+Viagen work status, 15% finished
+Viagen work status, 20% finished
+Viagen work status, 25% finished
+Viagen work status, 30% finished
+Viagen work status, 35% finished
+Viagen work status, 40% finished
+Viagen work status, 45% finished
+Viagen work status, 50% finished
+Viagen work status, 55% finished
+Viagen work status, 60% finished
+Viagen work status, 65% finished
+Viagen work status, 70% finished
+Viagen work status, 75% finished
+Viagen work status, 80% finished
+Viagen work status, 85% finished
+Viagen work status, 90% finished
+Viagen work status, 95% finished
+Viagen work status, 100% finished
+ViaGen created 181 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V1   |       181      |        0       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End editPowerVia (date=06/29 11:48:16, total cpu=0:00:00.3, real=0:00:00.0, peak res=2232.7M, current mem=2232.7M)
+<CMD> setViaGenMode -viarule_preference { M6_M5widePWR1p152 M5_M4widePWR0p864 M4_M3widePWR0p864 M3_M2widePWR0p936 M3_M2widePWR }
+<CMD> addStripe -extend_to design_boundary -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 7.92 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.378 -xleft_offset 4.509 -merge_stripes_value 0.16 -layer M3 -width 0.09 -nets {VDD VSS} -stacked_via_bottom_layer M2
+#% Begin addStripe (date=06/29 11:48:16, mem=2232.7M)
+**WARN: (IMPPP-4022):	Option "-stacked_via_top_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_top_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_top_layer layerName"..
+**WARN: (IMPPP-4022):	Option "-xleft_offset" is obsolete and has been replaced by "-start_offset". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-start_offset"..
+**WARN: (IMPPP-4022):	Option "-stacked_via_bottom_layer" is obsolete and has been replaced by "setAddStripeMode -stacked_via_bottom_layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "setAddStripeMode -stacked_via_bottom_layer layerName"..
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M3 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 3034.6M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+  -allow_nonpreferred_dir { stripe }
+*** Stripes and vias are being generated (current mem: 3034.570)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 3034.570M)
+Start to generate vias.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M2 & M3, size: 0.09 x 0.02 at (4.57, 0.00).
+Type 'man IMPPP-610' for more detail.
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M2 & M3, size: 0.09 x 0.02 at (4.57, 48.60).
+Type 'man IMPPP-610' for more detail.
+    Completing 10% (cpu time: 0:00:00.1, peak mem: 3034.570M)
+    Completing 20% (cpu time: 0:00:00.1, peak mem: 3034.570M)
+**WARN: (IMPPP-610):	The power planner failed to find a matching VIARULE, so no via was created between layer: M2 & M3, size: 0.09 x 0.02 at (12.46, 0.00).
+Type 'man IMPPP-610' for more detail.
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 40% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 50% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 60% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 70% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 80% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 90% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+  stripes and vias are completed(total cpu time: 0:00:00.3, peak mem: 3034.570M)
+Stripe generation is complete.
+addStripe created 14 wires.
+ViaGen created 1253 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V2   |      1253      |        0       |
+|   M3   |       14       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=06/29 11:48:16, total cpu=0:00:00.3, real=0:00:00.0, peak res=2232.7M, current mem=2232.7M)
+<CMD> setAddStripeMode -max_via_size { Stripe 100 100 100 } -via_using_exact_crossover_size true -stacked_via_bottom_layer M3 -stacked_via_top_layer M4
+<CMD> addStripe -extend_to design_boundary -direction horizontal -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 15.36 -skip_via_on_pin Standardcell -spacing 0.504 -start_offset 7.671 -merge_stripes_value 0.16 -layer M4 -width 0.12 -nets {VDD VSS}
+#% Begin addStripe (date=06/29 11:48:16, mem=2232.7M)
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M4 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 3034.6M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+  -allow_nonpreferred_dir { stripe }
+*** Stripes and vias are being generated (current mem: 3034.570)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 3034.570M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+  stripes and vias are completed(total cpu time: 0:00:00.0, peak mem: 3034.570M)
+Stripe generation is complete.
+addStripe created 6 wires.
+ViaGen created 42 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V3   |       42       |        0       |
+|   M4   |        6       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=06/29 11:48:16, total cpu=0:00:00.0, real=0:00:00.0, peak res=2232.9M, current mem=2232.9M)
+<CMD> setAddStripeMode -stacked_via_bottom_layer M4 -stacked_via_top_layer M5
+<CMD> setViaGenMode -bar_cut_orientation horizontal
+<CMD> addStripe -extend_to design_boundary -direction vertical -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 15.36 -skip_via_on_pin Standardcell -spacing 0.504 -start_offset 5.286 -merge_stripes_value 0.16 -layer M5 -width 0.216 -nets {VDD VSS}
+#% Begin addStripe (date=06/29 11:48:16, mem=2232.9M)
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M5 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 3034.6M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+  -allow_nonpreferred_dir { stripe }
+*** Stripes and vias are being generated (current mem: 3034.570)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 3034.570M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 20% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 30% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+  stripes and vias are completed(total cpu time: 0:00:00.0, peak mem: 3034.570M)
+Stripe generation is complete.
+addStripe created 8 wires.
+ViaGen created 24 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V4   |       24       |        0       |
+|   M5   |        8       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=06/29 11:48:16, total cpu=0:00:00.0, real=0:00:00.0, peak res=2232.9M, current mem=2232.9M)
+<CMD> setAddStripeMode -stacked_via_bottom_layer M5 -stacked_via_top_layer M6
+<CMD> setViaGenMode -bar_cut_orientation vertical
+<CMD> addStripe -extend_to design_boundary -direction horizontal -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 14.08 -skip_via_on_pin Standardcell -spacing 0.672 -start_offset 9.602 -merge_stripes_value 0.16 -layer M6 -width 0.288 -nets {VDD VSS}
+#% Begin addStripe (date=06/29 11:48:16, mem=2232.9M)
+setAddStripeMode -use_exact_spacing true is set by default for this design under 20nm node. 
+Setting -use_cce to 1. ViaGen will call CCE to colorize via and may re-colorize surrounding vias to resolve color conflict within the local range.
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+setViaGenMode -optimize_cross_via true is set by default for this design of 12nm node or under. 
+Setting -disable_via_merging to 1. ViaGen disables via merging with the via created earlier.
+setViaGenMode -disable_via_merging true is set by default for this design of 12nm node or under. 
+Setting -keep_existing_via to 1. ViaGen will keep the existing vias.
+setViaGenMode -keep_existing_via 1 is set by default for this design of 12nm node or under. 
+
+**WARN: (IMPPP-2030):	Layer M6 allows on grid right way wires only. Snap wire center to routing grid automatically.
+Initialize fgc environment(mem: 3034.6M) ...  done(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3034.6M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  -use_exact_spacing  1
+  -allow_nonpreferred_dir { stripe }
+*** Stripes and vias are being generated (current mem: 3034.570)***
+Start to generate stripes.
+Stripe generate is completed (cpu time: 0:00:00.0, peak mem: 3034.570M)
+Start to generate vias.
+    Completing 10% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+    Completing 100% (cpu time: 0:00:00.0, peak mem: 3034.570M)
+  stripes and vias are completed(total cpu time: 0:00:00.0, peak mem: 3034.570M)
+Stripe generation is complete.
+addStripe created 6 wires.
+ViaGen created 24 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   V5   |       24       |        0       |
+|   M6   |        6       |       NA       |
++--------+----------------+----------------+
+setAddStripeMode -use_exact_spacing is reset to default value: false.
+setViaGenMode -disable_via_merging is reset to default value: false.
+setViaGenMode -keep_existing_via is reset to default value: 0.
+setViaGenMode -optimize_cross_via is reset to default value: false.
+#% End addStripe (date=06/29 11:48:16, total cpu=0:00:00.0, real=0:00:00.0, peak res=2232.9M, current mem=2232.9M)
+couldn't read file "scripts/plce.tcl": no such file or directory
+<CMD> setDesignMode -topRoutingLayer 6
+<CMD> setPlaceMode -place_global_place_io_pins true
+<CMD> set_interactive_constraint_modes {setup_con}
+<CMD> set_false_path -from [get_ports]
+<CMD> set_false_path -to [get_ports]
+<CMD> set_interactive_constraint_modes {}
+<CMD> defOut des_Summer2026.unopt.def
+Writing DEF file 'des_Summer2026.unopt.def', current time is Mon Jun 29 11:48:29 2026 ...
+unitPerMicron=1000, dbgMicronPerDBU=0.001000, unitPerDBU=1.000000
+DEF file 'des_Summer2026.unopt.def' is written, current time is Mon Jun 29 11:48:29 2026 ...
+<CMD> place_opt_design
+#% Begin place_opt_design (date=06/29 11:48:29, mem=2240.8M)
+**INFO: User settings:
+setDesignMode -process                    7
+setDesignMode -topRoutingLayer            6
+setExtractRCMode -coupling_c_th           3
+setExtractRCMode -relative_c_th           0.03
+setExtractRCMode -total_c_th              5
+setDelayCalMode -engine                   aae
+setPlaceMode -place_global_place_io_pins  true
+setAnalysisMode -analysisType             single
+
+*** place_opt_design #1 [begin] () : totSession cpu/real = 0:01:06.2/0:19:50.6 (0.1), mem = 3046.7M
+No user sequential activity specified, applying default sequential activity of "0.2" for Dynamic Power reporting.
+'set_default_switching_activity' finished successfully.
+*** Starting GigaPlace ***
+-earlyGlobalBlockTracks {}                # string, default="", private
+-earlyGlobalCapacityScreen {}             # string, default="", private
+There is no track adjustment
+Starting place_opt_design V2 flow
+*** GlobalPlace #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:06.3/0:19:50.7 (0.1), mem = 3047.5M
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 820 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.6) ***
+Effort level <high> specified for tdgp_reg2reg_default path_group
+Did not delete 360 physical insts as they were marked preplaced.
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+Extracting standard cell pins and blockage ...... 
+**WARN: (IMPTR-2104):	Layer M10: Pitch=80 is less than min width=40 + min spacing=2000.
+**ERROR: (IMPTR-2101):	Layer M10: Pitch=720x9 is still less than min width=2000 + min spacing=40.
+**WARN: (IMPTR-2108):	For layer M10, the gaps of 606 out of 606 tracks are narrower than 2.040um (space 2.000 + width 0.040).
+Type 'man IMPTR-2108' for more detail.
+ As a result, your trialRoute congestion could be incorrect.
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+No user-set net weight.
+Net fanout histogram:
+2		: 9834 (58.2%) nets
+3		: 3188 (18.9%) nets
+4     -	14	: 3851 (22.8%) nets
+15    -	39	: 10 (0.1%) nets
+40    -	79	: 6 (0.0%) nets
+80    -	159	: 0 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 1 (0.0%) nets
+1280  -	2559	: 1 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Scan chains were not defined.
+#std cell=17129 (360 fixed + 16769 movable) #buf cell=0 #inv cell=3864 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=16891 #term=53525 #term/net=3.17, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=186
+stdCell: 17129 single + 0 double + 0 multi
+Total standard cell length = 6.1471 (mm), area = 0.0017 (mm^2)
+Average module density = 0.631.
+Density for the design = 0.631.
+       = stdcell_area 113115 sites (1649 um^2) / alloc_area 179280 sites (2614 um^2).
+Pin Density = 0.2974.
+            = total # of pins 53525 / total area 180000.
+[spp] 0
+Clock gating cells determined by native netlist tracing.
+=== lastAutoLevel = 9 
+Iteration  1: Total net bbox = 3.565e-09 (2.11e-09 1.46e-09)
+              Est.  stn bbox = 3.702e-09 (2.19e-09 1.51e-09)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3077.2M
+Iteration  2: Total net bbox = 3.565e-09 (2.11e-09 1.46e-09)
+              Est.  stn bbox = 3.702e-09 (2.19e-09 1.51e-09)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3078.2M
+*** Finished SKP initialization (cpu=0:00:02.6, real=0:00:03.0)***
+SKP will use view:
+  setup
+Iteration  3: Total net bbox = 1.352e+03 (6.08e+02 7.44e+02)
+              Est.  stn bbox = 1.437e+03 (6.46e+02 7.91e+02)
+              cpu = 0:00:03.0 real = 0:00:03.0 mem = 3304.0M
+Iteration  4: Total net bbox = 3.107e+04 (1.59e+04 1.51e+04)
+              Est.  stn bbox = 3.386e+04 (1.73e+04 1.66e+04)
+              cpu = 0:00:02.4 real = 0:00:03.0 mem = 3342.4M
+Iteration  5: Total net bbox = 3.107e+04 (1.59e+04 1.51e+04)
+              Est.  stn bbox = 3.386e+04 (1.73e+04 1.66e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3342.4M
+Iteration  6: Total net bbox = 3.034e+04 (1.58e+04 1.45e+04)
+              Est.  stn bbox = 3.315e+04 (1.72e+04 1.60e+04)
+              cpu = 0:00:01.3 real = 0:00:01.0 mem = 3342.4M
+[NR-eGR] Started Early Global Route kernel ( Curr Mem: 3.14 MB )
+Iteration  7: Total net bbox = 3.203e+04 (1.73e+04 1.48e+04)
+              Est.  stn bbox = 3.488e+04 (1.87e+04 1.62e+04)
+              cpu = 0:00:00.3 real = 0:00:01.0 mem = 3342.4M
+Iteration  8: Total net bbox = 3.203e+04 (1.73e+04 1.48e+04)
+              Est.  stn bbox = 3.488e+04 (1.87e+04 1.62e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3342.4M
+Iteration  9: Total net bbox = 3.922e+04 (2.06e+04 1.86e+04)
+              Est.  stn bbox = 4.278e+04 (2.24e+04 2.04e+04)
+              cpu = 0:00:01.3 real = 0:00:01.0 mem = 3342.4M
+Iteration 10: Total net bbox = 3.922e+04 (2.06e+04 1.86e+04)
+              Est.  stn bbox = 4.278e+04 (2.24e+04 2.04e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3342.4M
+Iteration 11: Total net bbox = 4.048e+04 (2.15e+04 1.89e+04)
+              Est.  stn bbox = 4.413e+04 (2.33e+04 2.08e+04)
+              cpu = 0:00:00.7 real = 0:00:01.0 mem = 3342.4M
+Iteration 12: Total net bbox = 4.048e+04 (2.15e+04 1.89e+04)
+              Est.  stn bbox = 4.413e+04 (2.33e+04 2.08e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3342.4M
+Iteration 13: Total net bbox = 4.135e+04 (2.21e+04 1.93e+04)
+              Est.  stn bbox = 4.501e+04 (2.39e+04 2.11e+04)
+              cpu = 0:00:01.4 real = 0:00:01.0 mem = 3342.4M
+Iteration 14: Total net bbox = 4.135e+04 (2.21e+04 1.93e+04)
+              Est.  stn bbox = 4.501e+04 (2.39e+04 2.11e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3342.4M
+Finished Global Placement (cpu=0:00:10.8, real=0:00:12.0, mem=3342.4M)
+Keep Tdgp Graph and DB for later use
+Info: 0 clock gating cells identified, 0 (on average) moved 0/7
+Begin: Reorder Scan Chains
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+End: Reorder Scan Chains
+*** Starting refinePlace (0:01:18 mem=3342.4M) ***
+Total net bbox length = 4.137e+04 (2.209e+04 1.928e+04) (ext = 5.081e+02)
+Move report: Detail placement moves 16760 insts, mean move: 0.19 um, max move: 5.07 um 
+	Max move on inst (uk_K_r7_reg_31_): (9.06, 27.00) --> (8.86, 22.14)
+	Runtime: CPU: 0:00:01.5 REAL: 0:00:02.0 MEM: 3310.4MB
+Summary Report:
+Instances move: 16760 (out of 16769 movable)
+Instances flipped: 7
+Mean displacement: 0.19 um
+Max displacement: 5.07 um (Instance: uk_K_r7_reg_31_) (9.058, 27.005) -> (8.856, 22.14)
+	Length: 20 sites, height: 1 rows, site name: asap7sc7p5t, cell type: DFFHQNx1_ASAP7_75t_L
+Physical-only instances move: 0 (out of 0 movable physical-only)
+Total net bbox length = 3.852e+04 (1.931e+04 1.921e+04) (ext = 5.014e+02)
+Runtime: CPU: 0:00:01.5 REAL: 0:00:02.0 MEM: 3310.4MB
+*** Finished refinePlace (0:01:20 mem=3310.4M) ***
+*** Finished Initial Placement (cpu=0:00:12.5, real=0:00:14.0, mem=3310.4M) ***
+Starting IO pin assignment...
+The design is not routed. Using placement based method for pin assignment.
+Completed IO pin assignment.
+Effort level <high> specified for tdgp_reg2reg_default path_group
+
+*** Start incrementalPlace ***
+No Views given, use default active views for adaptive view pruning
+Active views:
+  setup
+[NR-eGR] Early global route reroute all routable nets
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] M1 has single uniform track structure
+[NR-eGR] M2 has non-uniform track structure
+[NR-eGR] M3 has single uniform track structure
+[NR-eGR] M4 has single uniform track structure
+[NR-eGR] M5 has single uniform track structure
+[NR-eGR] M6 has single uniform track structure
+[NR-eGR] M7 has single uniform track structure
+[NR-eGR] M8 has single uniform track structure
+[NR-eGR] M9 has single uniform track structure
+[NR-eGR] Pad has single uniform track structure
+[NR-eGR] Read 3444 PG shapes
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Bump Blockages     : 0
+[NR-eGR] #Instance Blockages : 6094
+[NR-eGR] #PG Blockages       : 3444
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] #prerouted nets         : 0
+[NR-eGR] #prerouted special nets : 0
+[NR-eGR] #prerouted wires        : 0
+[NR-eGR] Read 16891 nets ( ignored 0 )
+[NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Rule name: (Default)  Nets: 16891
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 16891 net(s) in layer range [2, 6]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 4.293324e+04um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer             (1-0)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]      M1 ( 1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M2 ( 2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M3 ( 3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M4 ( 4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M5 ( 5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M6 ( 6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+[NR-eGR] Finished Early Global Route kernel ( CPU: 0.11 sec, Real: 0.11 sec, Curr Mem: 3.13 MB )
+Early Global Route congestion estimation runtime: 0.12 seconds, mem = 3310.4M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR] Connected 0 must-join pins/ports (post-process)
+[NR-eGR] Total eGR-routed clock nets wire length: 1324um, number of vias: 5308
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR]              Length (um)    Vias 
+[NR-eGR] ---------------------------------
+[NR-eGR]  M1   (1V)             0   53197 
+[NR-eGR]  M2   (2H)         18159   77016 
+[NR-eGR]  M3   (3V)         21857    2815 
+[NR-eGR]  M4   (4H)          4666     198 
+[NR-eGR]  M5   (5V)           657      10 
+[NR-eGR]  M6   (6H)            35       0 
+[NR-eGR]  M7   (7V)             0       0 
+[NR-eGR]  M8   (8H)             0       0 
+[NR-eGR]  M9   (9V)             0       0 
+[NR-eGR]  Pad  (10H)            0       0 
+[NR-eGR] ---------------------------------
+[NR-eGR]       Total        45373  133236 
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total half perimeter of net bounding box: 38495um
+[NR-eGR] Total length: 45373um, number of vias: 133236
+[NR-eGR] --------------------------------------------------------------------------
+Early Global Route wiring runtime: 0.20 seconds, mem = 3326.4M
+0 delay mode for cte disabled.
+
+*** Finished incrementalPlace (cpu=0:00:00.3, real=0:00:01.0)***
+Tdgp not enabled or already been cleared! skip clearing
+**placeDesign ... cpu = 0: 0:14, real = 0: 0:17, mem = 3310.4M **
+AAE DB initialization (MEM=2396.734375 CPU=0:00:00.0 REAL=0:00:00.0) 
+*** GlobalPlace #1 [finish] (place_opt_design #1) : cpu/real = 0:00:14.3/0:00:17.0 (0.8), totSession cpu/real = 0:01:20.6/0:20:07.8 (0.1), mem = 3312.4M
+Enable CTE adjustment.
+Enable Layer aware incrSKP.
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 2399.6M, totSessionCpu=0:01:21 **
+GigaOpt running with 1 threads.
+*** InitOpt #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:20.6/0:20:07.8 (0.1), mem = 3312.4M
+**INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+AAE DB initialization (MEM=2408.285156 CPU=0:00:00.0 REAL=0:00:00.0) 
+Info: Using SynthesisEngine executable '/Data/cad/cadence/installs/DDI231/INNOVUS231/bin/innovus_'.
+      SynthesisEngine workers will not check out additional licenses.
+**INFO: Using Advanced Metric Collection system.
+**optDesign ... cpu = 0:00:01, real = 0:00:21, mem = 2411.4M, totSessionCpu=0:01:22 **
+#optDebug: { P: 7 W: 2195 FE: standard PE: none LDR: 1}
+*** optDesign -preCTS ***
+DRC Margin: user margin 0.0; extra margin 0.2
+Setup Target Slack: user slack 0; extra slack 0.0
+Hold Target Slack: user slack 0
+**WARN: (IMPOPT-3195):	Analysis mode has changed.
+Type 'man IMPOPT-3195' for more detail.
+Multi-VT timing optimization disabled based on library information.
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+[NR-eGR] Started Early Global Route ( Curr Mem: 3.17 MB )
+[NR-eGR] Started Early Global Route kernel ( Curr Mem: 3.17 MB )
+[NR-eGR] Early global route reroute all routable nets
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] M1 has single uniform track structure
+[NR-eGR] M2 has non-uniform track structure
+[NR-eGR] M3 has single uniform track structure
+[NR-eGR] M4 has single uniform track structure
+[NR-eGR] M5 has single uniform track structure
+[NR-eGR] M6 has single uniform track structure
+[NR-eGR] M7 has single uniform track structure
+[NR-eGR] M8 has single uniform track structure
+[NR-eGR] M9 has single uniform track structure
+[NR-eGR] Pad has single uniform track structure
+[NR-eGR] Read 3444 PG shapes
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Bump Blockages     : 0
+[NR-eGR] #Instance Blockages : 6094
+[NR-eGR] #PG Blockages       : 3444
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] #prerouted nets         : 0
+[NR-eGR] #prerouted special nets : 0
+[NR-eGR] #prerouted wires        : 0
+[NR-eGR] Read 16891 nets ( ignored 0 )
+[NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Rule name: (Default)  Nets: 16891
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 16891 net(s) in layer range [2, 6]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 4.316166e+04um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer             (1-0)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]      M1 ( 1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M2 ( 2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M3 ( 3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M4 ( 4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M5 ( 5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M6 ( 6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+[NR-eGR] Connected 0 must-join pins/ports (post-process)
+[NR-eGR] Total eGR-routed clock nets wire length: 1407um, number of vias: 5269
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR]              Length (um)    Vias 
+[NR-eGR] ---------------------------------
+[NR-eGR]  M1   (1V)             0   53197 
+[NR-eGR]  M2   (2H)         18253   76333 
+[NR-eGR]  M3   (3V)         21728    2934 
+[NR-eGR]  M4   (4H)          4879     216 
+[NR-eGR]  M5   (5V)           699      12 
+[NR-eGR]  M6   (6H)            47       0 
+[NR-eGR]  M7   (7V)             0       0 
+[NR-eGR]  M8   (8H)             0       0 
+[NR-eGR]  M9   (9V)             0       0 
+[NR-eGR]  Pad  (10H)            0       0 
+[NR-eGR] ---------------------------------
+[NR-eGR]       Total        45605  132692 
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total half perimeter of net bounding box: 38495um
+[NR-eGR] Total length: 45605um, number of vias: 132692
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Finished Early Global Route kernel ( CPU: 0.31 sec, Real: 0.32 sec, Curr Mem: 3.19 MB )
+[NR-eGR] Finished Early Global Route ( CPU: 0.31 sec, Real: 0.32 sec, Curr Mem: 3.18 MB )
+Extraction called for design 'des' of instances=17129 and nets=16893 using extraction engine 'preRoute' .
+PreRoute RC Extraction called for design des.
+RC Extraction called in multi-corner(1) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using Quantus QRC technology file ...
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.2  Real Time: 0:00:00.0  MEM: 3367.082M)
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: des
+# Design Mode: 7nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=2501.41)
+siFlow : Timing analysis mode is single, using late cdB files
+Total number of fetched objects 16891
+End delay calculation. (MEM=2562.86 CPU=0:00:01.4 REAL=0:00:02.0)
+End delay calculation (fullDC). (MEM=2523.53 CPU=0:00:01.9 REAL=0:00:02.0)
+*** Done Building Timing Graph (cpu=0:00:03.0 real=0:00:04.0 totSessionCpu=0:01:26 mem=3726.1M)
+
+OptSummary:
+
+------------------------------------------------------------------
+             Initial Summary
+------------------------------------------------------------------
+
+Setup views included:
+ setup 
+
++--------------------+---------+
+|     Setup mode     |   all   |
++--------------------+---------+
+|           WNS (ns):|  0.146  |
+|           TNS (ns):|  0.000  |
+|    Violating Paths:|    0    |
+|          All Paths:|  1864   |
++--------------------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      2 (2)       |   -0.016   |      2 (2)       |
+|   max_tran     |     6 (233)      |   -0.284   |     6 (233)      |
+|   max_fanout   |    113 (113)     |   -1030    |    114 (114)     |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 63.094%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:06, real = 0:00:26, mem = 2538.5M, totSessionCpu=0:01:26 **
+*** InitOpt #1 [finish] (place_opt_design #1) : cpu/real = 0:00:05.8/0:00:25.8 (0.2), totSession cpu/real = 0:01:26.4/0:20:33.7 (0.1), mem = 3761.2M
+** INFO : this run is activating medium effort placeOptDesign flow
+*** ExcludedClockNetOpt #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:26.5/0:20:33.8 (0.1), mem = 3761.2M
+*** Starting optimizing excluded clock nets MEM= 3761.2M) ***
+*info: No excluded clock nets to be optimized.
+*** Finished optimizing excluded clock nets (CPU Time= 0:00:00.0  MEM= 3761.2M) ***
+*** ExcludedClockNetOpt #1 [finish] (place_opt_design #1) : cpu/real = 0:00:00.0/0:00:00.0 (0.0), totSession cpu/real = 0:01:26.5/0:20:33.8 (0.1), mem = 3761.2M
+The useful skew maximum allowed delay is: 0.15
+*** SimplifyNetlist #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:27.0/0:20:34.4 (0.1), mem = 3761.2M
+Info: 1 clock net  excluded from IPO operation.
+
+Footprint cell information for calculating maxBufDist
+*info: There are 14 candidate Buffer cells
+*info: There are 17 candidate Inverter cells
+
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+
+Netlist preparation processing... 
+Removed 0 instance
+*info: Marking 0 isolation instances dont touch
+*info: Marking 0 level shifter instances dont touch
+*** SimplifyNetlist #1 [finish] (place_opt_design #1) : cpu/real = 0:00:00.9/0:00:01.0 (0.9), totSession cpu/real = 0:01:27.9/0:20:35.4 (0.1), mem = 3820.9M
+Running new flow changes for HFN
+Begin: GigaOpt high fanout net optimization
+*** DrvOpt #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:28.0/0:20:35.5 (0.1), mem = 3820.9M
+Info: 1 clock net  excluded from IPO operation.
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+**WARN: (IMPOPT-7330):	Net decrypt has fanout exceed delaycal_use_default_delay_limit 1000, max-tran violations may increase due to buffering.
++---------+---------+--------+--------+------------+--------+
+| Density | Commits |  WNS   |  TNS   |    Real    |  Mem   |
++---------+---------+--------+--------+------------+--------+
+|   63.09%|        -|   0.000|   0.000|   0:00:00.0| 3820.9M|
+**WARN: (IMPOPT-7330):	Net decrypt has fanout exceed delaycal_use_default_delay_limit 1000, max-tran violations may increase due to buffering.
+|   63.18%|       19|   0.000|   0.000|   0:00:00.0| 3838.9M|
++---------+---------+--------+--------+------------+--------+
+
+*** Finish pre-CTS High Fanout Net Fixing (cpu=0:00:00.6 real=0:00:00.0 mem=3838.9M) ***
+Bottom Preferred Layer:
+    None
+Via Pillar Rule:
+    None
+*** DrvOpt #1 [finish] (place_opt_design #1) : cpu/real = 0:00:01.3/0:00:01.4 (0.9), totSession cpu/real = 0:01:29.2/0:20:36.8 (0.1), mem = 3838.9M
+End: GigaOpt high fanout net optimization
+Begin: GigaOpt DRV Optimization
+*** DrvOpt #2 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:29.3/0:20:37.0 (0.1), mem = 3838.9M
+Info: 1 clock net  excluded from IPO operation.
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|        max-tran       |        max-cap        |  max-fanout |  max-length |       setup       |        |        |        |       |          |         |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| nets | terms|  wViol  | nets | terms|  wViol  | nets | terms| nets | terms|   WNS   |   TNS   |  #Buf  |  #Inv  | #Resize|Density|   Real   |   Mem   |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|     8|   315|    -0.32|     2|     2|    -0.03|   132|   132|     0|     0|     0.14|     0.00|       0|       0|       0| 63.18%|          |         |
+|     0|     0|     0.00|     0|     0|     0.00|   132|   132|     0|     0|     0.14|     0.00|       0|       0|       8| 63.19%| 0:00:00.0|  3838.9M|
+|     0|     0|     0.00|     0|     0|     0.00|   132|   132|     0|     0|     0.14|     0.00|       0|       0|       0| 63.19%| 0:00:00.0|  3838.9M|
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+Bottom Preferred Layer:
+    None
+Via Pillar Rule:
+    None
+
+*** Finish DRV Fixing (cpu=0:00:00.5 real=0:00:01.0 mem=3838.9M) ***
+
+*** DrvOpt #2 [finish] (place_opt_design #1) : cpu/real = 0:00:01.4/0:00:01.4 (1.0), totSession cpu/real = 0:01:30.7/0:20:38.3 (0.1), mem = 3838.9M
+End: GigaOpt DRV Optimization
+**optDesign ... cpu = 0:00:10, real = 0:00:31, mem = 2577.6M, totSessionCpu=0:01:31 **
+
+Active setup views:
+ setup
+  Dominating endpoints: 0
+  Dominating TNS: -0.000
+
+Begin: GigaOpt Global Optimization
+*info: use new DP (enabled)
+Info: 1 clock net  excluded from IPO operation.
+*** GlobalOpt #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:30.8/0:20:38.5 (0.1), mem = 3838.9M
+*info: 1 clock net excluded
+** GigaOpt Global Opt WNS Slack 0.000  TNS Slack 0.000 
++--------+--------+---------+------------+--------+----------+---------+----------------------+
+|  WNS   |  TNS   | Density |    Real    |  Mem   |Worst View|Pathgroup|      End Point       |
++--------+--------+---------+------------+--------+----------+---------+----------------------+
+|   0.000|   0.000|   63.19%|   0:00:00.0| 3838.9M|     setup|       NA| NA                   |
++--------+--------+---------+------------+--------+----------+---------+----------------------+
+
+*** Finish pre-CTS Global Setup Fixing (cpu=0:00:00.0 real=0:00:00.0 mem=3838.9M) ***
+
+*** Finish pre-CTS Setup Fixing (cpu=0:00:00.0 real=0:00:00.0 mem=3838.9M) ***
+Bottom Preferred Layer:
+    None
+Via Pillar Rule:
+    None
+** GigaOpt Global Opt End WNS Slack 0.000  TNS Slack 0.000 
+*** GlobalOpt #1 [finish] (place_opt_design #1) : cpu/real = 0:00:00.8/0:00:00.9 (1.0), totSession cpu/real = 0:01:31.7/0:20:39.4 (0.1), mem = 3838.9M
+End: GigaOpt Global Optimization
+*** Timing Is met
+*** Check timing (0:00:00.0)
+Info: 1 clock net  excluded from IPO operation.
+Begin: Area Reclaim Optimization
+*** AreaOpt #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:31.9/0:20:39.5 (0.1), mem = 3838.9M
+Reclaim Optimization WNS Slack 0.000  TNS Slack 0.000 Density 63.19
++---------+---------+--------+--------+------------+--------+
+| Density | Commits |  WNS   |  TNS   |    Real    |  Mem   |
++---------+---------+--------+--------+------------+--------+
+|   63.19%|        -|   0.000|   0.000|   0:00:00.0| 3838.9M|
+|   63.19%|        0|   0.000|   0.000|   0:00:00.0| 3838.9M|
+|   63.19%|        0|   0.000|   0.000|   0:00:00.0| 3838.9M|
+|   62.82%|      116|   0.000|   0.000|   0:00:01.0| 3838.9M|
+|   61.81%|      782|   0.000|   0.000|   0:00:03.0| 3838.9M|
+|   61.80%|       12|   0.000|   0.000|   0:00:00.0| 3838.9M|
+|   61.80%|        0|   0.000|   0.000|   0:00:00.0| 3838.9M|
+|   61.80%|        0|   0.000|   0.000|   0:00:00.0| 3838.9M|
++---------+---------+--------+--------+------------+--------+
+Reclaim Optimization End WNS Slack 0.000  TNS Slack 0.000 Density 61.80
+Bottom Preferred Layer:
+    None
+Via Pillar Rule:
+    None
+
+Number of times islegalLocAvaiable called = 0 skipped = 0, called in commitmove = 0, skipped in commitmove = 0
+End: Core Area Reclaim Optimization (cpu = 0:00:04.9) (real = 0:00:05.0) **
+*** AreaOpt #1 [finish] (place_opt_design #1) : cpu/real = 0:00:04.9/0:00:04.9 (1.0), totSession cpu/real = 0:01:36.7/0:20:44.5 (0.1), mem = 3838.9M
+Executing incremental physical updates
+Executing incremental physical updates
+End: Area Reclaim Optimization (cpu=0:00:05, real=0:00:05, mem=3838.92M, totSessionCpu=0:01:37).
+*** IncrReplace #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:36.8/0:20:44.6 (0.1), mem = 3838.9M
+
+*** Start incrementalPlace ***
+No Views given, use default active views for adaptive view pruning
+Active views:
+  setup
+[NR-eGR] Started Early Global Route kernel ( Curr Mem: 3.60 MB )
+[NR-eGR] Early global route reroute all routable nets
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] M1 has single uniform track structure
+[NR-eGR] M2 has non-uniform track structure
+[NR-eGR] M3 has single uniform track structure
+[NR-eGR] M4 has single uniform track structure
+[NR-eGR] M5 has single uniform track structure
+[NR-eGR] M6 has single uniform track structure
+[NR-eGR] M7 has single uniform track structure
+[NR-eGR] M8 has single uniform track structure
+[NR-eGR] M9 has single uniform track structure
+[NR-eGR] Pad has single uniform track structure
+[NR-eGR] Read 3444 PG shapes
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Bump Blockages     : 0
+[NR-eGR] #Instance Blockages : 5952
+[NR-eGR] #PG Blockages       : 3444
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] #prerouted nets         : 0
+[NR-eGR] #prerouted special nets : 0
+[NR-eGR] #prerouted wires        : 0
+[NR-eGR] Read 16772 nets ( ignored 0 )
+[NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Rule name: (Default)  Nets: 16772
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 16772 net(s) in layer range [2, 6]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 4.303476e+04um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer             (1-0)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]      M1 ( 1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M2 ( 2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M3 ( 3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M4 ( 4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M5 ( 5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M6 ( 6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+[NR-eGR] Finished Early Global Route kernel ( CPU: 0.11 sec, Real: 0.11 sec, Curr Mem: 3.62 MB )
+Early Global Route congestion estimation runtime: 0.11 seconds, mem = 3838.9M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+
+=== incrementalPlace Internal Loop 1 ===
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   incrNP_iter_start
+[spp] 0
+*** Finished SKP initialization (cpu=0:00:00.7, real=0:00:00.0)***
+SKP will use view:
+  setup
+Iteration  7: Total net bbox = 3.273e+04 (1.74e+04 1.53e+04)
+              Est.  stn bbox = 3.584e+04 (1.90e+04 1.69e+04)
+              cpu = 0:00:00.5 real = 0:00:00.0 mem = 3870.9M
+Iteration  8: Total net bbox = 3.680e+04 (1.97e+04 1.71e+04)
+              Est.  stn bbox = 4.028e+04 (2.14e+04 1.88e+04)
+              cpu = 0:00:00.7 real = 0:00:01.0 mem = 3854.9M
+Iteration  9: Total net bbox = 3.659e+04 (1.97e+04 1.69e+04)
+              Est.  stn bbox = 4.006e+04 (2.15e+04 1.86e+04)
+              cpu = 0:00:00.5 real = 0:00:01.0 mem = 3854.9M
+[NR-eGR] Started Early Global Route kernel ( Curr Mem: 3.75 MB )
+Iteration 10: Total net bbox = 3.775e+04 (2.04e+04 1.74e+04)
+              Est.  stn bbox = 4.126e+04 (2.21e+04 1.91e+04)
+              cpu = 0:00:02.0 real = 0:00:02.0 mem = 3872.2M
+Iteration 11: Total net bbox = 3.752e+04 (2.02e+04 1.73e+04)
+              Est.  stn bbox = 4.101e+04 (2.20e+04 1.90e+04)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 3888.2M
+Move report: Timing Driven Placement moves 16650 insts, mean move: 1.15 um, max move: 5.74 um 
+	Max move on inst (U25089): (2.38, 1.35) --> (5.71, 3.75)
+
+Finished Incremental Placement (cpu=0:00:06.0, real=0:00:06.0, mem=3872.2M)
+Begin: Reorder Scan Chains
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+End: Reorder Scan Chains
+*** Starting refinePlace (0:01:43 mem=3872.2M) ***
+Total net bbox length = 3.799e+04 (2.065e+04 1.735e+04) (ext = 4.643e+02)
+Move report: Detail placement moves 16636 insts, mean move: 0.11 um, max move: 2.60 um 
+	Max move on inst (uk_K_r4_reg_21_): (16.69, 40.08) --> (14.20, 39.96)
+	Runtime: CPU: 0:00:00.9 REAL: 0:00:01.0 MEM: 3840.2MB
+Summary Report:
+Instances move: 16636 (out of 16650 movable)
+Instances flipped: 9
+Mean displacement: 0.11 um
+Max displacement: 2.60 um (Instance: uk_K_r4_reg_21_) (16.687, 40.079) -> (14.202, 39.96)
+	Length: 20 sites, height: 1 rows, site name: asap7sc7p5t, cell type: DFFHQNx1_ASAP7_75t_L
+Physical-only instances move: 0 (out of 0 movable physical-only)
+Total net bbox length = 3.528e+04 (1.791e+04 1.737e+04) (ext = 4.477e+02)
+Runtime: CPU: 0:00:00.9 REAL: 0:00:01.0 MEM: 3840.2MB
+*** Finished refinePlace (0:01:44 mem=3840.2M) ***
+[NR-eGR] Early global route reroute all routable nets
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] M1 has single uniform track structure
+[NR-eGR] M2 has non-uniform track structure
+[NR-eGR] M3 has single uniform track structure
+[NR-eGR] M4 has single uniform track structure
+[NR-eGR] M5 has single uniform track structure
+[NR-eGR] M6 has single uniform track structure
+[NR-eGR] M7 has single uniform track structure
+[NR-eGR] M8 has single uniform track structure
+[NR-eGR] M9 has single uniform track structure
+[NR-eGR] Pad has single uniform track structure
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Bump Blockages     : 0
+[NR-eGR] #Instance Blockages : 5952
+[NR-eGR] #PG Blockages       : 3444
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] #prerouted nets         : 0
+[NR-eGR] #prerouted special nets : 0
+[NR-eGR] #prerouted wires        : 0
+[NR-eGR] Read 16772 nets ( ignored 0 )
+[NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Rule name: (Default)  Nets: 16772
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 16772 net(s) in layer range [2, 6]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 3.929094e+04um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer             (1-0)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]      M1 ( 1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M2 ( 2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M3 ( 3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M4 ( 4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M5 ( 5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]      M6 ( 6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+[NR-eGR] Finished Early Global Route kernel ( CPU: 0.11 sec, Real: 0.11 sec, Curr Mem: 3.67 MB )
+Early Global Route congestion estimation runtime: 0.11 seconds, mem = 3840.2M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+[NR-eGR] Connected 0 must-join pins/ports (post-process)
+[NR-eGR] Total eGR-routed clock nets wire length: 1319um, number of vias: 5370
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR]              Length (um)    Vias 
+[NR-eGR] ---------------------------------
+[NR-eGR]  M1   (1V)             0   52947 
+[NR-eGR]  M2   (2H)         15405   73115 
+[NR-eGR]  M3   (3V)         19666    3964 
+[NR-eGR]  M4   (4H)          5780     289 
+[NR-eGR]  M5   (5V)           725      18 
+[NR-eGR]  M6   (6H)            40       0 
+[NR-eGR]  M7   (7V)             0       0 
+[NR-eGR]  M8   (8H)             0       0 
+[NR-eGR]  M9   (9V)             0       0 
+[NR-eGR]  Pad  (10H)            0       0 
+[NR-eGR] ---------------------------------
+[NR-eGR]       Total        41616  130333 
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total half perimeter of net bounding box: 35278um
+[NR-eGR] Total length: 41616um, number of vias: 130333
+[NR-eGR] --------------------------------------------------------------------------
+Early Global Route wiring runtime: 0.23 seconds, mem = 3838.4M
+[hotspot] +------------+---------------+---------------+
+[hotspot] |            |   max hotspot | total hotspot |
+[hotspot] +------------+---------------+---------------+
+[hotspot] | normalized |          0.00 |          0.00 |
+[hotspot] +------------+---------------+---------------+
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+[hotspot] Hotspot report including placement blocked areas
+[hotspot] +------------+---------------+---------------+
+[hotspot] |            |   max hotspot | total hotspot |
+[hotspot] +------------+---------------+---------------+
+[hotspot] | normalized |          0.00 |          0.00 |
+[hotspot] +------------+---------------+---------------+
+Local HotSpot Analysis (blockage included): normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+0 delay mode for cte disabled.
+
+*** Finished incrementalPlace (cpu=0:00:07.7, real=0:00:08.0)***
+Start to check current routing status for nets...
+All nets are already routed correctly.
+End to check current routing status for nets (mem=3838.4M)
+Extraction called for design 'des' of instances=17010 and nets=16774 using extraction engine 'preRoute' .
+PreRoute RC Extraction called for design des.
+RC Extraction called in multi-corner(1) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using Quantus QRC technology file ...
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.1  Real Time: 0:00:00.0  MEM: 3838.422M)
+**optDesign ... cpu = 0:00:24, real = 0:00:45, mem = 2576.9M, totSessionCpu=0:01:45 **
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: des
+# Design Mode: 7nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=2604.41)
+Total number of fetched objects 16772
+End delay calculation. (MEM=2630.66 CPU=0:00:01.3 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2630.66 CPU=0:00:01.6 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:02.3 real=0:00:02.0 totSessionCpu=0:01:47 mem=3844.3M)
+*** IncrReplace #1 [finish] (place_opt_design #1) : cpu/real = 0:00:10.3/0:00:10.5 (1.0), totSession cpu/real = 0:01:47.1/0:20:55.1 (0.1), mem = 3852.3M
+*** Timing Is met
+*** Check timing (0:00:00.0)
+*** Timing Is met
+*** Check timing (0:00:00.0)
+*** Timing Is met
+*** Check timing (0:00:00.0)
+Info: 1 clock net  excluded from IPO operation.
+Begin: Area Reclaim Optimization
+*** AreaOpt #2 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:47.9/0:20:56.0 (0.1), mem = 3868.3M
+Reclaim Optimization WNS Slack 0.000  TNS Slack 0.000 Density 61.80
++---------+---------+--------+--------+------------+--------+
+| Density | Commits |  WNS   |  TNS   |    Real    |  Mem   |
++---------+---------+--------+--------+------------+--------+
+|   61.80%|        -|   0.000|   0.000|   0:00:00.0| 3868.3M|
+|   61.80%|        0|   0.000|   0.000|   0:00:00.0| 3868.3M|
+|   61.80%|        0|   0.000|   0.000|   0:00:00.0| 3868.3M|
+|   61.80%|        2|   0.000|   0.000|   0:00:00.0| 3887.4M|
+|   61.80%|        0|   0.000|   0.000|   0:00:00.0| 3887.4M|
+|   61.80%|        0|   0.000|   0.000|   0:00:00.0| 3887.4M|
++---------+---------+--------+--------+------------+--------+
+Reclaim Optimization End WNS Slack 0.000  TNS Slack 0.000 Density 61.80
+Bottom Preferred Layer:
+    None
+Via Pillar Rule:
+    None
+
+Number of times islegalLocAvaiable called = 0 skipped = 0, called in commitmove = 0, skipped in commitmove = 0
+End: Core Area Reclaim Optimization (cpu = 0:00:00.7) (real = 0:00:00.0) **
+*** Finished re-routing un-routed nets (3903.4M) ***
+
+*** Finish Physical Update (cpu=0:00:00.1 real=0:00:00.0 mem=3903.4M) ***
+*** AreaOpt #2 [finish] (place_opt_design #1) : cpu/real = 0:00:00.9/0:00:00.9 (1.0), totSession cpu/real = 0:01:48.8/0:20:56.9 (0.1), mem = 3903.4M
+End: Area Reclaim Optimization (cpu=0:00:01, real=0:00:00, mem=3895.42M, totSessionCpu=0:01:49).
+-opt_exp_set_preroute_early_power_reclaim_recovery_split_flow false
+                                           # bool, default=false, private
+Begin: GigaOpt postEco DRV Optimization
+*** DrvOpt #3 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:49.0/0:20:57.0 (0.1), mem = 3895.4M
+Info: 1 clock net  excluded from IPO operation.
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
+	CornerforLayerOpt timing analysis view setup has been selected for calibration 
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|        max-tran       |        max-cap        |  max-fanout |  max-length |       setup       |        |        |        |       |          |         |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| nets | terms|  wViol  | nets | terms|  wViol  | nets | terms| nets | terms|   WNS   |   TNS   |  #Buf  |  #Inv  | #Resize|Density|   Real   |   Mem   |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|     5|   171|    -0.02|     0|     0|     0.00|   136|   136|     0|     0|     0.12|     0.00|       0|       0|       0| 61.80%|          |         |
+|     0|     0|     0.00|     0|     0|     0.00|   138|   138|     0|     0|     0.12|     0.00|       2|       0|       5| 61.81%| 0:00:01.0|  3943.6M|
+|     0|     0|     0.00|     0|     0|     0.00|   138|   138|     0|     0|     0.12|     0.00|       0|       0|       0| 61.81%| 0:00:00.0|  3943.6M|
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+Bottom Preferred Layer:
+    None
+Via Pillar Rule:
+    None
+
+*** Finish DRV Fixing (cpu=0:00:00.4 real=0:00:01.0 mem=3943.6M) ***
+
+*** DrvOpt #3 [finish] (place_opt_design #1) : cpu/real = 0:00:01.0/0:00:01.0 (1.0), totSession cpu/real = 0:01:50.0/0:20:58.1 (0.1), mem = 3943.6M
+End: GigaOpt postEco DRV Optimization
+**WARN: (IMPOPT-7329):	Skipping refinePlace due to user configuration.
+Register exp ratio and priority group on 0 nets on 16774 nets : 
+
+Active setup views:
+ setup
+  Dominating endpoints: 0
+  Dominating TNS: -0.000
+
+Extraction called for design 'des' of instances=17012 and nets=16776 using extraction engine 'preRoute' .
+PreRoute RC Extraction called for design des.
+RC Extraction called in multi-corner(1) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using Quantus QRC technology file ...
+Grid density data update skipped
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.1  Real Time: 0:00:00.0  MEM: 3925.812M)
+Skewing Data Summary (End_of_FINAL)
+
+Skew summary for view setup:
+* Accumulated skew : count = 0
+
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: des
+# Design Mode: 7nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=2609.55)
+Total number of fetched objects 16774
+End delay calculation. (MEM=2625.8 CPU=0:00:01.3 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2625.8 CPU=0:00:01.6 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:02.3 real=0:00:03.0 totSessionCpu=0:01:53 mem=3901.6M)
+OPTC: user 20.0
+Reported timing to dir ./timingReports
+**optDesign ... cpu = 0:00:33, real = 0:00:54, mem = 2605.5M, totSessionCpu=0:01:54 **
+
+OptSummary:
+
+------------------------------------------------------------------
+     optDesign Final Summary
+------------------------------------------------------------------
+
+Setup views included:
+ setup 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):|  0.121  |  0.121  |  0.000  |
+|           TNS (ns):|  0.000  |  0.000  |  0.000  |
+|    Violating Paths:|    0    |    0    |    0    |
+|          All Paths:|  1864   |  1864   |    0    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |    138 (138)     |    -67     |    139 (139)     |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 61.808%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------------
+Begin: Collecting metrics
+ ------------------------------------------------------------------------------------------------------------------------------------------------------- 
+| Snapshot                | WNS                  | TNS                  | Density (%) | Hotspot                   | Resource               | DRVs       |
+|                         | HEPG (ns) | ALL (ns) | HEPG (ns) | ALL (ns) |             | Max (bins) | Total (bins) | Real (s) | Memory (MB) | Tran | Cap |
+|-------------------------+-----------+----------+-----------+----------+-------------+------------+--------------+----------+-------------+------+-----|
+| initial_summary         |           |    0.146 |           |        0 |       63.09 |            |              | 0:00:04  |        3761 |    6 |   2 |
+| simplify_netlist        |           |          |           |          |             |            |              | 0:00:01  |        3821 |      |     |
+| drv_fixing              |     0.000 |    0.144 |         0 |        0 |       63.18 |            |              | 0:00:01  |        3839 |      |     |
+| drv_fixing_2            |     0.000 |    0.144 |         0 |        0 |       63.19 |            |              | 0:00:01  |        3839 |    0 |   0 |
+| global_opt              |           |    0.144 |           |        0 |       63.19 |            |              | 0:00:01  |        3839 |      |     |
+| area_reclaiming         |     0.000 |    0.112 |         0 |        0 |       61.80 |            |              | 0:00:05  |        3839 |      |     |
+| incremental_replacement |           |          |           |          |             |       0.00 |         0.00 | 0:00:11  |        3852 |      |     |
+| area_reclaiming_2       |     0.121 |    0.121 |         0 |        0 |       61.80 |            |              | 0:00:02  |        3895 |      |     |
+| drv_eco_fixing          |     0.121 |    0.121 |         0 |        0 |       61.81 |            |              | 0:00:01  |        3944 |    0 |   0 |
+| final_summary           |     0.121 |    0.121 |           |        0 |       61.81 |            |              | 0:00:01  |        3918 |    0 |   0 |
+ ------------------------------------------------------------------------------------------------------------------------------------------------------- 
+End: Collecting metrics
+**optDesign ... cpu = 0:00:33, real = 0:00:55, mem = 2611.5M, totSessionCpu=0:01:54 **
+**WARN: (IMPOPT-3195):	Analysis mode has changed.
+Type 'man IMPOPT-3195' for more detail.
+*** Finished optDesign ***
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   final
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   opt_design_prects
+Info: final physical memory for 2 CRR processes is 1200.83MB.
+Info: Summary of CRR changes:
+      - Timing transform commits:       0
+Disable CTE adjustment.
+Disable Layer aware incrSKP.
+**place_opt_design ... cpu = 0:00:48, real = 0:01:21, mem = 3917.6M **
+*** Finished GigaPlace ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPSP-9025           2  No scan chain specified/traced.          
+WARNING   IMPOPT-3195          2  Analysis mode has changed.               
+WARNING   IMPOPT-7330          2  Net %s has fanout exceed delaycal_use_de...
+WARNING   IMPOPT-7329          1  Skipping refinePlace due to user configu...
+ERROR     IMPTR-2101           1  Layer %s: Pitch=%dx%d is still less than...
+WARNING   IMPTR-2104           1  Layer %s: Pitch=%d is less than min widt...
+WARNING   IMPTR-2108           1  For layer M%d, the gaps of %d out of %d ...
+WARNING   NRIF-95              2  Option setNanoRouteMode -routeTopRouting...
+*** Message Summary: 11 warning(s), 1 error(s)
+
+*** place_opt_design #1 [finish] () : cpu/real = 0:00:48.0/0:01:20.5 (0.6), totSession cpu/real = 0:01:54.2/0:21:11.0 (0.1), mem = 3917.6M
+#% End place_opt_design (date=06/29 11:49:50, total cpu=0:00:48.0, real=0:01:21, peak res=2752.9M, current mem=2548.9M)
+<CMD> defOut des_Summer2026.opt.def
+Writing DEF file 'des_Summer2026.opt.def', current time is Mon Jun 29 11:49:50 2026 ...
+unitPerMicron=1000, dbgMicronPerDBU=0.001000, unitPerDBU=1.000000
+DEF file 'des_Summer2026.opt.def' is written, current time is Mon Jun 29 11:49:50 2026 ...
+<CMD> saveDesign des_Summer2026_place.inn
+#% Begin save design ... (date=06/29 11:49:50, mem=2549.1M)
+INFO: Current data have to be saved into a temporary db: 'des_Summer2026_place.inn.dat.tmp' first. It will be renamed to the correct name 'des_Summer2026_place.inn.dat' after the old db was deleted.
+% Begin Save ccopt configuration ... (date=06/29 11:49:50, mem=2549.1M)
+% End Save ccopt configuration ... (date=06/29 11:49:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=2549.5M, current mem=2549.5M)
+% Begin Save netlist data ... (date=06/29 11:49:50, mem=2549.5M)
+Writing Binary DB to des_Summer2026_place.inn.dat.tmp/des.v.bin in single-threaded mode...
+% End Save netlist data ... (date=06/29 11:49:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=2549.5M, current mem=2549.5M)
+Saving symbol-table file ...
+Saving congestion map file des_Summer2026_place.inn.dat.tmp/des.route.congmap.gz ...
+% Begin Save AAE data ... (date=06/29 11:49:50, mem=2549.8M)
+Saving AAE Data ...
+% End Save AAE data ... (date=06/29 11:49:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=2550.1M, current mem=2550.1M)
+Saving preference file des_Summer2026_place.inn.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=06/29 11:49:50, mem=2553.4M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=06/29 11:49:51, total cpu=0:00:00.0, real=0:00:01.0, peak res=2553.6M, current mem=2553.6M)
+Saving PG file des_Summer2026_place.inn.dat.tmp/des.pg.gz, version#2, (Created by Innovus v23.16-s070_1 on Mon Jun 29 11:49:51 2026)
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=3917.6M) ***
+*info - save blackBox cells to lef file des_Summer2026_place.inn.dat.tmp/des.bbox.lef
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=06/29 11:49:51, mem=2553.6M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=06/29 11:49:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=2553.7M, current mem=2553.7M)
+% Begin Save routing data ... (date=06/29 11:49:51, mem=2553.7M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.1 real=0:00:00.0 mem=3917.6M) ***
+% End Save routing data ... (date=06/29 11:49:51, total cpu=0:00:00.1, real=0:00:00.0, peak res=2553.9M, current mem=2553.9M)
+Saving property file des_Summer2026_place.inn.dat.tmp/des.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=3917.6M) ***
+Saving rc congestion map des_Summer2026_place.inn.dat.tmp/des.congmap.gz ...
+Saving preRoute extracted patterns in file 'des_Summer2026_place.inn.dat.tmp/des.techData.gz' ...
+Saving preRoute extraction data in directory 'des_Summer2026_place.inn.dat.tmp/extraction/' ...
+% Begin Save power constraints data ... (date=06/29 11:49:51, mem=2555.6M)
+% End Save power constraints data ... (date=06/29 11:49:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=2555.6M, current mem=2555.6M)
+typ_cap
+typ_cap
+typ_cap
+Generated self-contained design des_Summer2026_place.inn.dat.tmp
+typical_lib
+typ_cap
+#% End save design ... (date=06/29 11:49:51, total cpu=0:00:01.0, real=0:00:01.0, peak res=2556.5M, current mem=2556.5M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> set_ccopt_property buffer_cells { BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3 }
+<CMD> set_ccopt_property inverter_cells { INV_X8 INV_X16 INV_X32 }
+<CMD> set_ccopt_property clock_gating_cells {CLKGATE_X1 CLKGATE_X2 CLKGATE_X4 CLKGATE_X8}
+<CMD> set_ccopt_property use_inverters true
+<CMD> set_ccopt_property target_max_trans inf
+<CMD> set_ccopt_property target_skew inf
+<CMD> create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): setup_con
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Ignoring AAE DB Resetting ...
+Analyzing clock structure...
+Analyzing clock structure done.
+Reset timing graph...
+Ignoring AAE DB Resetting ...
+Reset timing graph done.
+Extracting original clock gating for clk...
+  clock_tree clk contains 1984 sinks and 0 clock gates.
+Extracting original clock gating for clk done.
+The skew group clk/setup_con was created. It contains 1984 sinks and 1 sources.
+Checking clock tree convergence...
+Checking clock tree convergence done.
+<CMD> set_ccopt_property buffer_cells { BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx8_ASAP7_75t_L  }
+<CMD> set_ccopt_property inverter_cells { CKINVDCx10_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L }
+<CMD> set_ccopt_property clock_gating_cells { ICGx1_ASAP7_75t_L ICGx2_ASAP7_75t_L ICGx3_ASAP7_75t_L ICGx4_ASAP7_75t_L ICGx5_ASAP7_75t_L ICGx8_ASAP7_75t_L ICGx2p67DC_ASAP7_75t_L ICGx4DC_ASAP7_75t_L ICGx5p33DC_ASAP7_75t_L ICGx6p67DC_ASAP7_75t_L }
+<CMD> set_ccopt_property use_inverters true
+<CMD> set_ccopt_property target_max_trans 200ps
+<CMD> set_ccopt_property target_skew 200ps
+<CMD> create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): setup_con
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+**ERROR: (IMPCCOPT-2048):	Clock tree extraction failed. Reason Cannot run automatic clock tree extraction as clock trees are already defined..
+
+ambiguous command name "delete_ccopt_clock_tree": delete_ccopt_clock_tree_source_group delete_ccopt_clock_tree_spec delete_ccopt_clock_trees
+<CMD> set_ccopt_property buffer_cells { BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx8_ASAP7_75t_L  }
+<CMD> set_ccopt_property inverter_cells { CKINVDCx10_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L }
+<CMD> set_ccopt_property clock_gating_cells { ICGx1_ASAP7_75t_L ICGx2_ASAP7_75t_L ICGx3_ASAP7_75t_L ICGx4_ASAP7_75t_L ICGx5_ASAP7_75t_L ICGx8_ASAP7_75t_L ICGx2p67DC_ASAP7_75t_L ICGx4DC_ASAP7_75t_L ICGx5p33DC_ASAP7_75t_L ICGx6p67DC_ASAP7_75t_L }
+<CMD> set_ccopt_property use_inverters true
+<CMD> set_ccopt_property target_max_trans 200ps
+<CMD> set_ccopt_property target_skew 200ps
+<CMD> create_ccopt_clock_tree_spec
+Creating clock tree spec for modes (timing configs): setup_con
+extract_clock_generator_skew_groups=true: create_ccopt_clock_tree_spec will generate skew groups with a name prefix of "_clock_gen" to balance clock generator connected flops with the clock generator they drive.
+**ERROR: (IMPCCOPT-2048):	Clock tree extraction failed. Reason Cannot run automatic clock tree extraction as clock trees are already defined..
+
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Mon Jun 29 11:51:20 2026
+  Total CPU time:     0:02:38
+  Total real time:    0:22:51
+  Peak memory (main): 2630.88MB
+
+
+*** Memory Usage v#1 (Current mem = 3923.812M, initial mem = 848.578M) ***
+*** Message Summary: 1907 warning(s), 3 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:59, real=0:22:48, mem=3923.8M) ---

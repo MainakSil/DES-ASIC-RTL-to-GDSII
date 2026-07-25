@@ -1,0 +1,89 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.16-s070_1, built Fri Oct 31 16:29:58 PDT 2025
+Options:	
+Date:		Mon Jun 29 11:11:02 2026
+Host:		vlsilab.iitbbs.ac.in (x86_64 w/Linux 5.14.0-503.11.1.el9_5.x86_64) (20cores*28cpus*Intel(R) Core(TM) i7-14700 33792KB)
+OS:		Red Hat Enterprise Linux 9.5 (Plow)
+
+License:
+		[11:11:06.426322] Configured Lic search path (23.02-s006): 5280@14.139.1.126:1717@14.139.1.126
+
+		invs	Innovus Implementation System	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 12411 / b24a2330-fb86-44b5-8de6-140461de7a5a / LdTUqTSVgi
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> setLibraryUnit -cap 1ff
+<CMD> setLibraryUnit -time 1ps
+<CMD> set init_gnd_net VSS
+<CMD> set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nmpdk.syn.v
+<CMD> set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+<CMD> set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+<CMD> set init_top_cell des
+<CMD> set init_pwr_net VDD
+<CMD> setDesignMode -process 7
+##  Process: 7             (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+<CMD> init_design
+#% Begin Load MMMC data ... (date=06/29 11:11:43, mem=1908.2M)
+#% End Load MMMC data ... (date=06/29 11:11:43, total cpu=0:00:00.0, real=0:00:00.0, peak res=1909.1M, current mem=1909.1M)
+typ_cap
+
+Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef ...
+
+Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef ...
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M1 pitch 36.
+[11:11:45.170266] Periodic Lic check successful
+[11:11:45.694569] Feature usage summary:
+[11:11:45.694569] Innovus_Impl_System
+[11:11:45.694570] Innovus_7nm_Opt
+
+(#124) This command "init_design" required an extra checkout of license invs_7nm.
+Additional license(s) checked out: 1 'invs_7nm' (Innovus_7nm_Opt; INVS07; 23.1) license(s)
+
+Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef ...
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Loading view definition file from /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_ccsa_211120' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_ccsa_220123' 
+Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 100310)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 142077)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120' 
+*** End library_loading (cpu=0.12min, real=0.13min, mem=489.0M, fe_cpu=0.38min, fe_real=0.85min, fe_mem=2309.6M) ***
+**ERROR: (IMPSYT-16038):	The specified file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nmpdk.syn.v' could not be found. Check your file system, correct the file name.
+**ERROR: (IMPIMEX-7008):	No netlist files are found.
+
+*** Message Summary: 3 warning(s), 2 error(s)
+
+
+*** Memory Usage v#1 (Current mem = 2309.562M, initial mem = 848.578M) ***
+--- Ending "Innovus" (totcpu=0:00:24.3, real=0:01:32, mem=2309.6M) ---

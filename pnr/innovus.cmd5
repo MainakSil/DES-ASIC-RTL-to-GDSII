@@ -1,0 +1,239 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Jun 29 11:51:58 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v23.16-s070_1 (64bit) 10/31/2025 16:29 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 23.16-s070_1 NR250925-2329/23_16-UB (database version 18.20.679) {superthreading v2.20}
+#@(#)CDS: AAE 23.16-s017 (64bit) 10/31/2025 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 23.16-s018_1 () Oct 25 2025 07:16:43 ( )
+#@(#)CDS: SYNTECH 23.16-s005_1 () Sep 24 2025 21:37:10 ( )
+#@(#)CDS: CPE v23.16-s054
+#@(#)CDS: IQuantus/TQuantus 23.1.1-s519 (64bit) Wed Aug 27 00:58:07 PDT 2025 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+setLibraryUnit -cap 1ff
+setLibraryUnit -time 1ps
+set init_gnd_net VSS
+set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nm.syn.v
+set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+set init_top_cell des
+set init_pwr_net VDD
+setDesignMode -process 7
+init_design
+saveDesign des_Summer2026_init.inn
+floorPlan -site asap7sc7p5t -s 54.0 48.6 0 0 0 0
+saveDesign des_Summer2026_fplan.inn
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
+globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
+addWellTap -cell TAPCELL_ASAP7_75t_L -cellInterval 43.2 -inRowOffset 5.4
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { M1 M6 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { M1 M6 } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { M1 }
+setAddStripeMode -stacked_via_bottom_layer M1 -stacked_via_top_layer M2 -allow_nonpreferred_dir stripe
+setViaGenMode -ignore_viarule_enclosure true
+addStripe -direction horizontal -set_to_set_distance 0.54 -spacing 0.252 -ybottom_offset -0.009 -ytop_offset -0.009 -width 0.018 -nets {VDD VSS} -layer M2
+addStripe -direction horizontal -set_to_set_distance 0.54 -spacing 0.252 -ybottom_offset -0.009 -ytop_offset -0.009 -width 0.018 -nets {VDD VSS} -layer M1
+setViaGenMode -ignore_viarule_enclosure true
+editPowerVia -skip_via_on_pin {Pad Block Cover Standardcell} -skip_via_on_wire_shape {Ring Blockring Corewire Blockwire Iowire Padring Fillwire Noshape} -bottom_layer M1 -add_vias 1 -orthogonal_only 0 -top_layer M2
+setViaGenMode -viarule_preference { M6_M5widePWR1p152 M5_M4widePWR0p864 M4_M3widePWR0p864 M3_M2widePWR0p936 M3_M2widePWR }
+addStripe -extend_to design_boundary -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 7.92 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.378 -xleft_offset 4.509 -merge_stripes_value 0.16 -layer M3 -width 0.09 -nets {VDD VSS} -stacked_via_bottom_layer M2
+setAddStripeMode -max_via_size { Stripe 100 100 100 } -via_using_exact_crossover_size true -stacked_via_bottom_layer M3 -stacked_via_top_layer M4
+addStripe -extend_to design_boundary -direction horizontal -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 15.36 -skip_via_on_pin Standardcell -spacing 0.504 -start_offset 7.671 -merge_stripes_value 0.16 -layer M4 -width 0.12 -nets {VDD VSS}
+setAddStripeMode -stacked_via_bottom_layer M4 -stacked_via_top_layer M5
+setViaGenMode -bar_cut_orientation horizontal
+addStripe -extend_to design_boundary -direction vertical -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 15.36 -skip_via_on_pin Standardcell -spacing 0.504 -start_offset 5.286 -merge_stripes_value 0.16 -layer M5 -width 0.216 -nets {VDD VSS}
+setAddStripeMode -stacked_via_bottom_layer M5 -stacked_via_top_layer M6
+setViaGenMode -bar_cut_orientation vertical
+addStripe -extend_to design_boundary -direction horizontal -skip_via_on_wire_shape Noshape -max_same_layer_jog_length 0.32 -set_to_set_distance 14.08 -skip_via_on_pin Standardcell -spacing 0.672 -start_offset 9.602 -merge_stripes_value 0.16 -layer M6 -width 0.288 -nets {VDD VSS}
+setDesignMode -topRoutingLayer 6
+setPlaceMode -place_global_place_io_pins true
+set_interactive_constraint_modes {setup_con}
+set_false_path -from [get_ports]
+set_false_path -to [get_ports]
+set_interactive_constraint_modes {}
+defOut des_Summer2026.unopt.def
+place_opt_design
+defOut des_Summer2026.opt.def
+saveDesign des_Summer2026_place.inn
+report_clocks
+report_timing
+set_ccopt_property buffer_cells { BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx8_ASAP7_75t_L  }
+set_ccopt_property inverter_cells { CKINVDCx10_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L }
+set_ccopt_property clock_gating_cells { ICGx1_ASAP7_75t_L ICGx2_ASAP7_75t_L ICGx3_ASAP7_75t_L ICGx4_ASAP7_75t_L ICGx5_ASAP7_75t_L ICGx8_ASAP7_75t_L ICGx2p67DC_ASAP7_75t_L ICGx4DC_ASAP7_75t_L ICGx5p33DC_ASAP7_75t_L ICGx6p67DC_ASAP7_75t_L }
+set_ccopt_property use_inverters true
+set_ccopt_property target_max_trans 200ps
+set_ccopt_property target_skew 200ps
+create_ccopt_clock_tree_spec
+clock_opt_design -cts
+timeDesign -postCTS
+saveDesign des_Summer2026_ccopt.inn
+setNanoRouteMode -drouteMinimizeLithoEffectOnLayer {t t t t t t t t t t}
+setAnalysisMode -analysisType onChipVariation
+setAnalysisMode -cppr both
+route_opt_design
+saveDesign -verilog -def des_Summer2026_route.inn
+setExtractRCMode -engine postRoute -effortLevel high
+extractRC
+rcOut -spef des.postRoute.spef
+summaryReport -outfile post_route_summary.rpt
+addFiller -cell {DECAPx10_ASAP7_75t_R  } -prefix FILLER_DECAP_
+addFiller -cell {DECAPx6_ASAP7_75t_R   } -prefix FILLER_DECAP_
+addFiller -cell {DECAPx4_ASAP7_75t_R   } -prefix FILLER_DECAP_
+addFiller -cell {TAPCELL_ASAP7_75t_R } -prefix FILLER_TAP_
+addFiller -cell {FILLER_ASAP7_75t_R FILLERxp5_ASAP7_75t_R } -prefix FILLER
+setExtractRCMode -engine postRoute -effortLevel signoff
+extractRC
+rcOut -spef des.postFill.spef
+saveDesign -verilog -def des_Summer2026_signoff.inn
+summaryReport -outfile post_fill_summary.rpt
+summaryReport
+setDrawView place
+checkDesign -io -netlist -physicalLibrary -powerGround -tieHilo -timingLibrary -spef -floorplan -place -outdir checkDesign
+verify_drc
+report_timing
+setLayerPreference node_track -isVisible 1
+setLayerPreference node_track -isVisible 0
+setLayerPreference node_overlay -isVisible 1
+setLayerPreference congestH -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+setLayerPreference congestV -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+fit
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference node_blockage -isVisible 1
+setLayerPreference node_blockage -isVisible 0
+setLayerPreference node_blockage -isVisible 1
+setLayerPreference node_blockage -isVisible 0
+setLayerPreference node_blockage -isVisible 1
+fit
+reset_parasitics
+extractRC
+checkPlace des.checkPlace
+setDrawView place
+fit
+setLayerPreference node_power -isVisible 1
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+setLayerPreference violation -isVisible 0
+setLayerPreference node_inst -isVisible 0
+setLayerPreference block -isVisible 1
+setLayerPreference block -isVisible 0
+setLayerPreference node_module -isVisible 0
+setLayerPreference node_cell -isVisible 1
+setLayerPreference node_cell -isVisible 0
+setLayerPreference node_blockage -isVisible 0
+setLayerPreference node_row -isVisible 1
+setLayerPreference node_row -isVisible 0
+setLayerPreference node_floorplan -isVisible 1
+setLayerPreference node_floorplan -isVisible 0
+setLayerPreference node_partition -isVisible 0
+setLayerPreference node_partition -isVisible 1
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+setLayerPreference node_partition -isVisible 0
+setLayerPreference node_net -isVisible 0
+setLayerPreference node_route -isVisible 0
+setLayerPreference node_route -isVisible 1
+setLayerPreference node_layer -isVisible 0
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+setLayerPreference violation -isVisible 1
+setLayerPreference node_inst -isVisible 1
+setLayerPreference node_module -isVisible 1
+setLayerPreference node_cell -isVisible 1
+setLayerPreference node_blockage -isVisible 1
+setLayerPreference node_blockage -isVisible 0
+setLayerPreference node_blockage -isVisible 1
+setLayerPreference node_row -isVisible 1
+setLayerPreference node_floorplan -isVisible 1
+setLayerPreference node_partition -isVisible 1
+setLayerPreference node_track -isVisible 1
+setLayerPreference node_net -isVisible 1
+setLayerPreference node_layer -isVisible 1
+setLayerPreference node_gird -isVisible 1
+setLayerPreference node_gird -isVisible 0
+setLayerPreference node_overlay -isVisible 0
+zoomBox -1.54900 11.78000 73.66600 50.40500
+zoomBox 6.72100 16.88900 70.65400 49.72000
+zoomBox 19.25600 24.07900 65.44800 47.80000
+zoomBox 28.31200 29.26600 61.68700 46.40500
+zoomBox 35.68600 32.39600 59.80000 44.77900
+zoomBox 41.01300 34.65700 58.43600 43.60400
+zoomBox 44.27400 36.33100 56.86300 42.79600
+zoomBox 46.63100 37.54100 55.72700 42.21200
+zoomBox 48.35800 38.41500 54.93100 41.79000
+zoomBox 49.03300 38.75600 54.62000 41.62500
+zoomBox 49.60700 39.04600 54.35600 41.48500
+zoomBox 50.09500 39.29300 54.13200 41.36600
+zoomBox 50.51000 39.50300 53.94100 41.26500
+zoomBox 51.38900 39.82600 53.86900 41.10000
+zoomBox 51.74500 39.94800 53.85400 41.03100
+zoomBox 52.00900 40.04800 53.80200 40.96900
+zoomBox 52.23100 40.13700 53.75600 40.92000
+panPage 1 0
+panPage 1 0
+zoomBox 53.36400 40.28900 54.46600 40.85500
+zoomBox 53.52000 40.40000 54.31600 40.80900
+zoomBox 53.58000 40.44300 54.25800 40.79100
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_layer -isVisible 0
+setLayerPreference node_layer -isVisible 1
+setLayerPreference node_power -isVisible 1
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference allLayers -isSelectable 0
+setLayerPreference allLayers -isSelectable 1
+zoomBox 5.40600 10.39600 69.34000 43.22800
+zoomBox 28.57800 20.15300 61.95200 37.29200
+zoomBox 40.67300 25.24800 58.09600 34.19500
+zoomBox 45.77000 27.39400 56.47100 32.88900
+zoomBox 46.98700 27.90600 56.08300 32.57700
+zoomBox 50.28300 29.29400 55.03200 31.73300
+zoomBox 52.00400 30.01800 54.48400 31.29200
+zoomBox 52.28500 30.13700 54.39400 31.22000
+zoomBox 52.52500 30.23800 54.31800 31.15900
+zoomBox 52.72800 30.32400 54.25300 31.10700
+zoomBox 52.90100 30.39700 54.19800 31.06300
+zoomBox 53.08100 30.46300 54.18500 31.03000
+zoomBox 53.34600 30.58900 54.14500 30.99900
+zoomBox 53.53800 30.68000 54.11600 30.97700
+panPage 0 1
+panPage 0 1
+zoomBox 53.45100 30.81900 54.13100 31.16800
+zoomBox 53.34900 30.77300 54.14900 31.18400
+zoomBox 53.45100 30.81900 54.13100 31.16800
+zoomBox 53.53800 30.85800 54.11600 31.15500
+zoomBox 53.61100 30.89100 54.10400 31.14400
+zoomBox 53.67400 30.91900 54.09300 31.13400
+panPage 0 -1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+summaryReport

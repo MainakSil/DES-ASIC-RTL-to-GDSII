@@ -1,0 +1,115 @@
+[06/29 11:11:02      0s] 
+[06/29 11:11:02      0s] Cadence Innovus(TM) Implementation System.
+[06/29 11:11:02      0s] Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+[06/29 11:11:02      0s] 
+[06/29 11:11:02      0s] Version:	v23.16-s070_1, built Fri Oct 31 16:29:58 PDT 2025
+[06/29 11:11:02      0s] Options:	
+[06/29 11:11:02      0s] Date:		Mon Jun 29 11:11:02 2026
+[06/29 11:11:02      0s] Host:		vlsilab.iitbbs.ac.in (x86_64 w/Linux 5.14.0-503.11.1.el9_5.x86_64) (20cores*28cpus*Intel(R) Core(TM) i7-14700 33792KB)
+[06/29 11:11:02      0s] OS:		Red Hat Enterprise Linux 9.5 (Plow)
+[06/29 11:11:02      0s] 
+[06/29 11:11:02      0s] License:
+[06/29 11:11:06      0s] 		[11:11:06.426322] Configured Lic search path (23.02-s006): 5280@14.139.1.126:1717@14.139.1.126
+
+[06/29 11:11:09      0s] 		invs	Innovus Implementation System	23.1	checkout succeeded
+[06/29 11:11:09      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[06/29 11:11:19     10s] Memory management switch to non-aggressive memory release mode.
+[06/29 11:11:19     10s] 
+[06/29 11:11:19     10s] OS Mmap count monitoring thread starts. Limit of OS Mmap count is 65530
+[06/29 11:11:19     10s] 
+[06/29 11:11:20     11s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v23.16-s070_1 (64bit) 10/31/2025 16:29 (Linux 3.10.0-693.el7.x86_64)
+[06/29 11:11:22     13s] @(#)CDS: NanoRoute 23.16-s070_1 NR250925-2329/23_16-UB (database version 18.20.679) {superthreading v2.20}
+[06/29 11:11:22     13s] @(#)CDS: AAE 23.16-s017 (64bit) 10/31/2025 (Linux 3.10.0-693.el7.x86_64)
+[06/29 11:11:22     13s] @(#)CDS: CTE 23.16-s018_1 () Oct 25 2025 07:16:43 ( )
+[06/29 11:11:22     13s] @(#)CDS: SYNTECH 23.16-s005_1 () Sep 24 2025 21:37:10 ( )
+[06/29 11:11:22     13s] @(#)CDS: CPE v23.16-s054
+[06/29 11:11:22     13s] @(#)CDS: IQuantus/TQuantus 23.1.1-s519 (64bit) Wed Aug 27 00:58:07 PDT 2025 (Linux 3.10.0-693.el7.x86_64)
+[06/29 11:11:22     13s] @(#)CDS: OA 22.61-p027 Wed May 14 22:25:16 2025
+[06/29 11:11:22     13s] @(#)CDS: SGN 23.10-d005 (03-Oct-2023) (64 bit executable, TkQt5.15.9)
+[06/29 11:11:22     13s] @(#)CDS: RCDB 11.15.0
+[06/29 11:11:22     13s] @(#)CDS: STYLUS 23.16-s001_1 (07/11/2025 08:51 PDT)
+[06/29 11:11:22     13s] @(#)CDS: IntegrityPlanner-23.16-17108 (23.16) (2025-08-12 13:53:14+0800)
+[06/29 11:11:22     13s] @(#)CDS: SYNTHESIS_ENGINE 23.16-s067
+[06/29 11:11:22     13s] Create and set the environment variable TMPDIR to /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/pnr/innovus_temp_12411_b24a2330-fb86-44b5-8de6-140461de7a5a_vlsilab.iitbbs.ac.in_cdsl14_Gq7nYq.
+
+[06/29 11:11:22     13s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[06/29 11:11:23     14s] Info: Process UID = 12411 / b24a2330-fb86-44b5-8de6-140461de7a5a / LdTUqTSVgi
+[06/29 11:11:23     14s] 
+[06/29 11:11:23     14s] **INFO:  MMMC transition support version v31-84 
+[06/29 11:11:23     14s] 
+[06/29 11:11:23     14s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[06/29 11:11:23     14s] <CMD> suppressMessage ENCEXT-2799
+[06/29 11:11:23     14s] <CMD> win
+[06/29 11:11:43     15s] <CMD> setLibraryUnit -cap 1ff
+[06/29 11:11:43     15s] <CMD> setLibraryUnit -time 1ps
+[06/29 11:11:43     15s] <CMD> set init_gnd_net VSS
+[06/29 11:11:43     15s] <CMD> set init_verilog /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nmpdk.syn.v
+[06/29 11:11:43     15s] <CMD> set init_lef_file {/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef}
+[06/29 11:11:43     15s] <CMD> set init_mmmc_file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+[06/29 11:11:43     15s] <CMD> set init_top_cell des
+[06/29 11:11:43     15s] <CMD> set init_pwr_net VDD
+[06/29 11:11:43     15s] <CMD> setDesignMode -process 7
+[06/29 11:11:43     15s] ##  Process: 7             (User Set)               
+[06/29 11:11:43     15s] ##     Node: (not set)                           
+[06/29 11:11:43     15s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[06/29 11:11:43     15s] Applying the recommended capacitance filtering threshold values for 7nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[06/29 11:11:43     15s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[06/29 11:11:43     15s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[06/29 11:11:43     15s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[06/29 11:11:43     15s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[06/29 11:11:43     15s] <CMD> init_design
+[06/29 11:11:43     15s] #% Begin Load MMMC data ... (date=06/29 11:11:43, mem=1908.2M)
+[06/29 11:11:43     15s] #% End Load MMMC data ... (date=06/29 11:11:43, total cpu=0:00:00.0, real=0:00:00.0, peak res=1909.1M, current mem=1909.1M)
+[06/29 11:11:43     15s] 
+[06/29 11:11:43     15s] Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7_tech_1x_201209.lef ...
+[06/29 11:11:43     15s] 
+[06/29 11:11:43     15s] Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_L_1x_220121a.lef ...
+[06/29 11:11:43     15s] **WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+[06/29 11:11:43     15s] so you are unable to create rectilinear partition in a hierarchical flow.
+[06/29 11:11:43     15s] Set DBUPerIGU to M1 pitch 36.
+[06/29 11:11:45     15s] [11:11:45.170266] Periodic Lic check successful
+[11:11:45.694569] Feature usage summary:
+[11:11:45.694569] Innovus_Impl_System
+[11:11:45.694570] Innovus_7nm_Opt
+
+[06/29 11:11:45     15s] (#124) This command "init_design" required an extra checkout of license invs_7nm.
+[06/29 11:11:45     15s] Additional license(s) checked out: 1 'invs_7nm' (Innovus_7nm_Opt; INVS07; 23.1) license(s)
+[06/29 11:11:45     15s] 
+[06/29 11:11:45     15s] Loading LEF file /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lef/asap7sc7p5t_28_R_1x_220121a.lef ...
+[06/29 11:11:45     15s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[06/29 11:11:45     15s] Loading view definition file from /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.mmmc.tcl
+[06/29 11:11:45     15s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:11:49     18s] Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_ccsa_211120' 
+[06/29 11:11:49     18s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:11:49     19s] Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120' 
+[06/29 11:11:49     19s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:11:52     22s] Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_ccsa_211120' 
+[06/29 11:11:52     22s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.lib' ...
+[06/29 11:11:52     22s] Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_ccsa_220123' 
+[06/29 11:11:52     22s] Reading typical_lib timing library '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib' ...
+[06/29 11:11:52     22s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 100310)
+[06/29 11:11:52     22s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.lib, Line 142077)
+[06/29 11:11:52     22s] Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120' 
+[06/29 11:11:53     22s] Ending "PreSetAnalysisView" (total cpu=0:00:07.5, real=0:00:08.0, peak res=2412.8M, current mem=1935.1M)
+[06/29 11:11:53     22s] *** End library_loading (cpu=0.12min, real=0.13min, mem=489.0M, fe_cpu=0.38min, fe_real=0.85min, fe_mem=2309.6M) ***
+[06/29 11:11:53     22s] **ERROR: (IMPSYT-16038):	The specified file '/home/cdsl14/Downloads/test_innovus/syn_pnr_pt_flow/design_files/des.asap7nmpdk.syn.v' could not be found. Check your file system, correct the file name.
+[06/29 11:11:53     22s] **ERROR: (IMPIMEX-7008):	No netlist files are found.
+[06/29 11:11:53     22s] 
+[06/29 11:12:34     24s] 
+[06/29 11:12:34     24s] *** Summary of all messages that are not suppressed in this session:
+[06/29 11:12:34     24s] Severity  ID               Count  Summary                                  
+[06/29 11:12:34     24s] WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+[06/29 11:12:34     24s] ERROR     IMPSYT-16038         1  The specified file '%s' could not be fou...
+[06/29 11:12:34     24s] ERROR     IMPIMEX-7008         1  No netlist files are found.              
+[06/29 11:12:34     24s] WARNING   TECHLIB-1277         2  The %s '%s' has been defined for %s %s '...
+[06/29 11:12:34     24s] *** Message Summary: 3 warning(s), 2 error(s)
+[06/29 11:12:34     24s] 
+[06/29 11:12:34     24s] 
+[06/29 11:12:34     24s] *** Memory Usage v#1 (Current mem = 2309.562M, initial mem = 848.578M) ***
+[06/29 11:12:34     24s] --- Ending "Innovus" (totcpu=0:00:24.3, real=0:01:32, mem=2309.6M) ---

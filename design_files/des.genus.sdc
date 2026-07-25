@@ -1,0 +1,206 @@
+# ####################################################################
+
+#  Created by Genus(TM) Synthesis Solution 23.16-s067_1 on Mon Jun 29 16:58:56 IST 2026
+
+# ####################################################################
+
+set sdc_version 2.0
+
+set_units -capacitance 1fF
+set_units -time 1ps
+
+# Set the current design
+current_design des
+
+create_clock -name "clk" -period 500.0 -waveform {0.0 250.0} [get_ports clk]
+set_max_delay 200 -through [list \
+  [get_ports {desIn[63]}]  \
+  [get_ports {desIn[62]}]  \
+  [get_ports {desIn[61]}]  \
+  [get_ports {desIn[60]}]  \
+  [get_ports {desIn[59]}]  \
+  [get_ports {desIn[58]}]  \
+  [get_ports {desIn[57]}]  \
+  [get_ports {desIn[56]}]  \
+  [get_ports {desIn[55]}]  \
+  [get_ports {desIn[54]}]  \
+  [get_ports {desIn[53]}]  \
+  [get_ports {desIn[52]}]  \
+  [get_ports {desIn[51]}]  \
+  [get_ports {desIn[50]}]  \
+  [get_ports {desIn[49]}]  \
+  [get_ports {desIn[48]}]  \
+  [get_ports {desIn[47]}]  \
+  [get_ports {desIn[46]}]  \
+  [get_ports {desIn[45]}]  \
+  [get_ports {desIn[44]}]  \
+  [get_ports {desIn[43]}]  \
+  [get_ports {desIn[42]}]  \
+  [get_ports {desIn[41]}]  \
+  [get_ports {desIn[40]}]  \
+  [get_ports {desIn[39]}]  \
+  [get_ports {desIn[38]}]  \
+  [get_ports {desIn[37]}]  \
+  [get_ports {desIn[36]}]  \
+  [get_ports {desIn[35]}]  \
+  [get_ports {desIn[34]}]  \
+  [get_ports {desIn[33]}]  \
+  [get_ports {desIn[32]}]  \
+  [get_ports {desIn[31]}]  \
+  [get_ports {desIn[30]}]  \
+  [get_ports {desIn[29]}]  \
+  [get_ports {desIn[28]}]  \
+  [get_ports {desIn[27]}]  \
+  [get_ports {desIn[26]}]  \
+  [get_ports {desIn[25]}]  \
+  [get_ports {desIn[24]}]  \
+  [get_ports {desIn[23]}]  \
+  [get_ports {desIn[22]}]  \
+  [get_ports {desIn[21]}]  \
+  [get_ports {desIn[20]}]  \
+  [get_ports {desIn[19]}]  \
+  [get_ports {desIn[18]}]  \
+  [get_ports {desIn[17]}]  \
+  [get_ports {desIn[16]}]  \
+  [get_ports {desIn[15]}]  \
+  [get_ports {desIn[14]}]  \
+  [get_ports {desIn[13]}]  \
+  [get_ports {desIn[12]}]  \
+  [get_ports {desIn[11]}]  \
+  [get_ports {desIn[10]}]  \
+  [get_ports {desIn[9]}]  \
+  [get_ports {desIn[8]}]  \
+  [get_ports {desIn[7]}]  \
+  [get_ports {desIn[6]}]  \
+  [get_ports {desIn[5]}]  \
+  [get_ports {desIn[4]}]  \
+  [get_ports {desIn[3]}]  \
+  [get_ports {desIn[2]}]  \
+  [get_ports {desIn[1]}]  \
+  [get_ports {desIn[0]}]  \
+  [get_ports {key[55]}]  \
+  [get_ports {key[54]}]  \
+  [get_ports {key[53]}]  \
+  [get_ports {key[52]}]  \
+  [get_ports {key[51]}]  \
+  [get_ports {key[50]}]  \
+  [get_ports {key[49]}]  \
+  [get_ports {key[48]}]  \
+  [get_ports {key[47]}]  \
+  [get_ports {key[46]}]  \
+  [get_ports {key[45]}]  \
+  [get_ports {key[44]}]  \
+  [get_ports {key[43]}]  \
+  [get_ports {key[42]}]  \
+  [get_ports {key[41]}]  \
+  [get_ports {key[40]}]  \
+  [get_ports {key[39]}]  \
+  [get_ports {key[38]}]  \
+  [get_ports {key[37]}]  \
+  [get_ports {key[36]}]  \
+  [get_ports {key[35]}]  \
+  [get_ports {key[34]}]  \
+  [get_ports {key[33]}]  \
+  [get_ports {key[32]}]  \
+  [get_ports {key[31]}]  \
+  [get_ports {key[30]}]  \
+  [get_ports {key[29]}]  \
+  [get_ports {key[28]}]  \
+  [get_ports {key[27]}]  \
+  [get_ports {key[26]}]  \
+  [get_ports {key[25]}]  \
+  [get_ports {key[24]}]  \
+  [get_ports {key[23]}]  \
+  [get_ports {key[22]}]  \
+  [get_ports {key[21]}]  \
+  [get_ports {key[20]}]  \
+  [get_ports {key[19]}]  \
+  [get_ports {key[18]}]  \
+  [get_ports {key[17]}]  \
+  [get_ports {key[16]}]  \
+  [get_ports {key[15]}]  \
+  [get_ports {key[14]}]  \
+  [get_ports {key[13]}]  \
+  [get_ports {key[12]}]  \
+  [get_ports {key[11]}]  \
+  [get_ports {key[10]}]  \
+  [get_ports {key[9]}]  \
+  [get_ports {key[8]}]  \
+  [get_ports {key[7]}]  \
+  [get_ports {key[6]}]  \
+  [get_ports {key[5]}]  \
+  [get_ports {key[4]}]  \
+  [get_ports {key[3]}]  \
+  [get_ports {key[2]}]  \
+  [get_ports {key[1]}]  \
+  [get_ports {key[0]}]  \
+  [get_ports decrypt]  \
+  [get_ports clk]  \
+  [get_ports {desOut[63]}]  \
+  [get_ports {desOut[62]}]  \
+  [get_ports {desOut[61]}]  \
+  [get_ports {desOut[60]}]  \
+  [get_ports {desOut[59]}]  \
+  [get_ports {desOut[58]}]  \
+  [get_ports {desOut[57]}]  \
+  [get_ports {desOut[56]}]  \
+  [get_ports {desOut[55]}]  \
+  [get_ports {desOut[54]}]  \
+  [get_ports {desOut[53]}]  \
+  [get_ports {desOut[52]}]  \
+  [get_ports {desOut[51]}]  \
+  [get_ports {desOut[50]}]  \
+  [get_ports {desOut[49]}]  \
+  [get_ports {desOut[48]}]  \
+  [get_ports {desOut[47]}]  \
+  [get_ports {desOut[46]}]  \
+  [get_ports {desOut[45]}]  \
+  [get_ports {desOut[44]}]  \
+  [get_ports {desOut[43]}]  \
+  [get_ports {desOut[42]}]  \
+  [get_ports {desOut[41]}]  \
+  [get_ports {desOut[40]}]  \
+  [get_ports {desOut[39]}]  \
+  [get_ports {desOut[38]}]  \
+  [get_ports {desOut[37]}]  \
+  [get_ports {desOut[36]}]  \
+  [get_ports {desOut[35]}]  \
+  [get_ports {desOut[34]}]  \
+  [get_ports {desOut[33]}]  \
+  [get_ports {desOut[32]}]  \
+  [get_ports {desOut[31]}]  \
+  [get_ports {desOut[30]}]  \
+  [get_ports {desOut[29]}]  \
+  [get_ports {desOut[28]}]  \
+  [get_ports {desOut[27]}]  \
+  [get_ports {desOut[26]}]  \
+  [get_ports {desOut[25]}]  \
+  [get_ports {desOut[24]}]  \
+  [get_ports {desOut[23]}]  \
+  [get_ports {desOut[22]}]  \
+  [get_ports {desOut[21]}]  \
+  [get_ports {desOut[20]}]  \
+  [get_ports {desOut[19]}]  \
+  [get_ports {desOut[18]}]  \
+  [get_ports {desOut[17]}]  \
+  [get_ports {desOut[16]}]  \
+  [get_ports {desOut[15]}]  \
+  [get_ports {desOut[14]}]  \
+  [get_ports {desOut[13]}]  \
+  [get_ports {desOut[12]}]  \
+  [get_ports {desOut[11]}]  \
+  [get_ports {desOut[10]}]  \
+  [get_ports {desOut[9]}]  \
+  [get_ports {desOut[8]}]  \
+  [get_ports {desOut[7]}]  \
+  [get_ports {desOut[6]}]  \
+  [get_ports {desOut[5]}]  \
+  [get_ports {desOut[4]}]  \
+  [get_ports {desOut[3]}]  \
+  [get_ports {desOut[2]}]  \
+  [get_ports {desOut[1]}]  \
+  [get_ports {desOut[0]}] ]
+set_clock_gating_check -setup 0.0 
+set_max_fanout 8.000 [current_design]
+set_max_transition 200.0 [current_design]
+set_wire_load_mode "enclosed"

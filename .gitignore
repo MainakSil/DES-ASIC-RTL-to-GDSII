@@ -1,0 +1,9 @@
+asap7nm_pdk/
+*.inn.dat/
+.cadence/
+checkDesign/
+extLogDir/
+user_files/
+*.log
+*.vcd
+*.fsdb
