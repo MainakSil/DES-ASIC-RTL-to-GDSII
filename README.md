@@ -496,8 +496,6 @@ The implementation was performed using:
 - Cadence Innovus
 - Synopsys PrimeTime
 
-Commercial EDA tools and proprietary/licensed technology files are not redistributed through this repository.
-
 ## References
 
 1. OpenCores, DES/Triple DES IP Cores, Rudolf Usselmann.
@@ -505,16 +503,6 @@ Commercial EDA tools and proprietary/licensed technology files are not redistrib
 3. Cadence Genus documentation.
 4. Cadence Innovus documentation.
 5. Synopsys PrimeTime documentation.
-
-## Author
-
-Mainak Sil
-
-B.Tech Electronics and Communication Engineering
-
-VIT-AP University
-
-GitHub: MainakSil
 
 ## Disclaimer
 
