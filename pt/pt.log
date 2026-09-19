@@ -1,0 +1,690 @@
+Error: Library Compiler executable path is not set. (PT-063)
+
+                                 PrimeTime (R)
+
+                 Version Y-2026.03 for linux64 - Feb 25, 2026 
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+source /home/cdsl15/Downloads/syn_pnr_pt_flow/pt/user_settings.tcl
+1000
+1000
+set target_library $LIBRARY_DB_SET
+/home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.db
+set link_library "*  $LIBRARY_DB_SET"
+*  /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.db /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.db
+read_verilog $POST_LAY_VERILOG
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link
+Loading db file '/home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.db'
+Loading verilog file '/home/cdsl15/Downloads/syn_pnr_pt_flow/pnr/des_signoff.inn.dat/des.v.gz'
+Loading db file '/home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.db'
+Loading db file '/home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.db'
+Loading db file '/home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.db'
+Loading db file '/home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.db'
+Linking design des...
+Information: 30 (71.43%) library cells are unused in library asap7sc7p5t_AO_LVT_TT_ccsa_211120..... (LNK-045)
+Information: 23 (62.16%) library cells are unused in library asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120..... (LNK-045)
+Information: 21 (61.76%) library cells are unused in library asap7sc7p5t_OA_LVT_TT_ccsa_211120..... (LNK-045)
+Information: 32 (96.97%) library cells are unused in library asap7sc7p5t_SEQ_LVT_TT_ccsa_220123..... (LNK-045)
+Information: 42 (75.00%) library cells are unused in library asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120..... (LNK-045)
+Information: total 148 library cells are unused (LNK-046)
+Design 'des' was successfully linked.
+Information: There are 16861 leaf cells, ports, hiers and 16796 nets in the design (LNK-047)
+1
+read_sdc $SDC_FILE
+
+Reading SDC version 2.2...
+1
+1
+read_parasitics $SPEF_FILE
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+Information: read_parasitics command is executed in background
+1
+complete_net_parasitics -complete_with zero
+1
+report_annotated_parasitics -check
+Information: Log for 'report_annotated_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+1
+report_annotated_parasitics -list_annotated
+Information: Log for 'report_annotated_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+1
+set inPorts [all_inputs]
+{"desIn_63_", "desIn_62_", "desIn_61_", "desIn_60_", "desIn_59_", "desIn_58_", "desIn_57_", "desIn_56_", "desIn_55_", "desIn_54_", "desIn_53_", "desIn_52_", "desIn_51_", "desIn_50_", "desIn_49_", "desIn_48_", "desIn_47_", "desIn_46_", "desIn_45_", "desIn_44_", "desIn_43_", "desIn_42_", "desIn_41_", "desIn_40_", "desIn_39_", "desIn_38_", "desIn_37_", "desIn_36_", "desIn_35_", "desIn_34_", "desIn_33_", "desIn_32_", "desIn_31_", "desIn_30_", "desIn_29_", "desIn_28_", "desIn_27_", "desIn_26_", "desIn_25_", "desIn_24_", "desIn_23_", "desIn_22_", "desIn_21_", "desIn_20_", "desIn_19_", "desIn_18_", "desIn_17_", "desIn_16_", "desIn_15_", "desIn_14_", "desIn_13_", "desIn_12_", "desIn_11_", "desIn_10_", "desIn_9_", "desIn_8_", "desIn_7_", "desIn_6_", "desIn_5_", "desIn_4_", "desIn_3_", "desIn_2_", "desIn_1_", "desIn_0_", "key_55_", "key_54_", "key_53_", "key_52_", "key_51_", "key_50_", "key_49_", "key_48_", "key_47_", "key_46_", "key_45_", "key_44_", "key_43_", "key_42_", "key_41_", "key_40_", "key_39_", "key_38_", "key_37_", "key_36_", "key_35_", "key_34_", "key_33_", "key_32_", "key_31_", "key_30_", "key_29_", "key_28_", "key_27_", "key_26_", "key_25_", "key_24_", "key_23_", "key_22_", "key_21_", "key_20_"...}
+set theClocks [get_clock]
+{"clk"}
+set clockNames [get_attribute $theClocks full_name] 
+clk
+set inPortsNoClock [remove_from_collection $inPorts $clockNames] 
+{"desIn_63_", "desIn_62_", "desIn_61_", "desIn_60_", "desIn_59_", "desIn_58_", "desIn_57_", "desIn_56_", "desIn_55_", "desIn_54_", "desIn_53_", "desIn_52_", "desIn_51_", "desIn_50_", "desIn_49_", "desIn_48_", "desIn_47_", "desIn_46_", "desIn_45_", "desIn_44_", "desIn_43_", "desIn_42_", "desIn_41_", "desIn_40_", "desIn_39_", "desIn_38_", "desIn_37_", "desIn_36_", "desIn_35_", "desIn_34_", "desIn_33_", "desIn_32_", "desIn_31_", "desIn_30_", "desIn_29_", "desIn_28_", "desIn_27_", "desIn_26_", "desIn_25_", "desIn_24_", "desIn_23_", "desIn_22_", "desIn_21_", "desIn_20_", "desIn_19_", "desIn_18_", "desIn_17_", "desIn_16_", "desIn_15_", "desIn_14_", "desIn_13_", "desIn_12_", "desIn_11_", "desIn_10_", "desIn_9_", "desIn_8_", "desIn_7_", "desIn_6_", "desIn_5_", "desIn_4_", "desIn_3_", "desIn_2_", "desIn_1_", "desIn_0_", "key_55_", "key_54_", "key_53_", "key_52_", "key_51_", "key_50_", "key_49_", "key_48_", "key_47_", "key_46_", "key_45_", "key_44_", "key_43_", "key_42_", "key_41_", "key_40_", "key_39_", "key_38_", "key_37_", "key_36_", "key_35_", "key_34_", "key_33_", "key_32_", "key_31_", "key_30_", "key_29_", "key_28_", "key_27_", "key_26_", "key_25_", "key_24_", "key_23_", "key_22_", "key_21_", "key_20_"...}
+#set all_nets [get_nets -hierarchical *]
+#set all_nets_NoClock [remove_from_collection $all_nets $clockNames] 
+#Optional
+set_false_path -from [all_inputs]
+1
+set_false_path -to [all_outputs]
+1
+set_propagated_clock [get_ports $clockNames]
+1
+#Timing analysis for setup
+report_timing -nets -delay_type max -path_type full_clock_expanded -nosplit -capacitance -max_paths $max_path_no -significant_digits 6 -slack_lesser_than $clock_period
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_15_/CLK-->QN (max rising_edge) [r/f total_cap = 0.000103806/0.000103806, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_62_/CLK-->QN (max rising_edge) [r/f total_cap = 0.000107262/0.000107262, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_15_/CLK-->QN (min rising_edge) [r/f total_cap = 0.000103806/0.000103806, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_46_/CLK-->QN (max rising_edge) [r/f total_cap = 8.33822e-05/8.33822e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_62_/CLK-->QN (min rising_edge) [r/f total_cap = 0.000107262/0.000107262, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_46_/CLK-->QN (min rising_edge) [r/f total_cap = 8.33822e-05/8.33822e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_28_/CLK-->QN (max rising_edge) [r/f total_cap = 9.8164e-05/9.8164e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_61_/CLK-->QN (max rising_edge) [r/f total_cap = 1.40611e-05/1.40611e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_28_/CLK-->QN (min rising_edge) [r/f total_cap = 9.8164e-05/9.8164e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_61_/CLK-->QN (min rising_edge) [r/f total_cap = 1.40611e-05/1.40611e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_44_/CLK-->QN (max rising_edge) [r/f total_cap = 7.2149e-05/7.2149e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_60_/CLK-->QN (max rising_edge) [r/f total_cap = 7.57157e-05/7.57157e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_44_/CLK-->QN (min rising_edge) [r/f total_cap = 7.2149e-05/7.2149e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_60_/CLK-->QN (min rising_edge) [r/f total_cap = 7.57157e-05/7.57157e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_12_/CLK-->QN (max rising_edge) [r/f total_cap = 4.7557e-05/4.7557e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_26_/CLK-->QN (max rising_edge) [r/f total_cap = 2.86441e-05/2.86441e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_12_/CLK-->QN (min rising_edge) [r/f total_cap = 4.7557e-05/4.7557e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_43_/CLK-->QN (max rising_edge) [r/f total_cap = 7.3621e-05/7.3621e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_26_/CLK-->QN (min rising_edge) [r/f total_cap = 2.86441e-05/2.86441e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_43_/CLK-->QN (min rising_edge) [r/f total_cap = 7.3621e-05/7.3621e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_58_/CLK-->QN (max rising_edge) [r/f total_cap = 0.000100418/0.000100418, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_58_/CLK-->QN (min rising_edge) [r/f total_cap = 0.000100418/0.000100418, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_42_/CLK-->QN (max rising_edge) [r/f total_cap = 9.6583e-05/9.6583e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_10_/CLK-->QN (max rising_edge) [r/f total_cap = 0.000104335/0.000104335, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_42_/CLK-->QN (min rising_edge) [r/f total_cap = 9.6583e-05/9.6583e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_10_/CLK-->QN (min rising_edge) [r/f total_cap = 0.000104335/0.000104335, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_56_/CLK-->QN (max rising_edge) [r/f total_cap = 8.32529e-05/8.32529e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_56_/CLK-->QN (min rising_edge) [r/f total_cap = 8.32529e-05/8.32529e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_22_/CLK-->QN (max rising_edge) [r/f total_cap = 5.1909e-05/5.1909e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_22_/CLK-->QN (min rising_edge) [r/f total_cap = 5.1909e-05/5.1909e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_7_/CLK-->QN (max rising_edge) [r/f total_cap = 1.40639e-05/1.40639e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_7_/CLK-->QN (min rising_edge) [r/f total_cap = 1.40639e-05/1.40639e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_21_/CLK-->QN (max rising_edge) [r/f total_cap = 8.044e-05/8.044e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_54_/CLK-->QN (max rising_edge) [r/f total_cap = 9.9247e-05/9.9247e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_38_/CLK-->QN (max rising_edge) [r/f total_cap = 4.9034e-05/4.9034e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_21_/CLK-->QN (min rising_edge) [r/f total_cap = 8.044e-05/8.044e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_54_/CLK-->QN (min rising_edge) [r/f total_cap = 9.9247e-05/9.9247e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_6_/CLK-->QN (max rising_edge) [r/f total_cap = 3.4252e-05/3.4252e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_38_/CLK-->QN (min rising_edge) [r/f total_cap = 4.9034e-05/4.9034e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_6_/CLK-->QN (min rising_edge) [r/f total_cap = 3.4252e-05/3.4252e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_37_/CLK-->QN (max rising_edge) [r/f total_cap = 7.48272e-05/7.48272e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_19_/CLK-->QN (max rising_edge) [r/f total_cap = 0.000109406/0.000109406, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_37_/CLK-->QN (min rising_edge) [r/f total_cap = 7.48272e-05/7.48272e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_52_/CLK-->QN (max rising_edge) [r/f total_cap = 2.83091e-05/2.83091e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_19_/CLK-->QN (min rising_edge) [r/f total_cap = 0.000109406/0.000109406, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_52_/CLK-->QN (min rising_edge) [r/f total_cap = 2.83091e-05/2.83091e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_50_/CLK-->QN (max rising_edge) [r/f total_cap = 2.86369e-05/2.86369e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_34_/CLK-->QN (max rising_edge) [r/f total_cap = 6.4004e-05/6.4004e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_50_/CLK-->QN (min rising_edge) [r/f total_cap = 2.86369e-05/2.86369e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_34_/CLK-->QN (min rising_edge) [r/f total_cap = 6.4004e-05/6.4004e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_0_/CLK-->QN (max rising_edge) [r/f total_cap = 7.7637e-05/7.7637e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_49_/CLK-->QN (max rising_edge) [r/f total_cap = 2.86441e-05/2.86441e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_0_/CLK-->QN (min rising_edge) [r/f total_cap = 7.7637e-05/7.7637e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_49_/CLK-->QN (min rising_edge) [r/f total_cap = 2.86441e-05/2.86441e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_48_/CLK-->QN (max rising_edge) [r/f total_cap = 7.89685e-05/7.89685e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_SEQ_LVT_TT_ccsa_220123/DFFHQNx1_ASAP7_75t_L) desOut_reg_48_/CLK-->QN (min rising_edge) [r/f total_cap = 7.89685e-05/7.89685e-05, lib_range = [0.00072 0.04608]/[0.00072 0.04608] (pF)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21517/A-->Y (max negative_unate) [r/f slew = 1.71392e-05/1.73797e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21517/A-->Y (min negative_unate) [r/f slew = 1.71392e-05/1.73797e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21518/A-->Y (max negative_unate) [r/f slew = 5.80382e-05/5.87924e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21518/A-->Y (min negative_unate) [r/f slew = 5.80382e-05/5.87924e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21533/A-->Y (max negative_unate) [r/f slew = 9.16394e-05/9.23801e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21519/A-->Y (max negative_unate) [r/f slew = 1.4484e-05/1.46657e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21533/A-->Y (min negative_unate) [r/f slew = 9.16394e-05/9.23801e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21519/A-->Y (min negative_unate) [r/f slew = 1.4484e-05/1.46657e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21534/A-->Y (max negative_unate) [r/f slew = 5.07111e-05/5.13663e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21520/A-->Y (max negative_unate) [r/f slew = 2.94734e-05/2.98738e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21534/A-->Y (min negative_unate) [r/f slew = 5.07111e-05/5.13663e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21520/A-->Y (min negative_unate) [r/f slew = 2.94734e-05/2.98738e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21535/A-->Y (max negative_unate) [r/f slew = 7.60735e-05/7.67933e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21521/A-->Y (max negative_unate) [r/f slew = 7.74281e-05/7.82035e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21535/A-->Y (min negative_unate) [r/f slew = 7.60735e-05/7.67933e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21521/A-->Y (min negative_unate) [r/f slew = 7.74281e-05/7.82035e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21510/A-->Y (max negative_unate) [r/f slew = 1.8258e-05/1.85142e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21536/A-->Y (max negative_unate) [r/f slew = 4.66563e-05/4.72748e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21522/A-->Y (max negative_unate) [r/f slew = 4.70106e-05/4.76704e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21510/A-->Y (min negative_unate) [r/f slew = 1.8258e-05/1.85142e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21536/A-->Y (min negative_unate) [r/f slew = 4.66563e-05/4.72748e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21522/A-->Y (min negative_unate) [r/f slew = 4.70106e-05/4.76704e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21549/A-->Y (max negative_unate) [r/f slew = 8.29092e-05/8.3684e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21511/A-->Y (max negative_unate) [r/f slew = 6.15758e-05/6.22689e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21537/A-->Y (max negative_unate) [r/f slew = 4.41765e-05/4.47634e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21523/A-->Y (max negative_unate) [r/f slew = 6.80329e-05/6.89878e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21511/A-->Y (min negative_unate) [r/f slew = 6.15758e-05/6.22689e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21537/A-->Y (min negative_unate) [r/f slew = 4.41765e-05/4.47634e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21549/A-->Y (min negative_unate) [r/f slew = 8.29092e-05/8.3684e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21523/A-->Y (min negative_unate) [r/f slew = 6.80329e-05/6.89878e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21512/A-->Y (max negative_unate) [r/f slew = 2.08602e-05/2.1153e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21538/A-->Y (max negative_unate) [r/f slew = 2.41315e-05/2.44702e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21512/A-->Y (min negative_unate) [r/f slew = 2.08602e-05/2.1153e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21524/A-->Y (max negative_unate) [r/f slew = 1.85236e-05/1.87836e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21538/A-->Y (min negative_unate) [r/f slew = 2.41315e-05/2.44702e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21552/A-->Y (max negative_unate) [r/f slew = 1.99256e-05/2.02052e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21524/A-->Y (min negative_unate) [r/f slew = 1.85236e-05/1.87836e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21513/A-->Y (max negative_unate) [r/f slew = 5.44291e-05/5.50936e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21552/A-->Y (min negative_unate) [r/f slew = 1.99256e-05/2.02052e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21539/A-->Y (max negative_unate) [r/f slew = 4.60858e-05/4.65983e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21513/A-->Y (min negative_unate) [r/f slew = 5.44291e-05/5.50936e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21525/A-->Y (max negative_unate) [r/f slew = 8.19803e-05/8.2804e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21539/A-->Y (min negative_unate) [r/f slew = 4.60858e-05/4.65983e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Warning: An extrapolation exceeding 80% of the library characterization range has been detected. The delay calculation accuracy may be affected. for the cell timing arc, (asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120/INVxp33_ASAP7_75t_L) U21554/A-->Y (max negative_unate) [r/f slew = 1.94013e-05/1.96601e-05, lib_range = [0.005 0.32]/[0.005 0.32] (nS)] (RC-011)
+Note - message 'RC-011' limit (100) exceeded.  Remainder will be suppressed.
+Note - message 'RC-011' limit (100) exceeded.  Remainder will be suppressed.
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-nosplit
+	-nets
+	-slack_lesser_than 1000.000000
+	-max_paths 5
+	-capacitance
+	-sort_by slack
+Design : des
+Version: Y-2026.03
+Date   : Mon Jun 29 12:16:21 2026
+****************************************
+
+
+  Startpoint: R7_reg_20_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R8_reg_8_ (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: max
+
+  Point                                         Fanout    Cap       Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                         0.000000   0.000000
+  clock source latency                                          0.000000   0.000000
+  clk (in)                                                      0.000004 & 0.000004 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00021/Y (CKINVDCx16_ASAP7_75t_L)                15.519928 & 15.519932 f
+  CTS_11 (net)                                    10 58.129417
+  CTS_ccl_a_inv_00017/Y (CKINVDCx8_ASAP7_75t_L)                 38.483353 & 54.003284 r
+  CTS_9 (net)                                    100 74.679077
+  R7_reg_20_/CLK (DFFHQNx1_ASAP7_75t_L)                         7.372749 & 61.376034 r
+  R7_reg_20_/QN (DFFHQNx1_ASAP7_75t_L)                          65.873596 & 127.249630 f
+  R7_20_ (net)                                     5 6.073533
+  U14452/Y (XNOR2xp5_ASAP7_75t_L)                               22.265167 & 149.514797 f
+  n12483 (net)                                     1 0.412087
+  U12904/Y (NOR2xp33_ASAP7_75t_L)                               12.551056 & 162.065853 r
+  n14492 (net)                                     1 0.553965
+  U17394/Y (NOR2xp33_ASAP7_75t_L)                               50.552765 & 212.618618 f
+  n21839 (net)                                     7 6.245206
+  U17712/Y (INVx1_ASAP7_75t_L)                                  29.647934 & 242.266552 r
+  n21573 (net)                                     5 2.821242
+  U17418/Y (NOR2xp33_ASAP7_75t_L)                               35.484833 & 277.751385 f
+  n21586 (net)                                     6 3.315016
+  U12390/Y (NOR2xp33_ASAP7_75t_L)                               57.209732 & 334.961117 r
+  n21836 (net)                                     7 5.357579
+  U25297/Y (NAND2xp5_ASAP7_75t_L)                               30.158630 & 365.119747 f
+  n21852 (net)                                     4 2.907109
+  U25299/Y (AO21x1_ASAP7_75t_L)                                 24.296661 & 389.416409 f
+  n21592 (net)                                     1 0.532614
+  U25300/Y (OAI211xp5_ASAP7_75t_L)                              10.888336 & 400.304745 r
+  n21595 (net)                                     1 0.701589
+  U12216/Y (AOI211xp5_ASAP7_75t_L)                              16.166473 & 416.471218 f
+  n21598 (net)                                     1 1.101426
+  U25301/Y (XNOR2xp5_ASAP7_75t_L)                               22.786652 & 439.257870 r
+  n11043 (net)                                     1 1.546700
+  R8_reg_8_/D (DFFHQNx1_ASAP7_75t_L)                            0.152771 & 439.410641 r
+  data arrival time                                                        439.410641
+
+  clock clk (rise edge)                                         500.000000 500.000000
+  clock source latency                                          0.000000   500.000000
+  clk (in)                                                      0.000004 & 500.000004 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00021/Y (CKINVDCx16_ASAP7_75t_L)                15.517883 & 515.517887 f
+  CTS_11 (net)                                    10 45.922348
+  CTS_ccl_a_inv_00012/Y (CKINVDCx8_ASAP7_75t_L)                 36.263996 & 551.781883 r
+  CTS_5 (net)                                    100 46.519844
+  R8_reg_8_/CLK (DFFHQNx1_ASAP7_75t_L)                          10.033943 & 561.815826 r
+  clock reconvergence pessimism                                 0.000000   561.815826
+  library setup time                                            -5.179829  556.635997
+  data required time                                                       556.635997
+  ------------------------------------------------------------------------------------
+  data required time                                                       556.635997
+  data arrival time                                                        -439.410641
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                              117.225357
+
+
+  Startpoint: R7_reg_20_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R8_reg_14_ (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: max
+
+  Point                                         Fanout    Cap       Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                         0.000000   0.000000
+  clock source latency                                          0.000000   0.000000
+  clk (in)                                                      0.000004 & 0.000004 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00021/Y (CKINVDCx16_ASAP7_75t_L)                15.519928 & 15.519932 f
+  CTS_11 (net)                                    10 58.129417
+  CTS_ccl_a_inv_00017/Y (CKINVDCx8_ASAP7_75t_L)                 38.483353 & 54.003284 r
+  CTS_9 (net)                                    100 74.679077
+  R7_reg_20_/CLK (DFFHQNx1_ASAP7_75t_L)                         7.372749 & 61.376034 r
+  R7_reg_20_/QN (DFFHQNx1_ASAP7_75t_L)                          65.873566 & 127.249599 f
+  R7_20_ (net)                                     5 6.073533
+  U14452/Y (XNOR2xp5_ASAP7_75t_L)                               22.265167 & 149.514767 f
+  n12483 (net)                                     1 0.412087
+  U12904/Y (NOR2xp33_ASAP7_75t_L)                               12.551056 & 162.065823 r
+  n14492 (net)                                     1 0.553965
+  U17394/Y (NOR2xp33_ASAP7_75t_L)                               50.552765 & 212.618587 f
+  n21839 (net)                                     7 6.245206
+  U17712/Y (INVx1_ASAP7_75t_L)                                  29.647934 & 242.266521 r
+  n21573 (net)                                     5 2.821242
+  U17418/Y (NOR2xp33_ASAP7_75t_L)                               35.484833 & 277.751354 f
+  n21586 (net)                                     6 3.315016
+  U12390/Y (NOR2xp33_ASAP7_75t_L)                               57.209763 & 334.961117 r
+  n21836 (net)                                     7 5.357579
+  U25297/Y (NAND2xp5_ASAP7_75t_L)                               30.158630 & 365.119747 f
+  n21852 (net)                                     4 2.907109
+  U25454/Y (OAI211xp5_ASAP7_75t_L)                              18.671722 & 383.791470 r
+  n21850 (net)                                     1 0.747324
+  U25460/Y (AOI211xp5_ASAP7_75t_L)                              17.466858 & 401.258327 f
+  n21859 (net)                                     1 0.781701
+  U25464/Y (NAND3xp33_ASAP7_75t_L)                              17.379211 & 418.637539 r
+  n21860 (net)                                     1 1.131540
+  U25465/Y (XNOR2xp5_ASAP7_75t_L)                               18.570618 & 437.208157 r
+  n11041 (net)                                     1 1.348664
+  R8_reg_14_/D (DFFHQNx1_ASAP7_75t_L)                           0.090118 & 437.298275 r
+  data arrival time                                                        437.298275
+
+  clock clk (rise edge)                                         500.000000 500.000000
+  clock source latency                                          0.000000   500.000000
+  clk (in)                                                      0.000004 & 500.000004 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00021/Y (CKINVDCx16_ASAP7_75t_L)                15.517883 & 515.517887 f
+  CTS_11 (net)                                    10 45.922348
+  CTS_ccl_a_inv_00012/Y (CKINVDCx8_ASAP7_75t_L)                 36.263996 & 551.781883 r
+  CTS_5 (net)                                    100 46.519844
+  R8_reg_14_/CLK (DFFHQNx1_ASAP7_75t_L)                         9.926186 & 561.708069 r
+  clock reconvergence pessimism                                 0.000000   561.708069
+  library setup time                                            -5.023093  556.684976
+  data required time                                                       556.684976
+  ------------------------------------------------------------------------------------
+  data required time                                                       556.684976
+  data arrival time                                                        -437.298275
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                              119.386703
+
+
+  Startpoint: R12_reg_20_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R13_reg_14_ (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: max
+
+  Point                                         Fanout    Cap       Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                         0.000000   0.000000
+  clock source latency                                          0.000000   0.000000
+  clk (in)                                                      0.000000 & 0.000000 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00021/Y (CKINVDCx16_ASAP7_75t_L)                15.519928 & 15.519928 f
+  CTS_11 (net)                                    10 58.129417
+  CTS_ccl_a_inv_00018/Y (CKINVDCx8_ASAP7_75t_L)                 44.248924 & 59.768852 r
+  CTS_10 (net)                                    99 74.400589
+  R12_reg_20_/CLK (DFFHQNx1_ASAP7_75t_L)                        4.688988 & 64.457840 r
+  R12_reg_20_/QN (DFFHQNx1_ASAP7_75t_L)                         66.694855 & 131.152695 r
+  R12_20_ (net)                                    5 5.698260
+  U19742/Y (XNOR2xp5_ASAP7_75t_L)                               17.858307 & 149.011002 r
+  n15125 (net)                                     1 0.493940
+  U19743/Y (NOR2xp33_ASAP7_75t_L)                               13.579651 & 162.590652 f
+  n15126 (net)                                     1 0.565175
+  U12696/Y (AOI21xp5_ASAP7_75t_L)                               29.548706 & 192.139359 r
+  n24476 (net)                                     7 4.144247
+  U13734/Y (NOR2xp33_ASAP7_75t_L)                               51.120468 & 243.259827 f
+  n12344 (net)                                     6 4.190963
+  U15614/Y (NOR2xp33_ASAP7_75t_L)                               48.877380 & 292.137207 r
+  n24479 (net)                                     6 4.181004
+  U16670/Y (NOR2xp33_ASAP7_75t_L)                               41.715866 & 333.853073 f
+  n24470 (net)                                     4 2.788543
+  U16499/Y (AOI21xp5_ASAP7_75t_L)                               33.573822 & 367.426895 r
+  n15774 (net)                                     4 3.074881
+  U16498/Y (NOR2xp33_ASAP7_75t_L)                               16.159851 & 383.586746 f
+  n13451 (net)                                     1 0.619137
+  U16497/Y (AOI211xp5_ASAP7_75t_L)                              15.997223 & 399.583969 r
+  n13450 (net)                                     1 0.725263
+  U16489/Y (NAND4xp25_ASAP7_75t_L)                              21.621948 & 421.205917 f
+  n15775 (net)                                     1 1.070592
+  U20478/Y (XNOR2xp5_ASAP7_75t_L)                               19.324005 & 440.529922 r
+  n10444 (net)                                     1 0.913159
+  R13_reg_14_/D (DFFHQNx1_ASAP7_75t_L)                          0.043915 & 440.573837 r
+  data arrival time                                                        440.573837
+
+  clock clk (rise edge)                                         500.000000 500.000000
+  clock source latency                                          0.000000   500.000000
+  clk (in)                                                      0.000000 & 500.000000 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00021/Y (CKINVDCx16_ASAP7_75t_L)                15.517879 & 515.517879 f
+  CTS_11 (net)                                    10 45.922348
+  CTS_ccl_a_inv_00018/Y (CKINVDCx8_ASAP7_75t_L)                 42.720989 & 558.238869 r
+  CTS_10 (net)                                    99 45.606953
+  R13_reg_14_/CLK (DFFHQNx1_ASAP7_75t_L)                        6.850868 & 565.089737 r
+  clock reconvergence pessimism                                 0.000000   565.089737
+  library setup time                                            -5.015273  560.074464
+  data required time                                                       560.074464
+  ------------------------------------------------------------------------------------
+  data required time                                                       560.074464
+  data arrival time                                                        -440.573837
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                              119.500626
+
+
+  Startpoint: R3_reg_16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R4_reg_14_ (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: max
+
+  Point                                           Fanout    Cap       Incr       Path
+  --------------------------------------------------------------------------------------
+  clock clk (rise edge)                                           0.000000   0.000000
+  clock source latency                                            0.000000   0.000000
+  clk (in)                                                        0.000000 & 0.000000 r
+  clk (net)                                          2 18.290401
+  CTS_ccl_a_inv_00022/Y (CKINVDCx12_ASAP7_75t_L)                  14.674461 & 14.674461 f
+  CTS_22 (net)                                      10 52.644737
+  CTS_ccl_a_inv_00010/Y (CKINVDCx5p33_ASAP7_75t_L)                47.459171 & 62.133633 r
+  CTS_17 (net)                                     100 73.629097
+  R3_reg_16_/CLK (DFFHQNx1_ASAP7_75t_L)                           4.123333 & 66.256966 r
+  R3_reg_16_/QN (DFFHQNx1_ASAP7_75t_L)                            65.733917 & 131.990883 r
+  R3_16_ (net)                                       4 5.108929
+  U20027/Y (XOR2xp5_ASAP7_75t_L)                                  22.599457 & 154.590340 r
+  n15365 (net)                                       1 0.655471
+  U15431/Y (AND2x2_ASAP7_75t_L)                                   15.609512 & 170.199852 r
+  n14377 (net)                                       1 0.329380
+  U14258/Y (NOR2xp33_ASAP7_75t_L)                                 40.307648 & 210.507500 f
+  n19014 (net)                                       8 5.416451
+  U20029/Y (NOR2xp33_ASAP7_75t_L)                                 47.116394 & 257.623894 r
+  n18998 (net)                                       5 2.916785
+  U20032/Y (NOR2xp33_ASAP7_75t_L)                                 37.163818 & 294.787712 f
+  n18960 (net)                                       4 2.471599
+  U20033/Y (INVxp67_ASAP7_75t_L)                                  12.565826 & 307.353539 r
+  n15368 (net)                                       1 0.372134
+  U16780/Y (NOR2xp33_ASAP7_75t_L)                                 25.195114 & 332.548653 f
+  n19019 (net)                                       4 2.779484
+  U12314/Y (OAI31xp33_ASAP7_75t_L)                                27.434113 & 359.982765 r
+  n12863 (net)                                       3 1.776459
+  U15581/Y (NOR2xp33_ASAP7_75t_L)                                 18.093781 & 378.076546 f
+  n12862 (net)                                       1 0.703541
+  U15580/Y (A2O1A1Ixp33_ASAP7_75t_L)                              22.445038 & 400.521584 r
+  n18967 (net)                                       1 1.652041
+  U23621/Y (XNOR2xp5_ASAP7_75t_L)                                 18.976440 & 419.498024 r
+  n11527 (net)                                       1 1.110392
+  R4_reg_14_/D (DFFHQNx1_ASAP7_75t_L)                             0.065826 & 419.563850 r
+  data arrival time                                                          419.563850
+
+  clock clk (rise edge)                                           500.000000 500.000000
+  clock source latency                                            0.000000   500.000000
+  clk (in)                                                        0.000004 & 500.000004 r
+  clk (net)                                          2 18.290401
+  CTS_ccl_a_inv_00022/Y (CKINVDCx12_ASAP7_75t_L)                  14.669365 & 514.669369 f
+  CTS_22 (net)                                      10 42.330315
+  CTS_ccl_a_inv_00011/Y (CKINVDCx8_ASAP7_75t_L)                   36.892490 & 551.561859 r
+  CTS_18 (net)                                     100 44.908863
+  R4_reg_14_/CLK (DFFHQNx1_ASAP7_75t_L)                           3.004765 & 554.566624 r
+  clock reconvergence pessimism                                   0.000000   554.566624
+  library setup time                                              -5.345727  549.220897
+  data required time                                                         549.220897
+  --------------------------------------------------------------------------------------
+  data required time                                                         549.220897
+  data arrival time                                                          -419.563850
+  --------------------------------------------------------------------------------------
+  slack (MET)                                                                129.657043
+
+
+  Startpoint: R1_reg_20_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: R2_reg_14_ (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: max
+
+  Point                                         Fanout    Cap       Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                         0.000000   0.000000
+  clock source latency                                          0.000000   0.000000
+  clk (in)                                                      0.000000 & 0.000000 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00022/Y (CKINVDCx12_ASAP7_75t_L                 14.674461 & 14.674461 f
+  CTS_22 (net)                                    10 52.644737
+  CTS_ccl_a_inv_00003/Y (CKINVDCx8_ASAP7_75t_L)                 37.691433 & 52.365894 r
+  CTS_13 (net)                                   100 73.926872
+  R1_reg_20_/CLK (DFFHQNx1_ASAP7_75t_L)                         5.930958 & 58.296852 r
+  R1_reg_20_/QN (DFFHQNx1_ASAP7_75t_L)                          64.499664 & 122.796516 f
+  R1_20_ (net)                                     5 5.740560
+  U19974/Y (XOR2xp5_ASAP7_75t_L)                                21.221008 & 144.017525 f
+  n15321 (net)                                     1 0.608998
+  U17581/Y (AND2x2_ASAP7_75t_L)                                 18.910675 & 162.928200 f
+  n14711 (net)                                     1 0.309018
+  U12850/Y (NOR2xp33_ASAP7_75t_L)                               32.917770 & 195.845970 r
+  n17704 (net)                                     7 3.930015
+  U17949/Y (NOR2xp33_ASAP7_75t_L)                               43.260986 & 239.106956 f
+  n17791 (net)                                     5 3.175600
+  FE_DBTC7_n17791/Y (INVxp33_ASAP7_75t_L)                       28.963715 & 268.070671 r
+  FE_DBTN7_n17791 (net)                            2 1.417826
+  U12734/Y (AND2x2_ASAP7_75t_L)                                 25.796265 & 293.866936 r
+  n17707 (net)                                     7 4.049438
+  U18860/Y (NOR2xp33_ASAP7_75t_L)                               24.845291 & 318.712227 f
+  n17797 (net)                                     4 2.740317
+  U18217/Y (AOI21xp5_ASAP7_75t_L)                               31.398346 & 350.110573 r
+  n17817 (net)                                     4 2.888748
+  U20576/Y (OAI211xp5_ASAP7_75t_L)                              16.366119 & 366.476692 f
+  n15872 (net)                                     1 0.796936
+  U13631/Y (NAND2xp5_ASAP7_75t_L)                               13.482513 & 379.959206 r
+  n12317 (net)                                     1 0.928036
+  U13633/Y (INVx1_ASAP7_75t_L)                                  6.193726 & 386.152931 f
+  n12318 (net)                                     1 0.452312
+  U13632/Y (NAND3xp33_ASAP7_75t_L)                              14.312714 & 400.465645 r
+  n15874 (net)                                     1 1.615372
+  U20580/Y (XNOR2xp5_ASAP7_75t_L)                               18.602448 & 419.068092 r
+  n11742 (net)                                     1 1.247463
+  R2_reg_14_/D (DFFHQNx1_ASAP7_75t_L)                           0.081329 & 419.149422 r
+  data arrival time                                                        419.149422
+
+  clock clk (rise edge)                                         500.000000 500.000000
+  clock source latency                                          0.000000   500.000000
+  clk (in)                                                      0.000004 & 500.000004 r
+  clk (net)                                        2 18.290401
+  CTS_ccl_a_inv_00022/Y (CKINVDCx12_ASAP7_75t_L                 14.669365 & 514.669369 f
+  CTS_22 (net)                                    10 42.330315
+  CTS_ccl_a_inv_00003/Y (CKINVDCx8_ASAP7_75t_L)                 36.230518 & 550.899887 r
+  CTS_13 (net)                                   100 44.786247
+  R2_reg_14_/CLK (DFFHQNx1_ASAP7_75t_L)                         3.409004 & 554.308891 r
+  clock reconvergence pessimism                                 0.000000   554.308891
+  library setup time                                            -5.352565  548.956326
+  data required time                                                       548.956326
+  ------------------------------------------------------------------------------------
+  data required time                                                       548.956326
+  data arrival time                                                        -419.149422
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                              129.806900
+
+Warning: report_timing has satisfied the max_paths criteria. There are 1859 further endpoints which have paths of interest with slack less than 1000.000000 that were not considered when generating this report. (UITE-502)
+
+1
+##Average statistical power analysis
+set power_enable_analysis TRUE
+Information: Checked out license 'PrimePower' (PT-019)
+TRUE
+set power_analysis_mode averaged
+averaged
+set_switching_activity -static_probability 0.5 -toggle_rate $input_toggle_rate -period $clock_period $inPortsNoClock
+1
+set_switching_activity -static_probability 0.5 -toggle_rate $reg_toggle_rate -period $clock_period -type registers -hierarchy
+1
+set_switching_activity -static_probability 0.5 -toggle_rate 2 -period $clock_period $clockNames
+1
+update_power
+Information: Running switching activity propagation with 4 threads!
+Information: Running averaged power analysis... (PWR-601)
+Information: Running power calculation with 4 threads. (PWR-602)
+1
+report_switching_activity
+****************************************
+Report : Switching Activity
+	
+Design : des
+Version: Y-2026.03
+Date   : Mon Jun 29 12:16:23 2026
+****************************************
+
+ Switching Activity Overview Statistics for "des"
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  From Activity     From         From         From             From            From                                                            Not           From Annotated
+Object Type       File (%)          SSA (%)      SSA Force (%) SSA Force (%)   SCA (%)         Clock (%)       Default (%)     Propagated(%)   Implied(%)      Annotated(%)  Waveform(%)         Total
+                                                 Annotated    Implied                                                                                                        
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nets             0(0.00%)          2106(12.54%) 0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        12985(77.31%)   1705(10.15%)    0(0.00%)      0(0.00%)            16796
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nets Driven by
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Primary Input     0(0.00%)          122(100.00%) 0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      0(0.00%)            122
+Tri-State         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+Black Box         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+Sequential        0(0.00%)          1984(100.00%) 0(0.00%)    0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      0(0.00%)            1984
+Combinational     0(0.00%)          0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        12985(88.39%)   1705(11.61%)    0(0.00%)      0(0.00%)            14690
+Memory            0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+Clock Gate        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Static Probability Overview Statistics for "des"
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                  From Activity     From         From         From             From            From                                                            Not           From Annotated
+Object Type       File (%)          SSA (%)      SSA Force (%) SSA Force (%)   SCA (%)         Clock (%)       Default (%)     Propagated(%)   Implied(%)      Annotated(%)  Waveform(%)         Total
+                                                 Annotated    Implied                                                                                                        
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nets             0(0.00%)          2106(12.54%) 0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        12985(77.31%)   1705(10.15%)    0(0.00%)      0(0.00%)            16796
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nets Driven by
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Primary Input     0(0.00%)          122(100.00%) 0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      0(0.00%)            122
+Tri-State         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+Black Box         0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+Sequential        0(0.00%)          1984(100.00%) 0(0.00%)    0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)        0(0.00%)      0(0.00%)            1984
+Combinational     0(0.00%)          0(0.00%)     0(0.00%)     0(0.00%)         0(0.00%)        0(0.00%)        0(0.00%)        12985(88.39%)   1705(11.61%)    0(0.00%)      0(0.00%)            14690
+Memory            0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+Clock Gate        0(0%)             0(0%)        0(0%)        0(0%)            0(0%)           0(0%)           0(0%)           0(0%)           0(0%)           0(0%)         0(0%)               0
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1
+report_power -verbose -nosplit
+****************************************
+Report : Averaged Power
+	-verbose
+	-nosplit
+Design : des
+Version: Y-2026.03
+Date   : Mon Jun 29 12:16:23 2026
+****************************************
+
+Library(s) Used:
+
+    asap7sc7p5t_AO_LVT_TT_ccsa_211120 (File: /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_AO_LVT_TT_ccsa_211120.db)
+    asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120 (File: /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_INVBUF_LVT_TT_ccsa_211120.db)
+    asap7sc7p5t_OA_LVT_TT_ccsa_211120 (File: /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_OA_LVT_TT_ccsa_211120.db)
+    asap7sc7p5t_SEQ_LVT_TT_ccsa_220123 (File: /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SEQ_LVT_TT_ccsa_220123.db)
+    asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120 (File: /home/cdsl15/Downloads/syn_pnr_pt_flow/asap7nm_pdk/lib/asap7sc7p5t_SIMPLE_LVT_TT_ccsa_211120.db)
+
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_AO_LVT_TT_ccsa_211120
+Wire Load Model Mode: top
+
+<no wire load model is set>
+
+Power-specific unit information :
+    Voltage Units = 1 V
+    Capacitance Units = 0.001 pf
+    Time Units = 0.001 ns
+    Dynamic Power Units = 1 W
+    Leakage Power Units = 1 W
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           2.467e-03 6.357e-04 9.423e-08 3.103e-03 (57.81%)  i
+register                3.562e-04 7.848e-05 4.410e-06 4.391e-04 ( 8.18%)  
+combinational           7.132e-04 1.104e-03 8.175e-06 1.826e-03 (34.01%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 1.818e-03   (33.88%)
+  Cell Internal Power  = 3.537e-03   (65.89%)
+  Cell Leakage Power   = 1.268e-05   ( 0.24%)
+                         ---------
+Total Power            = 5.368e-03  (100.00%)
+
+1
+#report_power -cell_power -leaf -sort_by name -nosplit > power_cell.txt
+report_power -hierarchy
+****************************************
+Report : Averaged Power
+	-hierarchy
+Design : des
+Version: Y-2026.03
+Date   : Mon Jun 29 12:16:23 2026
+****************************************
+
+
+
+                                      Int      Switch   Leak     Total
+Hierarchy                             Power    Power    Power    Power    %
+----------------------------------------------------------------------------------
+des                                   3.54e-03 1.82e-03 1.27e-05 5.37e-03 100.0
+1
+exit
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Information: Defining new variable 'theClocks'. (CMD-041)
+Information: Defining new variable 'SDC_FILE'. (CMD-041)
+Information: Defining new variable 'POST_LAY_VERILOG'. (CMD-041)
+Information: Defining new variable 'reg_toggle_rate'. (CMD-041)
+Information: Defining new variable 'max_path_no'. (CMD-041)
+Information: Defining new variable 'clockNames'. (CMD-041)
+Information: Defining new variable 'PDK_DIR'. (CMD-041)
+Information: Defining new variable 'inPorts'. (CMD-041)
+Information: Defining new variable 'LIBRARY_DB_SET'. (CMD-041)
+Information: Defining new variable 'clock_period'. (CMD-041)
+Information: Defining new variable 'DESIGN_DIR'. (CMD-041)
+Information: Defining new variable 'PDK'. (CMD-041)
+Information: Defining new variable 'inPortsNoClock'. (CMD-041)
+Information: Defining new variable 'SPEF_FILE'. (CMD-041)
+Information: Defining new variable 'input_toggle_rate'. (CMD-041)
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+RC-011      Warning               306          206
+Total 1 type of message is suppressed
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 3008.56 MB
+CPU usage for this session: 14 seconds 
+Elapsed time for this session: 10 seconds
+Diagnostics summary: 1 error, 101 warnings, 31 informationals
+
+Thank you for using pt_shell!
