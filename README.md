@@ -1,285 +1,525 @@
 # DES ASIC RTL-to-GDSII
 
-ASIC implementation of a DES encryption core from RTL through synthesis, physical design, static timing analysis, and final layout using the ASAP7 predictive 7 nm technology library.
+A complete ASIC physical implementation of a DES encryption core, starting from an open-source OpenCores RTL implementation and taking the design through synthesis, floorplanning, placement, clock-tree synthesis, routing, and post-route static timing and power analysis.
 
-The DES RTL used in this project is based on the open-source DES/Triple DES IP core from OpenCores, maintained by Rudolf Usselmann. The original OpenCores project provides the DES/Triple-DES Verilog IP. This repository focuses on taking the RTL through a complete ASIC implementation flow.
+The implementation uses the ASAP7 predictive 7 nm technology library with Cadence Genus, Cadence Innovus, and Synopsys PrimeTime.
 
-## Project Overview
+## Overview
 
-The implementation flow covers:
+This project demonstrates a complete digital ASIC implementation flow:
 
 ```text
 OpenCores DES RTL
-        ↓
-RTL Synthesis
-        ↓
+       │
+       ▼
+RTL Verification
+       │
+       ▼
+Logic Synthesis
+       │
+       ▼
 Gate-Level Netlist
-        ↓
+       │
+       ▼
 Floorplanning
-        ↓
+       │
+       ▼
 Power Planning
-        ↓
+       │
+       ▼
 Placement
-        ↓
+       │
+       ▼
 Clock Tree Synthesis
-        ↓
+       │
+       ▼
 Routing
-        ↓
-Static Timing Analysis
-        ↓
+       │
+       ▼
+Post-Route STA
+       │
+       ▼
+Power Analysis
+       │
+       ▼
 Physical Design Reports
 ```
 
-The design was implemented with the ASAP7 standard-cell libraries using Cadence Genus and Innovus, followed by timing analysis using Synopsys PrimeTime.
+The main focus of this repository is the ASIC implementation and physical-design flow. The original DES RTL is credited to the OpenCores project.
 
-## Original RTL
+## Results
 
-Source:
+### PrimeTime post-route analysis
 
-OpenCores DES/Triple DES IP Cores  
-https://opencores.org/projects/des
+| Metric | Result |
+|---|---:|
+| Clock period | 500 ps |
+| Target clock frequency | 2.0 GHz |
+| Critical path delay | 439.411 ps |
+| Worst setup slack | +117.225 ps |
+| Total power | 5.368 mW |
+
+The PrimeTime report shows the worst reported setup path with:
+
+```text
+Data arrival time : 439.410641 ps
+Data required time : 556.635997 ps
+Setup slack : +117.225357 ps
+```
+
+The reported critical path is therefore within the 500 ps clock constraint for the analyzed PrimeTime run.
+
+### Innovus physical implementation
+
+| Metric | Result |
+|---|---:|
+| Technology | ASAP7 |
+| Design | `des` |
+| Standard-cell instances | 42,845 |
+| Hard macros | 0 |
+| Signal nets | 16,798 |
+| Core area | 2,624.400 µm² |
+| Standard-cell area | 2,624.400 µm² |
+| Standard-cell area excluding physical cells | 1,622.900 µm² |
+| Pure gate density excluding physical cells | 61.839% |
+| Total routed wire length | 41,644.630 µm |
+| Average wire length per net | 2.4791 µm |
+| I/O pins | 0 pads |
+| Routing layers with signal wiring | M2-M6 |
+
+### Innovus timing
+
+The final Innovus report also shows positive setup and hold slack:
+
+| Metric | Result |
+|---|---:|
+| Setup WNS | +0.185 ns |
+| Setup TNS | 0.000 ns |
+| Hold WNS | +0.092 ns |
+| Hold TNS | 0.000 ns |
+
+These Innovus values are reported separately from PrimeTime because the timing configurations and analysis environments are not identical.
+
+## Design Source
+
+The starting DES RTL is based on the OpenCores:
+
+**DES/Triple DES IP Cores**
+
+The OpenCores project describes the design as a simple DES/Triple-DES core and credits Rudolf Usselmann as the project maintainer.
+
+The original project includes Verilog RTL, test benches, and DES test vectors.
+
+### Attribution
+
+The DES encryption RTL is not claimed as original work in this repository.
+
+The original OpenCores DES/Triple-DES IP is credited to its respective authors and project maintainers.
+
+This repository focuses on the subsequent ASIC implementation work, including synthesis, physical design, timing analysis, power analysis, and implementation reporting.
 
 Original project:
 
-- Project: DES/Triple DES IP Cores
-- Maintainer: Rudolf Usselmann
-- Language: Verilog
-- Category: Crypto core
-- OpenCores project created: 2001
-- OpenCores project updated: 2009
+OpenCores DES/Triple DES IP Cores
 
-OpenCores describes the original design as a simple DES/Triple-DES core designed for fast and small implementations. The original project also provides DES test benches and test vectors.
+https://opencores.org/projects/des
 
-This repository does not claim authorship of the original DES algorithm implementation.
+OpenCores source repository:
 
-## What This Repository Adds
+https://opencores.org/ocsvn/des/des/trunk
 
-The focus of this repository is the ASIC implementation rather than development of the DES algorithm itself.
+## DES Architecture
 
-The work includes:
+DES is a symmetric-key block cipher based on a Feistel network.
 
-- RTL synthesis
-- Timing constraint setup
-- ASAP7 standard-cell mapping
-- Floorplanning
-- Power distribution planning
-- Standard-cell placement
-- Clock Tree Synthesis
-- Global and detailed routing
-- Post-route timing analysis
-- Area and utilization analysis
-- Physical-design reporting
+The original DES algorithm operates on:
+
+- 64-bit data blocks
+- 64-bit keys including parity bits
+- 16 Feistel rounds
+- 32-bit left and right data halves
+
+The OpenCores implementation provides the DES functionality used as the RTL starting point for this project.
+
+The ASIC flow treats the DES core as the design-under-test and focuses on its implementation using standard-cell technology.
 
 ## Technology
 
-| Parameter | Value |
-|---|---|
-| Technology library | ASAP7 |
-| Standard-cell library | ASAP7 75-track |
-| Process configuration | 7 nm |
-| Top-level design | `des` |
-| Hard macros | 0 |
-| Standard-cell instances | 42,845 |
-| Signal nets | 16,798 |
-| Routing layers used | M1-M6 |
-| Clock | `clk` |
+The physical implementation uses the ASAP7 predictive technology model.
 
-The ASAP7 PDK is a predictive academic technology model. The reported dimensions and timing results should therefore not be interpreted as measurements from a fabricated 7 nm commercial process.
+ASAP7 is an academic predictive 7 nm technology platform intended for research and educational ASIC design studies.
 
-## Tools
+It should not be interpreted as silicon measured from a commercial 7 nm manufacturing process.
+
+The implementation uses the ASAP7 75-track standard-cell library.
+
+## EDA Tools
 
 | Tool | Purpose |
 |---|---|
 | Cadence Genus | RTL synthesis |
-| Cadence Innovus | Physical implementation |
-| Synopsys PrimeTime | Static timing analysis |
-| ASAP7 | Technology and standard-cell library |
+| Cadence Innovus | Floorplanning, placement, CTS, routing |
+| Synopsys PrimeTime | Static timing and power analysis |
+| ASAP7 | Predictive technology and standard-cell library |
 
-## ASIC Flow
+## ASIC Implementation Flow
 
 ### 1. RTL
 
-The design starts from the OpenCores DES Verilog implementation.
+The flow starts with the OpenCores DES Verilog implementation.
 
-The top-level module used for implementation is:
+The top-level design used for physical implementation is:
 
 ```text
 des
 ```
 
-The design contains the DES datapath and associated key and control logic from the original OpenCores implementation.
+The original RTL was synthesized and prepared for implementation against the ASAP7 standard-cell library.
 
 ### 2. Logic Synthesis
 
-Cadence Genus was used to synthesize the RTL against the ASAP7 standard-cell libraries.
+Cadence Genus was used for RTL synthesis.
 
-The synthesis flow produces:
+The synthesis stage performs:
 
-- Gate-level Verilog netlist
-- Timing constraints
-- Standard-cell mapping
-- Synthesis reports
+- RTL elaboration
+- Logic optimization
+- Technology mapping
+- Standard-cell selection
+- Timing constraint application
+- Gate-level netlist generation
 
-The resulting gate-level netlist was subsequently imported into Innovus.
+The synthesized netlist was then imported into Cadence Innovus for physical implementation.
 
 ### 3. Floorplanning
 
-The synthesized design was initialized in Cadence Innovus using the ASAP7 technology and standard-cell LEF files.
+The synthesized design was initialized in Innovus using the ASAP7 technology files and standard-cell libraries.
 
-The implementation contains:
+The final physical design contains:
 
-- 0 hard macros
-- 42,845 standard-cell instances
-- 16,798 signal nets
-- 1 clock
+```text
+Hard macros       : 0
+Standard cells    : 42,845
+Signal nets       : 16,798
+```
 
 The reported core area is:
 
 ```text
-2624.4 µm²
+2624.400 µm²
 ```
 
-The final physical database reports:
+The Innovus database reports the core boundary as approximately:
 
 ```text
-Core density excluding physical cells: 61.839%
+54 µm × 48.6 µm
 ```
 
 ### 4. Power Planning
 
-VDD and VSS power networks were created during physical implementation.
+The design uses:
 
-Power routing was performed across the available routing layers used by the implementation.
+```text
+VDD
+VSS
+```
+
+as the primary power and ground nets.
+
+Power structures were generated during the Innovus physical implementation flow using multiple metal layers.
+
+The implementation uses power routing across the reported M1-M6 layers.
 
 ### 5. Placement
 
-Standard cells were placed within the core region.
+Standard cells were placed inside the defined core area.
 
 Placement optimization considered:
 
 - Timing
 - Cell density
-- Routing congestion
-- Electrical design-rule constraints
+- Wirelength
+- Routing feasibility
+- Electrical constraints
 
-The implementation report shows zero routing overflow in the reported final timing/optimization stage.
+The final Innovus report contains 42,845 standard-cell instances.
+
+The design includes:
+
+```text
+DFFHQNx1_ASAP7_75t_L : 1,984
+```
+
+reported sequential cells of this type.
+
+The implementation also contains physical-only cells such as:
+
+- Tap cells
+- Filler cells
+- Decap cells
+
+These cells contribute to the physical implementation but are excluded from the pure gate-density calculation reported by Innovus.
 
 ### 6. Clock Tree Synthesis
 
 Clock Tree Synthesis was performed for the `clk` clock.
 
-Clock cells were inserted and optimized to distribute the clock to sequential elements.
+Innovus inserted and optimized clock-tree cells to distribute the clock to the sequential elements.
 
-The final design contains approximately 1,984 reported data flip-flop cells before accounting for other sequential and physical cells.
+The final design includes clock-buffer and clock-inverter cells from the ASAP7 library.
+
+The PrimeTime timing report analyzes register-to-register paths within the `clk` path group.
 
 ### 7. Routing
 
 Global and detailed routing were performed in Innovus.
 
-The final design report contains approximately:
+The final implementation uses signal routing across M2-M6.
+
+Reported wire length:
 
 ```text
-41.645 mm total routed wire length
+Total routed wire length : 41,644.630 µm
+Average wire length/net  : 2.4791 µm
 ```
 
-or approximately:
+Wire-length distribution:
 
-```text
-41,644.63 µm
-```
-
-The routing report covers M2 through M6 for the reported signal wiring.
+| Layer | Wire length |
+|---|---:|
+| M1 | 0.000 µm |
+| M2 | 12,698.023 µm |
+| M3 | 15,134.115 µm |
+| M4 | 8,675.520 µm |
+| M5 | 3,721.548 µm |
+| M6 | 1,415.424 µm |
+| Total | 41,644.630 µm |
 
 ### 8. Static Timing Analysis
 
-Static timing was analyzed during physical implementation and separately using PrimeTime.
+Synopsys PrimeTime was used for post-route timing analysis.
 
-The Innovus implementation used a 0.5 ns clock period for its reported timing analysis.
+The analyzed clock period is:
 
-Final reported setup timing:
+```text
+500 ps
+```
 
-| Metric | Result |
+which corresponds to a:
+
+```text
+2.0 GHz
+```
+
+clock target.
+
+The worst setup path reported by PrimeTime has:
+
+```text
+Data arrival time : 439.411 ps
+Data required time: 556.636 ps
+Setup slack       : +117.225 ps
+```
+
+The reported path therefore meets the 500 ps timing constraint in the analyzed corner and configuration.
+
+The critical path is a register-to-register path:
+
+```text
+R7_reg_20_ → R8_reg_8_
+```
+
+with a reported data arrival time of approximately:
+
+```text
+439.411 ps
+```
+
+### 9. Power Analysis
+
+PrimeTime was also used for power analysis.
+
+The reported total power is:
+
+```text
+5.368 mW
+```
+
+Power breakdown from the PrimeTime report:
+
+| Component | Power |
 |---|---:|
-| Clock period | 0.500 ns |
-| WNS | +0.185 ns |
-| TNS | 0.000 ns |
-| Violating setup paths | 0 |
+| Clock network | 3.103 mW |
+| Registers | 0.439 mW |
+| Combinational logic | 1.826 mW |
+| Total | 5.368 mW |
 
-Final reported hold timing:
+The report also gives:
 
-| Metric | Result |
-|---|---:|
-| WNS | +0.092 ns |
-| TNS | 0.000 ns |
-| Violating hold paths | 0 |
+```text
+Net switching power : 1.818 mW
+Cell internal power : 3.537 mW
+Cell leakage power  : 0.01268 mW
+```
 
-These values correspond to the Innovus timing reports in the implementation log.
-
-PrimeTime was also used for independent static timing analysis. The supplied PrimeTime report uses a 1000 ps timing period and reports a worst setup slack of approximately 117.2 ps for the paths shown in the report.
-
-The PrimeTime and Innovus results should therefore not be directly compared as identical operating points because the supplied runs use different clock-period constraints.
+The power result depends on the activity assumptions and timing/library configuration used by the PrimeTime analysis.
 
 ## Physical Design Summary
 
-| Metric | Reported result |
-|---|---:|
-| Technology | ASAP7 |
-| Top module | `des` |
-| Hard macros | 0 |
-| Standard cells | 42,845 |
-| Signal nets | 16,798 |
-| Core area | 2,624.4 µm² |
-| Core density excluding physical cells | 61.839% |
-| Total routed wire length | 41,644.63 µm |
-| Innovus setup WNS | +0.185 ns |
-| Innovus setup TNS | 0.000 ns |
-| Innovus hold WNS | +0.092 ns |
-| Innovus hold TNS | 0.000 ns |
-| Setup violating paths | 0 |
-| Hold violating paths | 0 |
+```text
+Technology
+    ASAP7 predictive 7 nm
 
-The exact directory contents depend on the files included in the repository.
+Design
+    des
 
-## Key Implementation Metrics
+Hard macros
+    0
 
-The final Innovus implementation contains:
+Standard-cell instances
+    42,845
 
-- 42,845 standard-cell instances
-- 16,798 signal nets
-- 2,624.4 µm² reported core area
-- 61.839% density after excluding physical-only cells
-- 41,644.63 µm total routed wire length
-- 0 setup violating paths
-- 0 hold violating paths
-- 0 ns setup TNS
-- 0 ns hold TNS
+Signal nets
+    16,798
 
-## Attribution
+Core area
+    2,624.400 µm²
 
-### DES RTL
+Pure gate density
+    61.839%
+    excluding physical-only cells
 
-The DES RTL used as the starting point for this project is derived from the OpenCores DES/Triple DES IP Core:
+Total routed wire length
+    41,644.630 µm
 
-https://opencores.org/projects/des
+Clock period
+    500 ps
 
-Original project maintained by Rudolf Usselmann.
+Target clock frequency
+    2.0 GHz
 
-OpenCores identifies the project as a Verilog DES/Triple-DES crypto core and provides the associated source and test infrastructure.
+PrimeTime critical path delay
+    439.411 ps
 
-### ASIC Implementation
+PrimeTime worst setup slack
+    +117.225 ps
 
-The synthesis, physical implementation, timing analysis, reporting, and repository organization in this project were performed as part of this work.
+PrimeTime total power
+    5.368 mW
+```
 
-The original DES RTL should therefore be attributed to its OpenCores source rather than presented as original RTL development.
+## Key Takeaways
+
+This project provides hands-on experience with the transition from digital RTL to a physically implemented ASIC.
+
+The main implementation stages covered are:
+
+- RTL synthesis
+- Technology mapping
+- Timing constraints
+- Floorplanning
+- Power planning
+- Standard-cell placement
+- Clock Tree Synthesis
+- Global routing
+- Detailed routing
+- Post-route static timing analysis
+- Power analysis
+- Physical-design reporting
+
+The project also demonstrates how physical implementation affects:
+
+- Timing
+- Wirelength
+- Cell density
+- Clock distribution
+- Power consumption
+- Routing resources
+
+## Important Notes
+
+### About the 2.0 GHz result
+
+The 2.0 GHz figure corresponds to the 500 ps clock constraint used in the reported PrimeTime analysis.
+
+It should not be interpreted as the absolute maximum frequency of the design.
+
+The reported PrimeTime result demonstrates positive setup slack at the 500 ps constraint.
+
+### About the ASAP7 technology
+
+ASAP7 is a predictive academic technology model.
+
+The physical dimensions and timing results are therefore simulation and library-based results, not measurements from fabricated silicon.
+
+### About power
+
+The 5.368 mW figure is the total power reported by PrimeTime under the activity and library assumptions used in the analysis.
+
+Power varies with switching activity, clock frequency, voltage, process corner, temperature, and input stimulus.
+
+### About signoff
+
+This repository reports synthesis, physical implementation, timing, and power results.
+
+A timing-clean result should not be interpreted as complete foundry signoff.
+
+Unless corresponding DRC and LVS reports are included in the repository, this project does not claim full DRC/LVS signoff.
+
+## Attribution and Credits
+
+### OpenCores DES/Triple DES IP Core
+
+The original DES RTL used as the starting point for this project comes from the OpenCores DES/Triple DES IP Core project.
+
+Project maintainer:
+
+Rudolf Usselmann
+
+Project:
+
+DES/Triple DES IP Cores
+
+The OpenCores project provides the original DES/Triple-DES RTL and verification material.
+
+The ASIC synthesis, physical implementation, timing analysis, power analysis, and implementation reporting in this repository are separate work performed on the source RTL.
+
+### ASAP7
+
+The physical implementation uses the ASAP7 predictive technology platform and its associated standard-cell libraries.
+
+### EDA Tools
+
+The implementation was performed using:
+
+- Cadence Genus
+- Cadence Innovus
+- Synopsys PrimeTime
+
+Commercial EDA tools and proprietary/licensed technology files are not redistributed through this repository.
 
 ## References
 
-- OpenCores DES/Triple DES IP Cores: https://opencores.org/projects/des
+1. OpenCores, DES/Triple DES IP Cores, Rudolf Usselmann.
+2. ASAP7 Predictive 7 nm FinFET PDK and standard-cell library.
+3. Cadence Genus documentation.
+4. Cadence Innovus documentation.
+5. Synopsys PrimeTime documentation.
+
+## Author
+
+Mainak Sil
+
+B.Tech Electronics and Communication Engineering
+
+VIT-AP University
+
+GitHub: MainakSil
 
 ## Disclaimer
 
 This repository is intended for educational and research purposes.
 
-The ASIC implementation uses academic EDA access and the ASAP7 predictive technology model.
+The original DES RTL is attributed to the OpenCores project and its respective contributors.
 
-The original DES RTL is credited to its OpenCores source.
+This repository documents the ASIC implementation performed using the stated EDA tools and technology libraries. It does not claim ownership of the original DES IP.
